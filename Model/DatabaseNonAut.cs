@@ -9,7 +9,14 @@ using MySql.Data.MySqlClient;
 
 namespace SeaStory.Model
 {
-    public class
+    public class NonMember
+    {
+
+    }
+    public class Food
+    {
+
+    }
     public class DatabaseNonAut
     {
         private static string connStr = "server=webp.flykorea.kr;user=story;database=storyDB;port=13306;password=sea@#21;";
