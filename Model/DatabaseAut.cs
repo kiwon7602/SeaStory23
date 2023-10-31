@@ -89,6 +89,7 @@ namespace SeaStory.Model
         }
 
         // 이메일 인증 구글 api를 사용하여서 해라?
+        //디비 수정 시작
     }
 }
 
