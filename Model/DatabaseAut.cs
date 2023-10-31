@@ -88,6 +88,7 @@ namespace SeaStory.Model
             return user;
         }
 
+        // 이메일 인증 구글 api를 사용하여서 해라?
     }
 }
 

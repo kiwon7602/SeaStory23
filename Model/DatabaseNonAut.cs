@@ -1,9 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
 
 
@@ -11,11 +8,16 @@ namespace SeaStory.Model
 {
     public class NonMember
     {
-
+        public string CardNumber;
+        public int RemainingHours; //비회원이 가지고 있는 남은 시간(사용 가능 시간).
+        public bool IsActive; //비회원의 계정 활성 여부를 나타내는 부울 값.
     }
     public class Food
     {
-
+        public string FoodName; //: 음식 이름.
+        public string FoodCode; //: 음식의 고유 코드.
+        public int FoodPrice; //: 음식의 가격.
+        public string ImageURL; //: 음식 이미지의 URL.
     }
     public class DatabaseNonAut
     {
