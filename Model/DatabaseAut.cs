@@ -27,7 +27,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string sql = "SELECT COUNT(*) FROM 테이블명 WHERE Id = @Id AND Pw = @Pw";
+                string sql = "SELECT COUNT(*) FROM Member WHERE ID = @Id AND Password = @Pw";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Id", Id);
                 cmd.Parameters.AddWithValue("@Pw", Pw);
@@ -43,19 +43,21 @@ namespace SeaStory.Model
             {
                 Console.WriteLine(ex.ToString());
             }
+            finally
+            {
+                conn.Close();
+            }
             return -1;
-
         }
 
         public User UserData(string Id)
         {
-            MySqlConnection conn = new MySqlConnection(connStr);
             User user = null;
 
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM 테이블명 WHERE Id = @Id";
+                string sql = "SELECT * FROM Member WHERE ID = @Id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Id", Id);
 
@@ -65,12 +67,12 @@ namespace SeaStory.Model
 
                     if (reader.Read())
                     {
-                        user.name = reader["name"].ToString();
-                        user.phoneNumber = reader["phoneNumber"].ToString();
-                        user.time = reader["time"].ToString();
-                        user.usedTime = reader["usedTime"].ToString();
-                        user.loginType = reader["loginType"].ToString();
-                        user.userType = Convert.ToBoolean(reader["userType"]);
+                        user.name = reader["Username"].ToString();
+                        user.phoneNumber = reader["PhoneNumber"].ToString();
+                        user.time = reader["RemainingHours"].ToString();
+                        user.usedTime = reader["UsageHours"].ToString();
+                        user.loginType = reader["LoginType"].ToString();
+                        user.userType = Convert.ToBoolean(reader["IsAdmin"]);
                     }
                 }
             }
@@ -85,9 +87,6 @@ namespace SeaStory.Model
 
             return user;
         }
-
-
-
 
     }
 }
