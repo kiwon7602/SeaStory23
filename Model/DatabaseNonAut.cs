@@ -3,24 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
+
 
 namespace SeaStory.Model
 {
     class DatabaseNonAut
     {
-        class UserFunction
+        public void Money() { }
+
+        public void NonUser()
         {
-            private string Id;
-            private string PW;
-
-            public int UesrCheck(String Id, String Pw)
-            {
-                string Query = "SELECT * FROM Member WHERE ID = @ID AND PW = @PW; ";
-                `
-                return 20231026;
-
-            }
 
         }
+        public void Food()
+        {
+
+        }
+
+        public void order()
+        {
+
+        }
+
+        public void sit()
+        {
+
+        }
+
     }
 }
