@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp7
+namespace SeaStory.ui
 {
-    public partial class SeatInterface : Form
+    public partial class AdminFoodManagement : Form
     {
-        public SeatInterface()
+        public AdminFoodManagement()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

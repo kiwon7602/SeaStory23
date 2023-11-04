@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp7
 {
-    partial class Form1
+    partial class SeatInterface
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.

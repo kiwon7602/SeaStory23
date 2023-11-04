@@ -12,10 +12,10 @@ namespace WindowsFormsApp7
 {
     public partial class main : Form
     {
-        public main()
-        {
-            InitializeComponent();
-        }
+        //public main()
+        // {
+        //     InitializeComponent();
+        // }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {

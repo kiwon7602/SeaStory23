@@ -118,15 +118,7 @@ namespace WindowsFormsApp7
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp7.Properties.Resources.kt80ir71617nr1e4f0jq;
-            this.pictureBox1.Location = new System.Drawing.Point(518, 110);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 221);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+           
             // 
             // button2
             // 
