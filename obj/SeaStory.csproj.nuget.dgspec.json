@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ALL\\Projects\\SeaStory23\\SeaStory.csproj": {}
+    "C:\\Users\\kimga\\Documents\\GitHub\\SeaStory23\\SeaStory.csproj": {}
   },
   "projects": {
-    "C:\\ALL\\Projects\\SeaStory23\\SeaStory.csproj": {
+    "C:\\Users\\kimga\\Documents\\GitHub\\SeaStory23\\SeaStory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ALL\\Projects\\SeaStory23\\SeaStory.csproj",
+        "projectUniqueName": "C:\\Users\\kimga\\Documents\\GitHub\\SeaStory23\\SeaStory.csproj",
         "projectName": "SeaStory",
-        "projectPath": "C:\\ALL\\Projects\\SeaStory23\\SeaStory.csproj",
-        "packagesPath": "C:\\Users\\fiasl\\.nuget\\packages\\",
-        "outputPath": "C:\\ALL\\Projects\\SeaStory23\\obj\\",
+        "projectPath": "C:\\Users\\kimga\\Documents\\GitHub\\SeaStory23\\SeaStory.csproj",
+        "packagesPath": "C:\\Users\\kimga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kimga\\Documents\\GitHub\\SeaStory23\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fiasl\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kimga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
