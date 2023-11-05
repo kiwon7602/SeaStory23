@@ -102,6 +102,7 @@ namespace SeaStory.Model
                     while (reader.Read())
                     {
                         SubscriptionTable subscription = new SubscriptionTable();
+                        subscription.SubscriptionKey = reader["SubscriptionKey"].ToString();
                         subscription.SubscriptionName = reader["SubscriptionName"].ToString();
                         subscription.SubscriptionAmount = Convert.ToInt32(reader["SubscriptionAmount"]);
                         subscription.SubscriptionHours = Convert.ToInt32(reader["SubscriptionHours"]);

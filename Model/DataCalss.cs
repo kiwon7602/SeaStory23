@@ -36,6 +36,7 @@ namespace SeaStory.Model
         //요금제 정보 데이터 클래스
         public class SubscriptionTable
         {
+            public string SubscriptionKey;
             public string SubscriptionName;
             public int SubscriptionAmount;
             public int SubscriptionHours;
