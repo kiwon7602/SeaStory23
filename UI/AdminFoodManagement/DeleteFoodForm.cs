@@ -1,8 +1,10 @@
-﻿using SeaStory.manage_menu_branch;
+﻿using MySqlX.XDevAPI;
+using SeaStory.manage_menu_branch;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -42,22 +44,34 @@ namespace SeaStory.UI.AdminFoodManagement
                 var menuItemControl = new MenuItemControl(Image, Name, Price.ToString("C"));
                 var checkBox = new CheckBox
                 {
-                    Dock = DockStyle.Right,
-                    Margin = new Padding(0, 0, menuItemControl.Width, 0),
                     AutoSize = true
                 };
 
+                // Create a container panel for the MenuItemControl and the CheckBox
                 var panel = new Panel
                 {
-                    Width = flowLayoutPanelMenuItems.Width,
+                    Width = flowLayoutPanelMenuItems.Width / 2 - 10, // Adjust for padding/margins
                     Height = menuItemControl.Height,
-                    Dock = DockStyle.Top
+                    Padding = new Padding(4),
+                    Margin = new Padding(0, 0, 4, 4)
                 };
 
-                panel.Controls.Add(menuItemControl);
-                panel.Controls.Add(checkBox);
+                // Use a FlowLayoutPanel for horizontal layout within the panel
+                var itemLayout = new FlowLayoutPanel
+                {
+                    Dock = DockStyle.Fill,
+                    FlowDirection = FlowDirection.LeftToRight
+                };
+
+                itemLayout.Controls.Add(checkBox); // Add the CheckBox first, so it appears on the left
+                itemLayout.Controls.Add(menuItemControl); // Add the MenuItemControl next
+
+                panel.Controls.Add(itemLayout); // Add the FlowLayoutPanel to the container panel
+
+                // Add the container panel to the main FlowLayoutPanel
                 flowLayoutPanelMenuItems.Controls.Add(panel);
 
+                // Keep track of the MenuItemControl and its associated CheckBox
                 itemsToDelete.Add(menuItemControl, checkBox);
             }
 
@@ -72,19 +86,31 @@ namespace SeaStory.UI.AdminFoodManagement
         private void buttonDeleteCheckedFood_Click(object sender, EventArgs e)
         {
             // This should find all the checked items in the flowpanel and delete all of them from the database
-            var checkedItems = itemsToDelete.Where(kvp => kvp.Value.Checked).Select(kvp => kvp.Key).ToList();
-            foreach (var item in checkedItems)
+            var itemsToDeleteList = itemsToDelete.Where(kvp => kvp.Value.Checked).ToList(); // We call ToList() here to avoid collection modification issues during enumeration.
+            foreach (var kvp in itemsToDeleteList)
             {
+                var menuItemControl = kvp.Key;
+                var checkBox = kvp.Value;
+
                 // Implement your database deletion logic here.
-                DeleteFoodItemFromDatabase(item);
+                DeleteFoodItemFromDatabase(menuItemControl);
 
-                // Remove the panel from the flowLayoutPanel as well as the entry from the dictionary.
-                flowLayoutPanelMenuItems.Controls.Remove(itemsToDelete[item].Parent);
-                itemsToDelete.Remove(item);
+                // Get the parent container panel of the CheckBox, which is the FlowLayoutPanel
+                var itemLayoutPanel = checkBox.Parent as FlowLayoutPanel;
+                // The parent of the itemLayoutPanel is the container Panel which we want to remove
+                var containerPanel = itemLayoutPanel?.Parent as Panel;
 
+                if (containerPanel != null)
+                {
+                    // Remove the container Panel from the flowLayoutPanelMenuItems
+                    flowLayoutPanelMenuItems.Controls.Remove(containerPanel);
+                    // Dispose the container panel to free resources
+                    containerPanel.Dispose();
+                }
 
+                // Finally, remove the entry from the dictionary
+                itemsToDelete.Remove(menuItemControl);
             }
-
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
