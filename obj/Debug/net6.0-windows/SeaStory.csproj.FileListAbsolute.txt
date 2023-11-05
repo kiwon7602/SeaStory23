@@ -20,3 +20,8 @@ C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\refint\SeaStory.dll
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.pdb
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.genruntimeconfig.cache
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\ref\SeaStory.dll
+C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.Properties.Resources.resources
+C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.ui.admin_inter_main.resources
+C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.user_interface_food.resources
+C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.ui.user_interface_pay.resources
+C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.ui.user_interface_rank.resources
