@@ -50,6 +50,8 @@ namespace SeaStory.manage_menu_branch
             {
                 // Perform actions when a menu item is clicked.
                 // Send to cart or ordering pate
+
+
             }
         }
 
@@ -58,6 +60,29 @@ namespace SeaStory.manage_menu_branch
             // Add Menu When clicked
             // Open a new form
 
+            using (AddFoodForm addFoodForm = new AddFoodForm())
+            {
+                if (addFoodForm.ShowDialog() == DialogResult.OK && addFoodForm.Confirm)
+                {
+                    // Now you have the data from the AddFoodForm stored in its properties.
+                    // You can access it like this:
+                    Image foodImage = addFoodForm.FoodImage;
+                    string foodName = addFoodForm.FoodName;
+                    decimal foodPrice = addFoodForm.FoodPrice;
+
+                    // Here you can add the new food item to the database
+                    AddFoodItemToDatabase(foodImage, foodName, foodPrice);
+
+                    // If you want to immediately display the new item in the menu:
+                    var menuItemControl = new MenuItemControl(foodImage, foodName, foodPrice.ToString("C"));
+                    flowLayoutPanelMenuItems.Controls.Add(menuItemControl);
+                }
+            }
+        }
+
+        private void AddFoodItemToDatabase(Image image, string name, decimal price)
+        {
+            // Implement your database logic here.
         }
 
         private void buttonDeleteFood_Click(object sender, EventArgs e)

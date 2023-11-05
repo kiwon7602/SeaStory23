@@ -65,9 +65,10 @@
             // 
             // flowLayoutPanelMenuItems
             // 
+            flowLayoutPanelMenuItems.AutoScroll = true;
             flowLayoutPanelMenuItems.Location = new System.Drawing.Point(49, 75);
             flowLayoutPanelMenuItems.Name = "flowLayoutPanelMenuItems";
-            flowLayoutPanelMenuItems.Size = new System.Drawing.Size(601, 347);
+            flowLayoutPanelMenuItems.Size = new System.Drawing.Size(601, 334);
             flowLayoutPanelMenuItems.TabIndex = 3;
             // 
             // ManageFood

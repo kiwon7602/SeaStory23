@@ -35,3 +35,4 @@ C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\refint\SeaStory.dll
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.pdb
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.genruntimeconfig.cache
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\ref\SeaStory.dll
+C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.manage_menu_branch.AddFoodForm.resources

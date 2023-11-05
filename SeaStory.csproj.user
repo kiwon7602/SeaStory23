@@ -4,6 +4,9 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="manage_menu_branch\AddFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="manage_menu_branch\ManageFood.cs">
       <SubType>Form</SubType>
     </Compile>
