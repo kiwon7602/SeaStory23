@@ -15,6 +15,8 @@ namespace SeaStory
         public Form1()
         {
             InitializeComponent();
+            manage_menu_branch.ManageFood mf = new manage_menu_branch.ManageFood();
+            mf.Show();
         }
 
     }

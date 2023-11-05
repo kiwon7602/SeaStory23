@@ -33,6 +33,14 @@
     </Compile>
     <Compile Update="ui\user_interface_rank.cs">
       <SubType>Form</SubType>
+    <Compile Update="manage_menu_branch\AddFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="manage_menu_branch\ManageFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="manage_menu_branch\MenuItemControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

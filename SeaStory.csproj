@@ -7,4 +7,12 @@
     <StartupObject>SeaStory.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ui\" />
+  </ItemGroup>
+
 </Project>
