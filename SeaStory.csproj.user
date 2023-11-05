@@ -1,8 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <Compile Update="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-    </ItemGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\AddFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\DeleteFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\ManageFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\MenuItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\admin_inter_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\seat_interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\UserSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface_food.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface_pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface_rank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
