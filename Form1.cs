@@ -7,13 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static SeaStory.Model.DataCalss;
 namespace SeaStory
 {
+
     public partial class Form1 : Form
     {
+
+
         public Form1()
         {
+            User a = new User();
+            int v = Model.DatabaseAut.UserCheck("hello","world");
+
             InitializeComponent();
         }
 

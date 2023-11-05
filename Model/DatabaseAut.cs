@@ -12,7 +12,7 @@ namespace SeaStory.Model
         MySqlConnection conn = new MySqlConnection(connStr);
 
         //회원 가입된 유저인지 확인하는 메소드, 있으면 1 없으면 -1을 반환한다.
-        public int UserCheck(string Id, string Pw)
+        internal static int UserCheck(string Id, string Pw)
         {
             try
             {
