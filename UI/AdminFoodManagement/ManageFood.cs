@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeaStory.UI.AdminFoodManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,10 +86,25 @@ namespace SeaStory.manage_menu_branch
             // Implement your database logic here.
         }
 
+
         private void buttonDeleteFood_Click(object sender, EventArgs e)
         {
             // Delete Menu When clicked
             // open a new window and ask users to select which menus to delete
+            using (DeleteFoodForm deleteFoodForm = new DeleteFoodForm())
+            {
+                if (deleteFoodForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Refresh the FlowLayoutPanel or other UI elements if necessary
+
+                }
+            }
+        }
+
+        private void DeleteFoodItemFromDatabase(MenuItemControl menuItemControl)
+        {
+            // Implement the logic to delete the menu item from your database.
+            // This will typically involve using the item's identifier or name to remove it from the database.
         }
     }
 }

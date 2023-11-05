@@ -8,6 +8,9 @@
     <Compile Update="UI\AdminFoodManagement\AddFoodForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI\AdminFoodManagement\DeleteFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UI\AdminFoodManagement\ManageFood.cs">
       <SubType>Form</SubType>
     </Compile>

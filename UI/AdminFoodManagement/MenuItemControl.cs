@@ -12,6 +12,10 @@ namespace SeaStory.manage_menu_branch
 {
     public partial class MenuItemControl : UserControl
     {
+        public string FoodName { get; private set; }
+        public Image FoodImage { get; private set; }
+        public string FoodPrice { get; private set; }
+
         // You could use a custom constructor or properties to pass in the image, name, and price.
         public MenuItemControl(Image foodImage, string foodName, string foodPrice)
         {

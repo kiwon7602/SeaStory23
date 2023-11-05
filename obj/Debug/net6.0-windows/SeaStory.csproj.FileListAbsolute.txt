@@ -46,3 +46,4 @@ C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.manage_menu_branch.
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.manage_menu_branch.ManageFood.resources
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.manage_menu_branch.MenuItemControl.resources
 C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.csproj.CopyComplete
+C:\ALL\Projects\SeaStory23\obj\Debug\net6.0-windows\SeaStory.UI.AdminFoodManagement.DeleteFoodForm.resources
