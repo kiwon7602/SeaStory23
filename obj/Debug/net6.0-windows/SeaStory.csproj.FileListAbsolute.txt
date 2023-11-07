@@ -79,7 +79,6 @@ C:\unityproject\gitproject\SeaStory23\obj\Debug\net6.0-windows\SeaStory.manage_m
 C:\unityproject\gitproject\SeaStory23\obj\Debug\net6.0-windows\SeaStory.manage_menu_branch.MenuItemControl.resources
 C:\unityproject\gitproject\SeaStory23\obj\Debug\net6.0-windows\SeaStory.ui.admin_inter_main.resources
 C:\unityproject\gitproject\SeaStory23\obj\Debug\net6.0-windows\SeaStory.login.resources
-C:\unityproject\gitproject\SeaStory23\obj\Debug\net6.0-windows\SeaStory.main.resources
 C:\unityproject\gitproject\SeaStory23\obj\Debug\net6.0-windows\SeaStory.user_interface.resources
 C:\unityproject\gitproject\SeaStory23\obj\Debug\net6.0-windows\SeaStory.user_interface_food.resources
 C:\unityproject\gitproject\SeaStory23\obj\Debug\net6.0-windows\SeaStory.ui.user_interface_pay.resources
