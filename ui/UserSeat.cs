@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApp7
+namespace SeaStory
 {
     partial class SeatInterface
     {
