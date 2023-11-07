@@ -22,6 +22,8 @@ namespace SeaStory
             int v = Model.DatabaseAut.UserCheck("hello","world");
 
             InitializeComponent();
+            manage_menu_branch.ManageFood mf = new manage_menu_branch.ManageFood();
+            mf.Show();
         }
 
     }
