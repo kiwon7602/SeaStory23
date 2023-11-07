@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeaStory
+namespace WindowsFormsApp7
 {
-    public partial class user_interface_food : Form
+    public partial class user_interface : Form
     {
-        public user_interface_food()
+        public user_interface()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeaStory
+namespace SeaStory.ui
 {
-    public partial class user_interface_food : Form
+    public partial class admin_inter_main : Form
     {
-        public user_interface_food()
+        public admin_inter_main()
         {
             InitializeComponent();
         }
