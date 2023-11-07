@@ -47,5 +47,15 @@ namespace SeaStory.manage_menu_branch
         {
 
         }
+
+        private void labelFoodName_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPrice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

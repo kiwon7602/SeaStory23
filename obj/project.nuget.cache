@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k95/6HdyLkBAI3Omqu2ifd/hgXakGwCnKn3YXF5/40afVNgyXLA9Z1GgQJwPXMKwsTFJDM/SgZdLBQcAIdMLMA==",
+  "dgSpecHash": "azs4xAUKbOFtKZg6IOQxtT+pZDd/bOhSr5jCJ7XD7bJ3YLNXhBsnaqLqhIHIXjZI1jGFlh/00M6aA0ESsrcZYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Documents\\GitHub\\SeaStory23\\SeaStory23\\SeaStory.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Documents\\GitHub\\SeaStory23\\SeaStory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
