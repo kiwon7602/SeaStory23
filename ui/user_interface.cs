@@ -8,16 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeaStory
+namespace WindowsFormsApp7
 {
-    public partial class Form1 : Form
+    public partial class user_interface : Form
     {
-        public Form1()
+        public user_interface()
         {
             InitializeComponent();
-            manage_menu_branch.ManageFood mf = new manage_menu_branch.ManageFood();
-            mf.Show();
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

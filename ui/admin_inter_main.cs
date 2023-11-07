@@ -8,16 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeaStory
+namespace SeaStory.ui
 {
-    public partial class Form1 : Form
+    public partial class admin_inter_main : Form
     {
-        public Form1()
+        public admin_inter_main()
         {
             InitializeComponent();
-            manage_menu_branch.ManageFood mf = new manage_menu_branch.ManageFood();
-            mf.Show();
         }
-
     }
 }
