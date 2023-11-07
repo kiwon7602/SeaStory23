@@ -1,28 +1,18 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-
-
+using static SeaStory.Model.DataCalss;
 
 namespace SeaStory.Model
 {
 
     class DatabaseAut
     {
-        public class User
-        {
-            public string name;
-            public string phoneNumber;
-            public string time;
-            public string usedTime;
-            public string loginType;
-            public bool userType;
-        }
-
 
         private static string connStr = "server=webp.flykorea.kr;user=story;database=storyDB;port=13306;password=sea@#21;";
         MySqlConnection conn = new MySqlConnection(connStr);
 
-        public int UserCheck(string Id, string Pw)
+        //회원 가입된 유저인지 확인하는 메소드, 있으면 1 없으면 -1을 반환한다.
+        internal static int UserCheck(string Id, string Pw)
         {
             try
             {
@@ -50,6 +40,7 @@ namespace SeaStory.Model
             return -1;
         }
 
+        //일치하는 아이디의 회원정보를 모두 반환한다. 
         public User UserData(string Id)
         {
             User user = null;
@@ -67,12 +58,12 @@ namespace SeaStory.Model
 
                     if (reader.Read())
                     {
-                        user.name = reader["Username"].ToString();
-                        user.phoneNumber = reader["PhoneNumber"].ToString();
-                        user.time = reader["RemainingHours"].ToString();
-                        user.usedTime = reader["UsageHours"].ToString();
-                        user.loginType = reader["LoginType"].ToString();
-                        user.userType = Convert.ToBoolean(reader["IsAdmin"]);
+                        user.Name = reader["Username"].ToString();
+                        user.PhoneNumber = reader["PhoneNumber"].ToString();
+                        user.Time = reader["RemainingHours"].ToString();
+                        user.UsedTime = reader["UsageHours"].ToString();
+                        user.LoginType = reader["LoginType"].ToString();
+                        user.UserType = Convert.ToBoolean(reader["IsAdmin"]);
                     }
                 }
             }
@@ -88,7 +79,16 @@ namespace SeaStory.Model
             return user;
         }
 
-        // 이메일 인증 구글 api를 사용하여서 해라?
+        // 이메일 인증 구글 api부분추가 예정
+        // 사용자의 현재시간을 반환하는 메소드
+
+
+        //어드민 인증이 필요함 
+
+        // 회원정보를 수정하는 메소드
+        // 자리정보를 수정하는 메소드
+        // 요금제 정보를 수정하는 메소드
+        //음식정보를 수정하는 메소드
     }
 }
 
