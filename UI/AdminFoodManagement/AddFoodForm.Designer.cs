@@ -1,4 +1,4 @@
-﻿namespace SeaStory.manage_menu_branch
+﻿namespace SeaStory.UI.AdminFoodManagement
 {
     partial class AddFoodForm
     {

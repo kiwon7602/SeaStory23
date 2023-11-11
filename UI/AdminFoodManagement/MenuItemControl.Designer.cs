@@ -1,4 +1,4 @@
-﻿namespace SeaStory.manage_menu_branch
+﻿namespace SeaStory.UI.AdminFoodManagement
 {
     partial class MenuItemControl
     {
@@ -51,7 +51,6 @@
             labelFoodName.Size = new System.Drawing.Size(58, 15);
             labelFoodName.TabIndex = 1;
             labelFoodName.Text = "음식 이름";
-            labelFoodName.Click += labelFoodName_Click;
             // 
             // pictureBoxFood
             // 
@@ -71,7 +70,6 @@
             Controls.Add(labelPrice);
             Name = "MenuItemControl";
             Size = new System.Drawing.Size(145, 158);
-            Load += MenuItemControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxFood).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -9,7 +9,7 @@ namespace SeaStory.Model
     {
 
         private static string connStr = "server=webp.flykorea.kr;user=story;database=storyDB;port=13306;password=sea@#21;";
-        MySqlConnection conn = new MySqlConnection(connStr);
+        static MySqlConnection conn = new MySqlConnection(connStr);
 
         //회원 가입된 유저인지 확인하는 메소드, 있으면 1 없으면 -1을 반환한다.
         internal static int UserCheck(string Id, string Pw)

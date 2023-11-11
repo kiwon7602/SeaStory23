@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeaStory.manage_menu_branch
+namespace SeaStory.UI.AdminFoodManagement
 {
     public partial class AddFoodForm : Form
     {
