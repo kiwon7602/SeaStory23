@@ -1,4 +1,5 @@
 ﻿using MySqlX.XDevAPI;
+using SeaStory.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,20 +15,24 @@ namespace SeaStory.UI.AdminFoodManagement
 {
     public partial class DeleteFoodForm : Form
     {
+        private DatabaseNonAut db = new DatabaseNonAut();
+
         // Dictionary to keep track of menu items and their respective CheckBoxes.
         private List<MenuItemControl> itemsToDelete = new List<MenuItemControl>();
 
         public DeleteFoodForm()
         {
             InitializeComponent();
-            PopulateWithMenuItems();
+            PopulateWithMenuItemsAsync().ConfigureAwait(false);
         }
 
-        public void PopulateWithMenuItems()
+        public async Task PopulateWithMenuItemsAsync()
         {
             // get items from database
+            var foodItemList = db.GetFoods();
 
-            // test : use fake data
+
+            /*
             // test : create fake data
             var foodItemList = new List<(Image Image, string Name, decimal Price)>
             {
@@ -37,19 +42,18 @@ namespace SeaStory.UI.AdminFoodManagement
                 (Image.FromFile("../../../assets/pasta.jpg"), "Pasta", 7.99m),
                 (Image.FromFile("../../../assets/salad.jpg"), "Salad", 4.99m)
             };
+            */
 
-            // PLEASE HELP
-            foreach (var (Image, Name, Price) in foodItemList)
+            foreach (var foodItem in foodItemList)
             {
-                // Create an instance of your custom control that includes a CheckBox
-                var menuItemControl = new MenuItemWithCheckboxControl(Image, Name, Price.ToString("C"));
+                Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
+                var menuItemControl = new MenuItemWithCheckboxControl(foodImage, foodItem.FoodName, foodItem.FoodPrice.ToString("C"));
 
-                // Add the menuItemControl to the FlowLayoutPanel
                 flowLayoutPanelMenuItems.Controls.Add(menuItemControl);
 
-                // Associate the menuItemControl with its CheckBox in the dictionary for later retrieval
                 itemsToDelete.Add(menuItemControl);
             }
+
         }
 
         private void DeleteFoodItemFromDatabase(MenuItemControl menuItemControl)
