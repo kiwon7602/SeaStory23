@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,7 +48,7 @@ namespace SeaStory.UI.AdminFoodManagement
             foreach (var foodItem in foodItemList)
             {
                 Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
-                var menuItemControl = new MenuItemWithCheckboxControl(foodImage, foodItem.FoodName, foodItem.FoodPrice.ToString("C"));
+                var menuItemControl = new MenuItemWithCheckboxControl(foodImage, foodItem.FoodName, foodItem.FoodPrice.ToString("C", new CultureInfo("ko-KR")));
 
                 flowLayoutPanelMenuItems.Controls.Add(menuItemControl);
 

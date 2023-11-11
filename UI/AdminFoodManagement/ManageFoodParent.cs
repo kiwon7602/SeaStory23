@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -50,7 +51,7 @@ namespace SeaStory.UI.AdminFoodManagement
             foreach (var foodItem in foodItemList)
             {
                 Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
-                var menuItemControl = new MenuItemControl(foodImage, foodItem.FoodName, foodItem.FoodPrice.ToString("C"));
+                var menuItemControl = new MenuItemControl(foodImage, foodItem.FoodName, foodItem.FoodPrice.ToString("C", new CultureInfo("ko-KR")));
 
                 flowLayoutPanelMenuItems.Controls.Add(menuItemControl); 
             }
