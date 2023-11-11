@@ -27,7 +27,7 @@ namespace SeaStory.UI.AdminFoodManagement
                 if (addFoodForm.ShowDialog() == DialogResult.OK && addFoodForm.Confirm)
                 {
                     // Refresh the FlowLayoutPanel
-                    CreateMenuItemsAsync();
+                    CreateMenuItemsAsync().ConfigureAwait(false);
                 }
             }
         }
@@ -42,7 +42,7 @@ namespace SeaStory.UI.AdminFoodManagement
                 if (deleteFoodForm.ShowDialog() == DialogResult.OK)
                 {
                     // Refresh the FlowLayoutPanel
-                    CreateMenuItemsAsync();
+                    CreateMenuItemsAsync().ConfigureAwait(false);
                 }
             }
         }

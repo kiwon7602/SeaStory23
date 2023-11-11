@@ -8,7 +8,7 @@ namespace SeaStory.Model
 {
   
 
-     class DatabaseNonAut
+     public class DatabaseNonAut
     {
         private static string connStr = "server=webp.flykorea.kr;user=story;database=storyDB;port=13306;password=sea@#21;";
         MySqlConnection conn = new MySqlConnection(connStr);

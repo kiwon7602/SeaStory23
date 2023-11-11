@@ -19,7 +19,7 @@ namespace SeaStory.UI.AdminFoodManagement
 {
     public partial class ManageFoodParent : Form
     {
-        private DatabaseNonAut db = new DatabaseNonAut();
+        protected DatabaseNonAut db = new DatabaseNonAut();
 
         public ManageFoodParent()
         {
@@ -27,7 +27,7 @@ namespace SeaStory.UI.AdminFoodManagement
             CreateMenuItemsAsync().ConfigureAwait(false); // Call the new async method
         }
 
-        protected async Task CreateMenuItemsAsync()
+        protected virtual async Task CreateMenuItemsAsync()
         {
             // Clear existing items
             flowLayoutPanelMenuItems.Controls.Clear();
@@ -51,7 +51,7 @@ namespace SeaStory.UI.AdminFoodManagement
             foreach (var foodItem in foodItemList)
             {
                 Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
-                var menuItemControl = new MenuItemControl(foodImage, foodItem.FoodName, foodItem.FoodPrice.ToString("C", new CultureInfo("ko-KR")));
+                var menuItemControl = new MenuItemControl(foodImage, foodItem.FoodName, foodItem.FoodPrice);
 
                 flowLayoutPanelMenuItems.Controls.Add(menuItemControl); 
             }

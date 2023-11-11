@@ -12,7 +12,7 @@ namespace SeaStory.UI.AdminFoodManagement
 {
     public partial class MenuItemWithCheckboxControl : MenuItemControl
     {
-        public MenuItemWithCheckboxControl(Image foodImage, string foodName, string foodPrice)
+        public MenuItemWithCheckboxControl(Image foodImage, string foodName, int foodPrice)
             : base(foodImage, foodName, foodPrice)
         {
             InitializeComponent();
