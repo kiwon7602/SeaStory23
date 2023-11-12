@@ -17,7 +17,7 @@ namespace SeaStory
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UI.AdminFoodManagement.ManageFoodChildUser());
+            Application.Run(new UI.TimeManagement.ManageTimeAdmin());
         }
     }
 }
