@@ -53,7 +53,7 @@ namespace SeaStory.UI.AdminFoodManagement
                 Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
                 var menuItemControl = new MenuItemControl(foodImage, foodItem.FoodName, foodItem.FoodPrice);
 
-                flowLayoutPanelMenuItems.Controls.Add(menuItemControl); 
+                flowLayoutPanelMenuItems.Controls.Add(menuItemControl);
             }
 
         }
