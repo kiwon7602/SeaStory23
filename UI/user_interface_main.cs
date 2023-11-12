@@ -35,19 +35,18 @@ namespace SeaStory
             label8.Text = seat_number;
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        //요리 주문 버튼 클릭 시
+        private void button10_Click(object sender, EventArgs e)
         {
+            //요리 주문폼으로 showdialog 보내줄 정보는 회원id, 좌석 번호
 
         }
-
-        private void main_Load(object sender, EventArgs e)
+        //사용 종료 버튼 클릭 시
+        private void button11_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            login login = new login();
+            login.Show();
+            this.Close();
         }
     }
 }

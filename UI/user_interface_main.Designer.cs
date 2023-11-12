@@ -149,6 +149,7 @@ namespace SeaStory
             button10.TabIndex = 9;
             button10.Text = "요리주문";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // button11
             // 
@@ -159,6 +160,7 @@ namespace SeaStory
             button11.TabIndex = 11;
             button11.Text = "사용종료";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // label1
             // 
@@ -168,7 +170,6 @@ namespace SeaStory
             label1.Size = new System.Drawing.Size(55, 15);
             label1.TabIndex = 12;
             label1.Text = "회원요금";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -234,7 +235,7 @@ namespace SeaStory
             label8.TabIndex = 19;
             label8.Text = "label8";
             // 
-            // main
+            // user_interface_main
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,9 +260,8 @@ namespace SeaStory
             Controls.Add(button2);
             Controls.Add(button1);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            Name = "main";
+            Name = "user_interface_main";
             Text = "Form2";
-            Load += main_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -1,4 +1,5 @@
-﻿using SeaStory.UI;
+﻿using SeaStory.ui;
+using SeaStory.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,18 +71,22 @@ namespace SeaStory
                 {
                     //관리자 체크를 받아야 하기 때문에 유저 정보 받기
                     User user = Model.DatabaseAut.UserData(textBox1.Text);
-                    
+
                     //관리자 체크
-                    if(user.UserType == true)
+                    if (user.UserType == true)
                     {
                         //관리자 폼 열기
-                        //(미구현) 로그인 정상 동작 확인된 뒤 추가 예정
+                        admin_inter_main admin_Inter_Main = new admin_inter_main();
+                        admin_Inter_Main.Show();
+                        this.Close();
                     }
-
-                    //자리 선택 폼으로 이동
-                    user_seat user_Seat = new user_seat(textBox1.Text, 0);
-                    user_Seat.Show();
-                    this.Close();
+                    else
+                    {
+                        //자리 선택 폼으로 이동
+                        user_seat user_Seat = new user_seat(textBox1.Text, 0);
+                        user_Seat.Show();
+                        this.Close();
+                    }
                 }
                 //로그인 실패
                 else
