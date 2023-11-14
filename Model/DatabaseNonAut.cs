@@ -8,13 +8,13 @@ namespace SeaStory.Model
 {
   
 
-      class DatabaseNonAut
+      public class DatabaseNonAut
     {
         private static string connStr = "server=webp.flykorea.kr;user=story;database=storyDB;port=13306;password=sea@#21;";
         static MySqlConnection conn = new MySqlConnection(connStr);
 
         //리스트형태로 음식정보를 반환하는 메소드
-        public List<Food> GetFoods()
+        public static List<Food> GetFoods()
         {
             List<Food> foods = new List<Food>();
 
@@ -51,7 +51,7 @@ namespace SeaStory.Model
         }
 
         // 리스트형태로 요금제 정보를 반환하는 메소드
-        public List<SubscriptionTable> GetSubscriptions()
+        public static List<SubscriptionTable> GetSubscriptions()
         {
             List<SubscriptionTable> subscriptions = new List<SubscriptionTable>();
 
@@ -87,7 +87,7 @@ namespace SeaStory.Model
             return subscriptions;
         }
         //리스트 형태로 주문정보를 반환하는 메소드
-        public List<OrderTable> GetOrders()
+        public static List<OrderTable> GetOrders()
         {
             List<OrderTable> orders = new List<OrderTable>();
 
@@ -123,7 +123,7 @@ namespace SeaStory.Model
         }
 
         // 리스트 형태로 자리정보를 반환하는 메소드
-        public List<Seat> GetSeats()
+        public static List<Seat> GetSeats()
         {
             List<Seat> seats = new List<Seat>();
 

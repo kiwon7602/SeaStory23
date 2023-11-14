@@ -107,7 +107,7 @@ namespace SeaStory.Model
         }
 
         //비회원 카드정보를 입력하면 모두 반환한다.
-        public NonMember GetNonMembers(string CardNumber)
+        public static NonMember GetNonMembers(string CardNumber)
         {
             NonMember nonMembers = null;
 
@@ -121,9 +121,9 @@ namespace SeaStory.Model
                 {
                     nonMembers = new NonMember();
 
-                    nonMember.CardNumber = reader["CardNumber"].ToString();
-                    nonMember.RemainingHours = Convert.ToInt32(reader["RemainingHours"]);
-                    nonMember.IsActive = Convert.ToBoolean(reader["IsActive"]);
+                    nonMembers.CardNumber = reader["CardNumber"].ToString();
+                    nonMembers.RemainingHours = Convert.ToInt32(reader["RemainingHours"]);
+                    nonMembers.IsActive = Convert.ToBoolean(reader["IsActive"]);
                 }
             }
 
@@ -140,7 +140,7 @@ namespace SeaStory.Model
         }
 
         //회원가입을 위해 유저 ID, PW, 이름, 연락처를 받고 DB에 새로운 회원을 생성하는 함수
-        public void RegisterUser(string userId, string name, string password,  string phoneNumber)
+        public static void RegisterUser(string userId, string name, string password,  string phoneNumber)
         {
             try
             {
@@ -164,7 +164,7 @@ namespace SeaStory.Model
         }
 
         //유저 ID를 넣으면 유저의 잔여 시간을 반환해주는 함수
-        public int GetUesrTime(string userId)
+        public static int GetUesrTime(string userId)
         {
             int remainingHours = -1;
 
@@ -197,7 +197,7 @@ namespace SeaStory.Model
 
         //id에 대하여 소모시간을 5더하고 남은시간을 5 차감하는 메소드
         // 시간 소모관련하여서 사용하시면됨
-        public void SpendTime(string userId)
+        public static void SpendTime(string userId)
         {
             try
             {
@@ -220,7 +220,7 @@ namespace SeaStory.Model
         //비회원 시간 깍기 추가
 
         // 회원ID를 입력받고 비밀번호 이름 연락처를 정보를 수정하는 메소드
-        public void UpdateUser(string userId, string password, string name, string phoneNumber)
+        public static void UpdateUser(string userId, string password, string name, string phoneNumber)
         {
             try
             {
@@ -244,7 +244,7 @@ namespace SeaStory.Model
             }
         }
         //SeatNumber와 UserID를 입력받아 UserID에는 입력받은 유저 ID를, UsageTime에는 회원의 남은시간을 넣는 메소드
-        public void UpdateSeatInfo(int seatNumber, string userId)
+        public static void UpdateSeatInfo(int seatNumber, string userId)
         {
             try
             {
@@ -266,7 +266,7 @@ namespace SeaStory.Model
             }
         }
         //SubscriptionKey를 입력받아 요금제 정보를 수정하는 메소드
-        public void UpdateSubscriptionInfo(string subscriptionKey, int newAmount, int newHours)
+        public static void UpdateSubscriptionInfo(string subscriptionKey, int newAmount, int newHours)
         {
             try
             {
@@ -290,7 +290,7 @@ namespace SeaStory.Model
         }
 
         //SubscriptionKey를 입력받아 요금제 정보를 삭제하는 메소드
-        public void DeleteSubscription(string subscriptionKey)
+        public static void DeleteSubscription(string subscriptionKey)
         {
             try
             {
@@ -311,7 +311,7 @@ namespace SeaStory.Model
             }
         }
         //FoodCode를 입력받아 음식정보들을 수정하는 메소드
-        public void UpdateFoodInfo(string foodCode, string newName, int newPrice, string newImageUrl)
+        public static void UpdateFoodInfo(string foodCode, string newName, int newPrice, string newImageUrl)
         {
             try
             {
@@ -335,7 +335,7 @@ namespace SeaStory.Model
             }
         }
         //FoodCode를 해당 음식을 삭제하는 메소드
-        public void DeleteFood(string foodCode)
+        public static void DeleteFood(string foodCode)
         {
             try
             {
@@ -357,7 +357,7 @@ namespace SeaStory.Model
         }
 
         //Foodcode와 주문시각, 주문한 자리 정보를 받아 저장하는 메소드
-        public void AddOrder(string foodCode, int orderTime, string orderSeat)
+        public static void AddOrder(string foodCode, int orderTime, string orderSeat)
         {
             try
             {
@@ -380,7 +380,7 @@ namespace SeaStory.Model
             }
         }
         //Foodcode와 주문자리 정보를 받아 삭제하는 메소드
-        public void DeleteOrder(string orderSeat)
+        public static void DeleteOrder(string orderSeat)
         {
             try
             {
