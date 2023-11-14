@@ -85,7 +85,7 @@ namespace SeaStory
                         //자리 선택 폼으로 이동
                         user_seat user_Seat = new user_seat(textBox1.Text, 0);
                         user_Seat.Show();
-                        this.Close();
+                        // this.Close();
                     }
                 }
                 //로그인 실패
