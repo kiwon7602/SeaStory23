@@ -56,9 +56,9 @@ namespace SeaStory
             // 
             // listView1
             // 
-            listView1.Location = new System.Drawing.Point(254, 79);
+            listView1.Location = new System.Drawing.Point(120, 79);
             listView1.Name = "listView1";
-            listView1.Size = new System.Drawing.Size(151, 121);
+            listView1.Size = new System.Drawing.Size(582, 221);
             listView1.TabIndex = 2;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
