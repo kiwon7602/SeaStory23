@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\AddFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\DeleteFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\ManageFoodChildAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\ManageFoodChildUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\ManageFoodParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\MenuItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\MenuItemWithCheckboxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\admin_inter_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\TimeManagement\AddTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\TimeManagement\DeleteTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+
+    <Compile Update="UI\tts\tts_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\UserSeat.cs">
+
+    <Compile Update="UI\TimeManagement\ManageTimeAdmin.cs">
+
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\TimeManagement\TimeTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface_food.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface_pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_interface_rank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\user_seat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
