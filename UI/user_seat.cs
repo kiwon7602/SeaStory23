@@ -48,6 +48,12 @@ namespace SeaStory.UI
             //잔여석 사용중 좌석 표시
             //List<Seat> seats = Model.DatabaseNonAut.GetSeats();
 
+            //버튼에 대한 정보 초기화 부분
+            //DB에서 리스트 형태로 좌석 정보 받음
+            //1. 빈자리인 경우 - 버튼 텍스트에 좌석 이름만 받음
+            //2. 사용중 좌석이면서 사용 시간이 null인 경우 - 버튼 텍스트에 좌석 이름 \r\n 사용자명 , 버튼 상태 enable -false
+            //3. 사용중 좌석이면서 사용 시간이 있는 경우 - 버튼 텍스트에 좌석 이름  \r\n 사용자명  \r\n 잔여 시간 , 버튼 상태 enable -false
+
 
         }
 
