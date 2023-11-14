@@ -29,6 +29,9 @@
     <Compile Update="UI\seat_interface.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI\tts\tts_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ui\UserSeat.cs">
       <SubType>Form</SubType>
     </Compile>
