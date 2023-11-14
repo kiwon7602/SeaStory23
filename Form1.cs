@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeaStory.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,11 +19,28 @@ namespace SeaStory
 
         public Form1()
         {
-            User a = new User();
-            int v = Model.DatabaseAut.UserCheck("hello","world");
-
+            DatabaseAut database = new DatabaseAut();
+            DatabaseNonAut databaseNonAut = new DatabaseNonAut();
             InitializeComponent();
         }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // 어스부분에서 체크할때
+            int v = Model.DatabaseAut.UserCheck("admin", "1234");
+            label1.Text = v.ToString();
+            // 리스트 받아쓸떄
+            List<Food> foods = DatabaseNonAut.GetFoods();
+        }
     }
 }
