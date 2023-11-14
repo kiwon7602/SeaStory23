@@ -121,9 +121,9 @@ namespace SeaStory.Model
                 {
                     nonMembers = new NonMember();
 
-                    nonMember.CardNumber = reader["CardNumber"].ToString();
-                    nonMember.RemainingHours = Convert.ToInt32(reader["RemainingHours"]);
-                    nonMember.IsActive = Convert.ToBoolean(reader["IsActive"]);
+                    nonMembers.CardNumber = reader["CardNumber"].ToString();
+                    nonMembers.RemainingHours = Convert.ToInt32(reader["RemainingHours"]);
+                    nonMembers.IsActive = Convert.ToBoolean(reader["IsActive"]);
                 }
             }
 
