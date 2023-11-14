@@ -18,9 +18,10 @@ namespace SeaStory
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //½ÃÀÛÁ¡°ú µ¿½Ã¿¡ Æû »ı¼ºÀÌ ¾Æ´Ñ
-            //Æû »ı¼º ÈÄ ½ÃÀÛÁ¡À¸·ÎÇÏ¸é ÆûÁ¶ÀÛÀÌ À¯¿¬ÇÏ°Ô µÊ
-            //ex)Æû¿¡¼­ Æû ÀÌµ¿°£¿¡ ºÎ¸ğ ÆûÀ» Áö¿ì°í ÀÚ½ÄÆû¸¸ ³²±â·Á´Â °æ¿ì(·Î±×ÀÎ->ÀÚ¸®¼±ÅÃ)
+
+            //ì‹œì‘ì ê³¼ ë™ì‹œì— í¼ ìƒì„±ì´ ì•„ë‹Œ
+            //í¼ ìƒì„± í›„ ì‹œì‘ì ìœ¼ë¡œí•˜ë©´ í¼ì¡°ì‘ì´ ìœ ì—°í•˜ê²Œ ë¨
+            //ex)í¼ì—ì„œ í¼ ì´ë™ê°„ì— ë¶€ëª¨ í¼ì„ ì§€ìš°ê³  ìì‹í¼ë§Œ ë‚¨ê¸°ë ¤ëŠ” ê²½ìš°(ë¡œê·¸ì¸->ìë¦¬ì„ íƒ)
             //(new login()).Show();
             Application.Run(new login());
         }
