@@ -1,6 +1,6 @@
-﻿namespace SeaStory.manage_menu_branch
+﻿namespace SeaStory.UI.AdminFoodManagement
 {
-    partial class ManageFood
+    partial class ManageFoodParent
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             title = new System.Windows.Forms.Label();
-            buttonAddFood = new System.Windows.Forms.Button();
-            buttonDeleteFood = new System.Windows.Forms.Button();
             flowLayoutPanelMenuItems = new System.Windows.Forms.FlowLayoutPanel();
             SuspendLayout();
             // 
@@ -43,26 +41,6 @@
             title.TabIndex = 0;
             title.Text = "음식 목록";
             // 
-            // buttonAddFood
-            // 
-            buttonAddFood.Location = new System.Drawing.Point(675, 99);
-            buttonAddFood.Name = "buttonAddFood";
-            buttonAddFood.Size = new System.Drawing.Size(75, 23);
-            buttonAddFood.TabIndex = 1;
-            buttonAddFood.Text = "음식 추가";
-            buttonAddFood.UseVisualStyleBackColor = true;
-            buttonAddFood.Click += buttonAddFood_Click;
-            // 
-            // buttonDeleteFood
-            // 
-            buttonDeleteFood.Location = new System.Drawing.Point(675, 186);
-            buttonDeleteFood.Name = "buttonDeleteFood";
-            buttonDeleteFood.Size = new System.Drawing.Size(75, 23);
-            buttonDeleteFood.TabIndex = 2;
-            buttonDeleteFood.Text = "음식 삭제";
-            buttonDeleteFood.UseVisualStyleBackColor = true;
-            buttonDeleteFood.Click += buttonDeleteFood_Click;
-            // 
             // flowLayoutPanelMenuItems
             // 
             flowLayoutPanelMenuItems.AutoScroll = true;
@@ -71,16 +49,14 @@
             flowLayoutPanelMenuItems.Size = new System.Drawing.Size(601, 334);
             flowLayoutPanelMenuItems.TabIndex = 3;
             // 
-            // ManageFood
+            // ManageFoodParent
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
             Controls.Add(flowLayoutPanelMenuItems);
-            Controls.Add(buttonDeleteFood);
-            Controls.Add(buttonAddFood);
             Controls.Add(title);
-            Name = "ManageFood";
+            Name = "ManageFoodParent";
             Text = "ManageFood";
             ResumeLayout(false);
             PerformLayout();
@@ -89,8 +65,6 @@
         #endregion
 
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.Button buttonAddFood;
-        private System.Windows.Forms.Button buttonDeleteFood;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMenuItems;
+        protected System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMenuItems;
     }
 }

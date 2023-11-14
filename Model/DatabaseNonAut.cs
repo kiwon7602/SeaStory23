@@ -8,46 +8,10 @@ namespace SeaStory.Model
 {
   
 
-     class DatabaseNonAut
+      class DatabaseNonAut
     {
         private static string connStr = "server=webp.flykorea.kr;user=story;database=storyDB;port=13306;password=sea@#21;";
-        MySqlConnection conn = new MySqlConnection(connStr);
-
-        //리스트 형태로 비회원 정보를 반환하는 메소드
-        public List<NonMember> GetNonMembers()
-        {
-            List<NonMember> nonMembers = new List<NonMember>();
-
-            try
-            {
-                conn.Open();
-                string sql = "SELECT * FROM NonMember";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-
-                using (MySqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        NonMember nonMember = new NonMember();
-                        nonMember.CardNumber = reader["CardNumber"].ToString();
-                        nonMember.RemainingHours = Convert.ToInt32(reader["RemainingHours"]);
-                        nonMember.IsActive = Convert.ToBoolean(reader["IsActive"]);
-
-                        nonMembers.Add(nonMember);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-            return nonMembers;
-        }
+        static MySqlConnection conn = new MySqlConnection(connStr);
 
         //리스트형태로 음식정보를 반환하는 메소드
         public List<Food> GetFoods()
@@ -193,6 +157,6 @@ namespace SeaStory.Model
 
             return seats;
         }
-    }
 
+    }
 }

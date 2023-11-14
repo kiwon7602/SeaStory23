@@ -1,6 +1,6 @@
 ﻿namespace SeaStory.ui
 {
-    partial class user_interface_pay
+    partial class UserInterFacePayment
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user_interface_pay));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserInterFacePayment));
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
+            labelPrice = new System.Windows.Forms.Label();
             SuspendLayout();
             // 
             // button1
@@ -64,17 +65,28 @@
             button3.TabIndex = 2;
             button3.UseVisualStyleBackColor = true;
             // 
+            // labelPrice
+            // 
+            labelPrice.AutoSize = true;
+            labelPrice.Location = new System.Drawing.Point(76, 42);
+            labelPrice.Name = "labelPrice";
+            labelPrice.Size = new System.Drawing.Size(33, 15);
+            labelPrice.TabIndex = 3;
+            labelPrice.Text = "Price";
+            // 
             // user_interface_pay
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(labelPrice);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "user_interface_pay";
             Text = "user_interface_pay";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label labelPrice;
     }
 }

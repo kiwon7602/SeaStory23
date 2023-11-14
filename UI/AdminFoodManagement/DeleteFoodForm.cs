@@ -1,11 +1,12 @@
 ﻿using MySqlX.XDevAPI;
-using SeaStory.manage_menu_branch;
+using SeaStory.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,20 +16,24 @@ namespace SeaStory.UI.AdminFoodManagement
 {
     public partial class DeleteFoodForm : Form
     {
+        private DatabaseNonAut db = new DatabaseNonAut();
+
         // Dictionary to keep track of menu items and their respective CheckBoxes.
-        private Dictionary<MenuItemControl, CheckBox> itemsToDelete = new Dictionary<MenuItemControl, CheckBox>();
+        private List<MenuItemControl> itemsToDelete = new List<MenuItemControl>();
 
         public DeleteFoodForm()
         {
             InitializeComponent();
-            PopulateWithMenuItems();
+            PopulateWithMenuItemsAsync().ConfigureAwait(false);
         }
 
-        public void PopulateWithMenuItems()
+        public async Task PopulateWithMenuItemsAsync()
         {
             // get items from database
+            var foodItemList = db.GetFoods();
 
-            // test : use fake data
+
+            /*
             // test : create fake data
             var foodItemList = new List<(Image Image, string Name, decimal Price)>
             {
@@ -38,41 +43,16 @@ namespace SeaStory.UI.AdminFoodManagement
                 (Image.FromFile("../../../assets/pasta.jpg"), "Pasta", 7.99m),
                 (Image.FromFile("../../../assets/salad.jpg"), "Salad", 4.99m)
             };
+            */
 
-            foreach (var (Image, Name, Price) in foodItemList)
+            foreach (var foodItem in foodItemList)
             {
-                var menuItemControl = new MenuItemControl(Image, Name, Price.ToString("C"));
-                var checkBox = new CheckBox
-                {
-                    AutoSize = true
-                };
+                Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
+                var menuItemControl = new MenuItemWithCheckboxControl(foodImage, foodItem.FoodName, foodItem.FoodPrice);
 
-                // Create a container panel for the MenuItemControl and the CheckBox
-                var panel = new Panel
-                {
-                    Width = flowLayoutPanelMenuItems.Width / 2 - 10, // Adjust for padding/margins
-                    Height = menuItemControl.Height,
-                    Padding = new Padding(4),
-                    Margin = new Padding(0, 0, 4, 4)
-                };
+                flowLayoutPanelMenuItems.Controls.Add(menuItemControl);
 
-                // Use a FlowLayoutPanel for horizontal layout within the panel
-                var itemLayout = new FlowLayoutPanel
-                {
-                    Dock = DockStyle.Fill,
-                    FlowDirection = FlowDirection.LeftToRight
-                };
-
-                itemLayout.Controls.Add(checkBox); // Add the CheckBox first, so it appears on the left
-                itemLayout.Controls.Add(menuItemControl); // Add the MenuItemControl next
-
-                panel.Controls.Add(itemLayout); // Add the FlowLayoutPanel to the container panel
-
-                // Add the container panel to the main FlowLayoutPanel
-                flowLayoutPanelMenuItems.Controls.Add(panel);
-
-                // Keep track of the MenuItemControl and its associated CheckBox
-                itemsToDelete.Add(menuItemControl, checkBox);
+                itemsToDelete.Add(menuItemControl);
             }
 
         }
@@ -86,29 +66,21 @@ namespace SeaStory.UI.AdminFoodManagement
         private void buttonDeleteCheckedFood_Click(object sender, EventArgs e)
         {
             // This should find all the checked items in the flowpanel and delete all of them from the database
-            var itemsToDeleteList = itemsToDelete.Where(kvp => kvp.Value.Checked).ToList(); // We call ToList() here to avoid collection modification issues during enumeration.
-            foreach (var kvp in itemsToDeleteList)
-            {
-                var menuItemControl = kvp.Key;
-                var checkBox = kvp.Value;
+            var itemsToDeleteList = itemsToDelete.OfType<MenuItemWithCheckboxControl>()
+                                                 .Where(control => control.IsChecked())
+                                                 .ToList(); // We call ToList() here to avoid collection modification issues during enumeration.
 
+            foreach (var menuItemControl in itemsToDeleteList)
+            {
                 // Implement your database deletion logic here.
                 DeleteFoodItemFromDatabase(menuItemControl);
 
-                // Get the parent container panel of the CheckBox, which is the FlowLayoutPanel
-                var itemLayoutPanel = checkBox.Parent as FlowLayoutPanel;
-                // The parent of the itemLayoutPanel is the container Panel which we want to remove
-                var containerPanel = itemLayoutPanel?.Parent as Panel;
+                // Remove the menuItemControl from the flowLayoutPanelMenuItems
+                flowLayoutPanelMenuItems.Controls.Remove(menuItemControl);
+                // Dispose the menuItemControl to free resources
+                menuItemControl.Dispose();
 
-                if (containerPanel != null)
-                {
-                    // Remove the container Panel from the flowLayoutPanelMenuItems
-                    flowLayoutPanelMenuItems.Controls.Remove(containerPanel);
-                    // Dispose the container panel to free resources
-                    containerPanel.Dispose();
-                }
-
-                // Finally, remove the entry from the dictionary
+                // Finally, remove the entry from the itemsToDelete list
                 itemsToDelete.Remove(menuItemControl);
             }
         }

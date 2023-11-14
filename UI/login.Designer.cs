@@ -38,17 +38,16 @@ namespace SeaStory
             label2 = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
             imageList1 = new System.Windows.Forms.ImageList(components);
-            pictureBox1 = new System.Windows.Forms.PictureBox();
             button2 = new System.Windows.Forms.Button();
-            button3 = new System.Windows.Forms.Button();
             textBox3 = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            register = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // radioButton1
             // 
             radioButton1.AutoSize = true;
+            radioButton1.Checked = true;
             radioButton1.Location = new System.Drawing.Point(46, 54);
             radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             radioButton1.Name = "radioButton1";
@@ -57,6 +56,7 @@ namespace SeaStory
             radioButton1.TabStop = true;
             radioButton1.Text = "회원 로그인";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButton2
             // 
@@ -66,9 +66,9 @@ namespace SeaStory
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new System.Drawing.Size(101, 19);
             radioButton2.TabIndex = 1;
-            radioButton2.TabStop = true;
             radioButton2.Text = "비회원 로그인";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // label1
             // 
@@ -117,6 +117,7 @@ namespace SeaStory
             button1.TabIndex = 6;
             button1.Text = "로그인";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // imageList1
             // 
@@ -124,34 +125,15 @@ namespace SeaStory
             imageList1.ImageSize = new System.Drawing.Size(16, 16);
             imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new System.Drawing.Point(57, 81);
-            pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(100, 62);
-            pictureBox1.TabIndex = 12;
-            pictureBox1.TabStop = false;
-            // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(651, 15);
+            button2.Location = new System.Drawing.Point(709, 13);
             button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(61, 58);
+            button2.Size = new System.Drawing.Size(79, 58);
             button2.TabIndex = 8;
             button2.Text = "잔돈반환";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new System.Drawing.Point(727, 15);
-            button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(61, 58);
-            button3.TabIndex = 9;
-            button3.Text = "메인화면";
-            button3.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
@@ -160,7 +142,6 @@ namespace SeaStory
             textBox3.Name = "textBox3";
             textBox3.Size = new System.Drawing.Size(288, 23);
             textBox3.TabIndex = 10;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label3
             // 
@@ -172,16 +153,26 @@ namespace SeaStory
             label3.Text = "코드 입력";
             label3.Visible = false;
             // 
+            // register
+            // 
+            register.Location = new System.Drawing.Point(612, 13);
+            register.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            register.Name = "register";
+            register.Size = new System.Drawing.Size(79, 58);
+            register.TabIndex = 12;
+            register.Text = "회원가입";
+            register.UseVisualStyleBackColor = true;
+            register.Click += register_Click;
+            // 
             // login
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 562);
+            Controls.Add(register);
             Controls.Add(label3);
             Controls.Add(textBox3);
-            Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(label2);
@@ -192,8 +183,7 @@ namespace SeaStory
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "login";
             Text = "login";
-            Load += login_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,10 +198,9 @@ namespace SeaStory
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button register;
     }
 }
