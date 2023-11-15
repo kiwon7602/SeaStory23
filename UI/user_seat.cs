@@ -11,7 +11,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static SeaStory.Model.DataCalss;
 using User = SeaStory.Model.DataCalss.User;
-using static SeaStory.Model.DatabaseNonAut;
+using SeaStory.Model;
 
 namespace SeaStory.UI
 {
@@ -45,8 +45,27 @@ namespace SeaStory.UI
                 label3.Text = ID;
             }
 
+            //리스트 형태로 좌석 정보 받아오기
+            List<Seat> seats = DatabaseNonAut.GetSeats();
+
             //잔여석 사용중 좌석 표시
-            //List<Seat> seats = Model.DatabaseNonAut.GetSeats();
+            
+            //사용석 갯수
+            int use_seats = 0;
+            
+            //사용석 갯수 구하는 함수
+            foreach (Seat seat in seats)
+            {
+                if (!string.IsNullOrEmpty(seat.UserID)) use_seats++;
+            }
+            //잔여석 갯수
+            int seatsCount = seats.Count - use_seats;
+            //잔여석
+            label1.Text = seatsCount.ToString();
+            //사용석
+            label2.Text = use_seats.ToString();
+            
+
 
             //버튼에 대한 정보 초기화 부분
             //DB에서 리스트 형태로 좌석 정보 받음
