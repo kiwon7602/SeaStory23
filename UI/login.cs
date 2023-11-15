@@ -85,7 +85,7 @@ namespace SeaStory
                         //자리 선택 폼으로 이동
                         user_seat user_Seat = new user_seat(textBox1.Text, 0);
                         user_Seat.Show();
-                        // this.Close();
+                        this.Close();
                     }
                 }
                 //로그인 실패
@@ -97,7 +97,7 @@ namespace SeaStory
             //비회원 로그인
             if (radioButton2.Checked)
             {
-                user_seat user_Seat = new user_seat(textBox3.Text,1);
+                user_seat user_Seat = new user_seat(textBox3.Text, 1);
                 user_Seat.Show();
                 this.Close();
 

@@ -42,6 +42,7 @@ namespace SeaStory
             textBox3 = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
             register = new System.Windows.Forms.Button();
+            appCloseButton1 = new UI.AppCloseButton();
             SuspendLayout();
             // 
             // radioButton1
@@ -164,11 +165,20 @@ namespace SeaStory
             register.UseVisualStyleBackColor = true;
             register.Click += register_Click;
             // 
+            // appCloseButton1
+            // 
+            appCloseButton1.Location = new System.Drawing.Point(637, 491);
+            appCloseButton1.Name = "appCloseButton1";
+            appCloseButton1.Size = new System.Drawing.Size(111, 29);
+            appCloseButton1.TabIndex = 13;
+            // 
             // login
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 562);
+            ControlBox = false;
+            Controls.Add(appCloseButton1);
             Controls.Add(register);
             Controls.Add(label3);
             Controls.Add(textBox3);
@@ -183,7 +193,6 @@ namespace SeaStory
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "login";
             Text = "login";
-            
             ResumeLayout(false);
             PerformLayout();
         }
@@ -202,5 +211,6 @@ namespace SeaStory
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button register;
+        private UI.AppCloseButton appCloseButton1;
     }
 }

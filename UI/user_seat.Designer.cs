@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new System.Windows.Forms.Panel();
+            button1 = new System.Windows.Forms.Button();
             seat_opend = new System.Windows.Forms.Label();
             seat_used = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -36,7 +37,7 @@
             Back_Button = new System.Windows.Forms.Button();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
-            button1 = new System.Windows.Forms.Button();
+            appCloseButton1 = new AppCloseButton();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,6 +48,16 @@
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(499, 285);
             panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new System.Drawing.Point(15, 14);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(61, 54);
+            button1.TabIndex = 0;
+            button1.Text = "01";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // seat_opend
             // 
@@ -113,21 +124,20 @@
             label4.TabIndex = 7;
             label4.Text = "님 환영합니다";
             // 
-            // button1
+            // appCloseButton1
             // 
-            button1.Location = new System.Drawing.Point(15, 14);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(61, 54);
-            button1.TabIndex = 0;
-            button1.Text = "01";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            appCloseButton1.Location = new System.Drawing.Point(46, 399);
+            appCloseButton1.Name = "appCloseButton1";
+            appCloseButton1.Size = new System.Drawing.Size(111, 29);
+            appCloseButton1.TabIndex = 8;
             // 
             // user_seat
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            ControlBox = false;
+            Controls.Add(appCloseButton1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(Back_Button);
@@ -154,5 +164,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private AppCloseButton appCloseButton1;
     }
 }

@@ -30,7 +30,7 @@ namespace SeaStory.UI.AdminFoodManagement
         public async Task PopulateWithMenuItemsAsync()
         {
             // get items from database
-            var foodItemList = db.GetFoods();
+            var foodItemList = DatabaseNonAut.GetFoods();
 
 
             /*

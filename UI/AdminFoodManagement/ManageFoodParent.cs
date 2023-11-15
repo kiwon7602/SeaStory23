@@ -33,7 +33,7 @@ namespace SeaStory.UI.AdminFoodManagement
             flowLayoutPanelMenuItems.Controls.Clear();
 
             // get menu from database here
-            var foodItemList = db.GetFoods();
+            var foodItemList = DatabaseNonAut.GetFoods();
 
 
             // test : create fake data

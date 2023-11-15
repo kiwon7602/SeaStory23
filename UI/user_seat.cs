@@ -24,7 +24,7 @@ namespace SeaStory.UI
         private int userType;
         private string selectedSeat;
 
-        public user_seat(string ID,int user_type)
+        public user_seat(string ID, int user_type)
         {
             InitializeComponent();
             userID = ID;
@@ -75,7 +75,7 @@ namespace SeaStory.UI
             string seat = "01";
             user_interface_main user_Interface_main = new user_interface_main(userID, userType, seat);
             user_Interface_main.Show();
-            this.Close ();
+            this.Close();
         }
     }
 }

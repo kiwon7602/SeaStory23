@@ -82,7 +82,7 @@ namespace SeaStory.UI.TimeManagement
             dataGridViewTimeTable.Rows.Clear();
 
             // Get new data from database
-            var subscriptions = db.GetSubscriptions();
+            var subscriptions = DatabaseNonAut.GetSubscriptions();
 
             // Add new rows with the fresh data
             foreach (var subscription in subscriptions)

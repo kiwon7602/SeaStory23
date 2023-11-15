@@ -48,6 +48,7 @@ namespace SeaStory
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
+            appCloseButton1 = new UI.AppCloseButton();
             SuspendLayout();
             // 
             // button1
@@ -235,11 +236,20 @@ namespace SeaStory
             label8.TabIndex = 19;
             label8.Text = "label8";
             // 
+            // appCloseButton1
+            // 
+            appCloseButton1.Location = new System.Drawing.Point(677, 521);
+            appCloseButton1.Name = "appCloseButton1";
+            appCloseButton1.Size = new System.Drawing.Size(111, 29);
+            appCloseButton1.TabIndex = 20;
+            // 
             // user_interface_main
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 562);
+            ControlBox = false;
+            Controls.Add(appCloseButton1);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -286,5 +296,6 @@ namespace SeaStory
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private UI.AppCloseButton appCloseButton1;
     }
 }

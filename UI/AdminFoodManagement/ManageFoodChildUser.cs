@@ -1,4 +1,5 @@
-﻿using SeaStory.ui;
+﻿using SeaStory.Model;
+using SeaStory.ui;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,7 @@ namespace SeaStory.UI.AdminFoodManagement
             flowLayoutPanelMenuItems.Controls.Clear();
 
             // get menu from database 
-            var foodItemList = db.GetFoods();
+            var foodItemList = DatabaseNonAut.GetFoods();
 
             foreach (var foodItem in foodItemList)
             {

@@ -31,20 +31,6 @@
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             panel1 = new System.Windows.Forms.Panel();
-            button3 = new System.Windows.Forms.Button();
-            button4 = new System.Windows.Forms.Button();
-            button5 = new System.Windows.Forms.Button();
-            button6 = new System.Windows.Forms.Button();
-            button7 = new System.Windows.Forms.Button();
-            button8 = new System.Windows.Forms.Button();
-            button9 = new System.Windows.Forms.Button();
-            button10 = new System.Windows.Forms.Button();
-            button11 = new System.Windows.Forms.Button();
-            button12 = new System.Windows.Forms.Button();
-            button13 = new System.Windows.Forms.Button();
-            button14 = new System.Windows.Forms.Button();
-            button15 = new System.Windows.Forms.Button();
-            button16 = new System.Windows.Forms.Button();
             button17 = new System.Windows.Forms.Button();
             button18 = new System.Windows.Forms.Button();
             button19 = new System.Windows.Forms.Button();
@@ -52,9 +38,24 @@
             button21 = new System.Windows.Forms.Button();
             button22 = new System.Windows.Forms.Button();
             button23 = new System.Windows.Forms.Button();
+            button10 = new System.Windows.Forms.Button();
+            button11 = new System.Windows.Forms.Button();
+            button12 = new System.Windows.Forms.Button();
+            button13 = new System.Windows.Forms.Button();
+            button14 = new System.Windows.Forms.Button();
+            button15 = new System.Windows.Forms.Button();
+            button16 = new System.Windows.Forms.Button();
+            button9 = new System.Windows.Forms.Button();
+            button8 = new System.Windows.Forms.Button();
+            button7 = new System.Windows.Forms.Button();
+            button6 = new System.Windows.Forms.Button();
+            button5 = new System.Windows.Forms.Button();
+            button4 = new System.Windows.Forms.Button();
+            button3 = new System.Windows.Forms.Button();
             button24 = new System.Windows.Forms.Button();
             button25 = new System.Windows.Forms.Button();
             colorDialog1 = new System.Windows.Forms.ColorDialog();
+            appCloseButton1 = new UI.AppCloseButton();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -103,132 +104,6 @@
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(517, 279);
             panel1.TabIndex = 2;
-            // 
-            // button3
-            // 
-            button3.Location = new System.Drawing.Point(12, 18);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(62, 52);
-            button3.TabIndex = 3;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new System.Drawing.Point(80, 18);
-            button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(62, 52);
-            button4.TabIndex = 4;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Location = new System.Drawing.Point(148, 18);
-            button5.Name = "button5";
-            button5.Size = new System.Drawing.Size(62, 52);
-            button5.TabIndex = 5;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.Location = new System.Drawing.Point(216, 18);
-            button6.Name = "button6";
-            button6.Size = new System.Drawing.Size(62, 52);
-            button6.TabIndex = 6;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Location = new System.Drawing.Point(284, 18);
-            button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(62, 52);
-            button7.TabIndex = 7;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.Location = new System.Drawing.Point(352, 18);
-            button8.Name = "button8";
-            button8.Size = new System.Drawing.Size(62, 52);
-            button8.TabIndex = 8;
-            button8.Text = "button8";
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            button9.Location = new System.Drawing.Point(420, 18);
-            button9.Name = "button9";
-            button9.Size = new System.Drawing.Size(62, 52);
-            button9.TabIndex = 9;
-            button9.Text = "button9";
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            button10.Location = new System.Drawing.Point(420, 76);
-            button10.Name = "button10";
-            button10.Size = new System.Drawing.Size(62, 52);
-            button10.TabIndex = 16;
-            button10.Text = "button10";
-            button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            button11.Location = new System.Drawing.Point(352, 76);
-            button11.Name = "button11";
-            button11.Size = new System.Drawing.Size(62, 52);
-            button11.TabIndex = 15;
-            button11.Text = "button11";
-            button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            button12.Location = new System.Drawing.Point(284, 76);
-            button12.Name = "button12";
-            button12.Size = new System.Drawing.Size(62, 52);
-            button12.TabIndex = 14;
-            button12.Text = "button12";
-            button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            button13.Location = new System.Drawing.Point(216, 76);
-            button13.Name = "button13";
-            button13.Size = new System.Drawing.Size(62, 52);
-            button13.TabIndex = 13;
-            button13.Text = "button13";
-            button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            button14.Location = new System.Drawing.Point(148, 76);
-            button14.Name = "button14";
-            button14.Size = new System.Drawing.Size(62, 52);
-            button14.TabIndex = 12;
-            button14.Text = "button14";
-            button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            button15.Location = new System.Drawing.Point(80, 76);
-            button15.Name = "button15";
-            button15.Size = new System.Drawing.Size(62, 52);
-            button15.TabIndex = 11;
-            button15.Text = "button15";
-            button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            button16.Location = new System.Drawing.Point(12, 76);
-            button16.Name = "button16";
-            button16.Size = new System.Drawing.Size(62, 52);
-            button16.TabIndex = 10;
-            button16.Text = "button16";
-            button16.UseVisualStyleBackColor = true;
             // 
             // button17
             // 
@@ -293,6 +168,132 @@
             button23.Text = "button23";
             button23.UseVisualStyleBackColor = true;
             // 
+            // button10
+            // 
+            button10.Location = new System.Drawing.Point(420, 76);
+            button10.Name = "button10";
+            button10.Size = new System.Drawing.Size(62, 52);
+            button10.TabIndex = 16;
+            button10.Text = "button10";
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            button11.Location = new System.Drawing.Point(352, 76);
+            button11.Name = "button11";
+            button11.Size = new System.Drawing.Size(62, 52);
+            button11.TabIndex = 15;
+            button11.Text = "button11";
+            button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            button12.Location = new System.Drawing.Point(284, 76);
+            button12.Name = "button12";
+            button12.Size = new System.Drawing.Size(62, 52);
+            button12.TabIndex = 14;
+            button12.Text = "button12";
+            button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            button13.Location = new System.Drawing.Point(216, 76);
+            button13.Name = "button13";
+            button13.Size = new System.Drawing.Size(62, 52);
+            button13.TabIndex = 13;
+            button13.Text = "button13";
+            button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            button14.Location = new System.Drawing.Point(148, 76);
+            button14.Name = "button14";
+            button14.Size = new System.Drawing.Size(62, 52);
+            button14.TabIndex = 12;
+            button14.Text = "button14";
+            button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            button15.Location = new System.Drawing.Point(80, 76);
+            button15.Name = "button15";
+            button15.Size = new System.Drawing.Size(62, 52);
+            button15.TabIndex = 11;
+            button15.Text = "button15";
+            button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            button16.Location = new System.Drawing.Point(12, 76);
+            button16.Name = "button16";
+            button16.Size = new System.Drawing.Size(62, 52);
+            button16.TabIndex = 10;
+            button16.Text = "button16";
+            button16.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            button9.Location = new System.Drawing.Point(420, 18);
+            button9.Name = "button9";
+            button9.Size = new System.Drawing.Size(62, 52);
+            button9.TabIndex = 9;
+            button9.Text = "button9";
+            button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            button8.Location = new System.Drawing.Point(352, 18);
+            button8.Name = "button8";
+            button8.Size = new System.Drawing.Size(62, 52);
+            button8.TabIndex = 8;
+            button8.Text = "button8";
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Location = new System.Drawing.Point(284, 18);
+            button7.Name = "button7";
+            button7.Size = new System.Drawing.Size(62, 52);
+            button7.TabIndex = 7;
+            button7.Text = "button7";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Location = new System.Drawing.Point(216, 18);
+            button6.Name = "button6";
+            button6.Size = new System.Drawing.Size(62, 52);
+            button6.TabIndex = 6;
+            button6.Text = "button6";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new System.Drawing.Point(148, 18);
+            button5.Name = "button5";
+            button5.Size = new System.Drawing.Size(62, 52);
+            button5.TabIndex = 5;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new System.Drawing.Point(80, 18);
+            button4.Name = "button4";
+            button4.Size = new System.Drawing.Size(62, 52);
+            button4.TabIndex = 4;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new System.Drawing.Point(12, 18);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(62, 52);
+            button3.TabIndex = 3;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // button24
             // 
             button24.Location = new System.Drawing.Point(343, 21);
@@ -311,11 +312,20 @@
             button25.Text = "요금 관리";
             button25.UseVisualStyleBackColor = true;
             // 
+            // appCloseButton1
+            // 
+            appCloseButton1.Location = new System.Drawing.Point(34, 399);
+            appCloseButton1.Name = "appCloseButton1";
+            appCloseButton1.Size = new System.Drawing.Size(111, 29);
+            appCloseButton1.TabIndex = 5;
+            // 
             // admin_inter_main
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            ControlBox = false;
+            Controls.Add(appCloseButton1);
             Controls.Add(button25);
             Controls.Add(button24);
             Controls.Add(panel1);
@@ -356,5 +366,6 @@
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private UI.AppCloseButton appCloseButton1;
     }
 }
