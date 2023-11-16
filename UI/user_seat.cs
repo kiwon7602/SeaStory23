@@ -91,6 +91,8 @@ namespace SeaStory.UI
             //1.해당 좌석에 ID기반으로 DB에 사용 유저와 적립 시간을 넣는다
             //2.유저 ID, 회원 비회원 토글 ,좌석의 번호를 main폼으로 넘긴다
             //임의로 seat = "01" 로 생성해서 테스트
+
+            //좌석 번호와 ID를 넘겼을 때 DB에서 좌석 테이블에 해당 좌석 번호에 사용자 이름과 남은 시간이 등록되도록 하는 함수
             string seat = "01";
             user_interface_main user_Interface_main = new user_interface_main(userID, userType, seat);
             user_Interface_main.Show();

@@ -242,6 +242,7 @@ namespace SeaStory
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
             appCloseButton1.TabIndex = 20;
+            appCloseButton1.Load += appCloseButton1_Load;
             // 
             // user_interface_main
             // 

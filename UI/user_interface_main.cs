@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +11,25 @@ using System.Windows.Forms;
 using static SeaStory.Model.DataCalss;
 using User = SeaStory.Model.DataCalss.User;
 
+// 시간이 변경되는 동작이 있는 경우 좌석 테이블의 좌석코드와 업데이트 이후의 시간을 넣어 업데이트 해주는 함수 필요
+
 namespace SeaStory
 {
     public partial class user_interface_main : Form
     {
+        private Timer timer;
+        private string userID; // userID 추가
+        private int userType; // userType 추가
+        private string seatNumber; // seat_number 추가
+
         public user_interface_main(string ID, int user_type, string seat_number)
         {
             InitializeComponent();
+            //타이머 작동 함수
+            InitializeTimer();
+            userID = ID;
+            userType = user_type;
+            seatNumber = seat_number;
             //회원 로그인
             if (user_type == 0)
             {
@@ -32,6 +45,7 @@ namespace SeaStory
             {
                 //비회원 로그인
             }
+            //자리 번호
             label8.Text = seat_number;
 
             //타이머관련 함수 설계
@@ -50,6 +64,35 @@ namespace SeaStory
             //5. 이벤트는 결제 폼열기 (유저 ID(카드번호), 선택한 요금제 코드)
 
         }
+        //타이머 함수
+        private void InitializeTimer()
+        {
+            // 타이머 생성
+            timer = new Timer();
+
+            // 타이머 간격 설정 (5초 = 5000밀리초)
+            timer.Interval = 5000;
+
+            // 타이머 이벤트 핸들러 등록
+            timer.Tick += Timer_Tick;
+
+            // 타이머 시작
+            timer.Start();
+        }
+
+        //타이머 이벤트 핸들러
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // 시간 업데이트 메서드 호출
+            UpdateTime(userID, userType, seatNumber);
+        }
+        //시간 업데이트 함수
+        private void UpdateTime(string userID, int userType, string seatNumber)
+        {
+            //시간 변경 함수 들어가야됨
+            //label6 잔여시간
+            label6.Text = Model.DatabaseAut.GetUesrTime(userID).ToString();
+        }
 
         //요리 주문 버튼 클릭 시
         private void button10_Click(object sender, EventArgs e)
@@ -63,6 +106,26 @@ namespace SeaStory
             login login = new login();
             login.Show();
             this.Close();
+        }
+
+
+        // 폼이 닫힐 때 타이머 정리
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (timer != null)
+            {
+                timer.Stop();
+                timer.Dispose();
+            }
+        }
+
+        //프로그램 종료 추가 기능
+        private void appCloseButton1_Load(object sender, EventArgs e)
+        {
+            //자리 테이블 자리코드 받고 네임 잔여시간 null
+            //요리 주문 목록테이블에도 자리 코드 맞는거 다 지워줘야됨
         }
     }
 }
