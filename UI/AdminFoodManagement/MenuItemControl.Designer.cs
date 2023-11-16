@@ -39,7 +39,7 @@
             labelPrice.AutoSize = true;
             labelPrice.Location = new System.Drawing.Point(52, 133);
             labelPrice.Name = "labelPrice";
-            labelPrice.Size = new System.Drawing.Size(49, 15);
+            labelPrice.Size = new System.Drawing.Size(54, 15);
             labelPrice.TabIndex = 0;
             labelPrice.Text = "10000원";
             // 
@@ -48,7 +48,7 @@
             labelFoodName.AutoSize = true;
             labelFoodName.Location = new System.Drawing.Point(43, 106);
             labelFoodName.Name = "labelFoodName";
-            labelFoodName.Size = new System.Drawing.Size(58, 15);
+            labelFoodName.Size = new System.Drawing.Size(59, 15);
             labelFoodName.TabIndex = 1;
             labelFoodName.Text = "음식 이름";
             // 
@@ -70,6 +70,7 @@
             Controls.Add(labelPrice);
             Name = "MenuItemControl";
             Size = new System.Drawing.Size(145, 158);
+            Load += MenuItemControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxFood).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -30,11 +30,16 @@ namespace SeaStory.UI.AdminFoodManagement
 
             this.FoodImage = foodImage;
             this.FoodName = foodName;
-            this.FoodPrice = foodPrice; 
+            this.FoodPrice = foodPrice;
 
             this.pictureBoxFood.Image = foodImage;
             this.labelFoodName.Text = foodName;
             this.labelPrice.Text = FoodPrice.ToString("C", new CultureInfo("ko-KR"));
+        }
+
+        private void MenuItemControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
