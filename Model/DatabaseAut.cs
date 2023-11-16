@@ -202,7 +202,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string updateSql = "UPDATE Member SET UsageHours = UsageHours + 5, RemainingHours = RemainingHours - 5 WHERE ID = @Id";
+                string updateSql = "UPDATE Member SET UsageHours = UsageHours + 1, RemainingHours = RemainingHours - 1 WHERE ID = @Id";
                 MySqlCommand updateCmd = new MySqlCommand(updateSql, conn);
                 updateCmd.Parameters.AddWithValue("@Id", userId);
 

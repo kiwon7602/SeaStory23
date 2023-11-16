@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using SeaStory.UI.AdminFoodManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,15 +36,16 @@ namespace SeaStory
             {
                 //로그인 폼에서 받아온 ID 기반 유저 정보 넣기
                 User user = Model.DatabaseAut.UserData(ID);
-
+                label1.Text = "회원 요금제";
                 //유저 정보 기반 유저명 호출 및 표시
                 label3.Text = user.Name;
                 //남은 시간
-                label6.Text = user.Time;
+                //label6.Text = user.Time;
             }
             if (user_type == 1)
             {
                 //비회원 로그인
+                label1.Text = "비회원 요금제";
             }
             //자리 번호
             label8.Text = seat_number;
@@ -71,7 +73,7 @@ namespace SeaStory
             timer = new Timer();
 
             // 타이머 간격 설정 (5초 = 5000밀리초)
-            timer.Interval = 5000;
+            timer.Interval = 1000;
 
             // 타이머 이벤트 핸들러 등록
             timer.Tick += Timer_Tick;
@@ -90,15 +92,32 @@ namespace SeaStory
         private void UpdateTime(string userID, int userType, string seatNumber)
         {
             //시간 변경 함수 들어가야됨
-            //label6 잔여시간
-            label6.Text = Model.DatabaseAut.GetUesrTime(userID).ToString();
+
+            if (!(Model.DatabaseAut.GetUesrTime(userID) == 0))
+            {
+                Model.DatabaseAut.SpendTime(userID);
+            }
+            // GetUesrTime을 통해 남은 시간을 초 단위로 받아옴
+            int remainingTimeInSeconds = Model.DatabaseAut.GetUesrTime(userID);
+
+            // 남은 시간을 시, 분, 초로 변환
+            int hours = remainingTimeInSeconds / 3600;
+            int minutes = (remainingTimeInSeconds % 3600) / 60;
+            int seconds = remainingTimeInSeconds % 60;
+
+            // 시간을 00:00:00 형태의 문자열로 변환
+            string formattedTime = $"{hours:D2}:{minutes:D2}:{seconds:D2}";
+
+            // label6에 남은 시간 표시
+            label6.Text = formattedTime;
         }
 
         //요리 주문 버튼 클릭 시
         private void button10_Click(object sender, EventArgs e)
         {
             //요리 주문폼으로 showdialog 보내줄 정보는 회원id, 좌석 번호
-
+            ManageFoodChildUser manageFoodChildUser = new ManageFoodChildUser();
+            manageFoodChildUser.ShowDialog();
         }
         //사용 종료 버튼 클릭 시
         private void button11_Click(object sender, EventArgs e)
