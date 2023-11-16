@@ -11,7 +11,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static SeaStory.Model.DataCalss;
 using User = SeaStory.Model.DataCalss.User;
-using static SeaStory.Model.DatabaseNonAut;
+using SeaStory.Model;
 
 namespace SeaStory.UI
 {
@@ -45,8 +45,27 @@ namespace SeaStory.UI
                 label3.Text = ID;
             }
 
+            //리스트 형태로 좌석 정보 받아오기
+            List<Seat> seats = DatabaseNonAut.GetSeats();
+
             //잔여석 사용중 좌석 표시
-            //List<Seat> seats = Model.DatabaseNonAut.GetSeats();
+            
+            //사용석 갯수
+            int use_seats = 0;
+            
+            //사용석 갯수 구하는 함수
+            foreach (Seat seat in seats)
+            {
+                if (!string.IsNullOrEmpty(seat.UserID)) use_seats++;
+            }
+            //잔여석 갯수
+            int seatsCount = seats.Count - use_seats;
+            //잔여석
+            label1.Text = seatsCount.ToString();
+            //사용석
+            label2.Text = use_seats.ToString();
+            
+
 
             //버튼에 대한 정보 초기화 부분
             //DB에서 리스트 형태로 좌석 정보 받음
@@ -72,6 +91,8 @@ namespace SeaStory.UI
             //1.해당 좌석에 ID기반으로 DB에 사용 유저와 적립 시간을 넣는다
             //2.유저 ID, 회원 비회원 토글 ,좌석의 번호를 main폼으로 넘긴다
             //임의로 seat = "01" 로 생성해서 테스트
+
+            //좌석 번호와 ID를 넘겼을 때 DB에서 좌석 테이블에 해당 좌석 번호에 사용자 이름과 남은 시간이 등록되도록 하는 함수
             string seat = "01";
             user_interface_main user_Interface_main = new user_interface_main(userID, userType, seat);
             user_Interface_main.Show();

@@ -97,10 +97,19 @@ namespace SeaStory
             //비회원 로그인
             if (radioButton2.Checked)
             {
-                user_seat user_Seat = new user_seat(textBox3.Text, 1);
-                user_Seat.Show();
-                this.Close();
+                //int login_check = Model.DatabaseAut.UserCheck(textBox3.Text);
+                int login_check = 1;
 
+                if (login_check == 1)
+                {
+                    user_seat user_Seat = new user_seat(textBox3.Text, 1);
+                    user_Seat.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("로그인 정보가 잘못되었습니다!", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
             }
         }
     }

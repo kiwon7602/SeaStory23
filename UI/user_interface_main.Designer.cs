@@ -41,7 +41,6 @@ namespace SeaStory
             button10 = new System.Windows.Forms.Button();
             button11 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
@@ -98,7 +97,7 @@ namespace SeaStory
             button5.Name = "button5";
             button5.Size = new System.Drawing.Size(89, 76);
             button5.TabIndex = 6;
-            button5.Text = "24시간\r\n(24:00)\r\n20,000원";
+            button5.Text = "1\r\n홍길동\r\n00:00:10";
             button5.UseVisualStyleBackColor = true;
             // 
             // button6
@@ -172,15 +171,6 @@ namespace SeaStory
             label1.TabIndex = 12;
             label1.Text = "회원요금";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(153, 49);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(67, 15);
-            label2.TabIndex = 13;
-            label2.Text = "비회원요금";
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -242,6 +232,7 @@ namespace SeaStory
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
             appCloseButton1.TabIndex = 20;
+            appCloseButton1.Load += appCloseButton1_Load;
             // 
             // user_interface_main
             // 
@@ -256,7 +247,6 @@ namespace SeaStory
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button11);
             Controls.Add(button9);
@@ -289,7 +279,6 @@ namespace SeaStory
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

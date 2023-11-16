@@ -56,9 +56,6 @@
     <Compile Update="UI\user_interface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\user_interface_food.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="UI\user_interface_main.cs">
       <SubType>Form</SubType>
     </Compile>
