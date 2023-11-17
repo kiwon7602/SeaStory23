@@ -17,8 +17,10 @@ namespace SeaStory.UI
             InitializeComponent();
         }
         //종료 버튼 눌러졋을 때
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
+            var clientWrapper = await ClientWrapper.Instance;
+            await clientWrapper.CloseAsync();
             Application.Exit();
         }
     }

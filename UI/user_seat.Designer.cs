@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new System.Windows.Forms.Panel();
-            button1 = new System.Windows.Forms.Button();
             seat_opend = new System.Windows.Forms.Label();
             seat_used = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -38,26 +36,8 @@
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             appCloseButton1 = new AppCloseButton();
-            panel1.SuspendLayout();
+            seatPanel1 = new Seats.SeatPanel();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(button1);
-            panel1.Location = new System.Drawing.Point(289, 153);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(499, 285);
-            panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new System.Drawing.Point(15, 14);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(61, 54);
-            button1.TabIndex = 0;
-            button1.Text = "01";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // seat_opend
             // 
@@ -83,7 +63,7 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(46, 108);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(39, 15);
+            label1.Size = new System.Drawing.Size(38, 15);
             label1.TabIndex = 3;
             label1.Text = "label1";
             // 
@@ -92,7 +72,7 @@
             label2.AutoSize = true;
             label2.Location = new System.Drawing.Point(162, 108);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(39, 15);
+            label2.Size = new System.Drawing.Size(38, 15);
             label2.TabIndex = 4;
             label2.Text = "label2";
             // 
@@ -111,7 +91,7 @@
             label3.AutoSize = true;
             label3.Location = new System.Drawing.Point(345, 59);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(39, 15);
+            label3.Size = new System.Drawing.Size(38, 15);
             label3.TabIndex = 6;
             label3.Text = "label3";
             // 
@@ -120,7 +100,7 @@
             label4.AutoSize = true;
             label4.Location = new System.Drawing.Point(441, 59);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(83, 15);
+            label4.Size = new System.Drawing.Size(82, 15);
             label4.TabIndex = 7;
             label4.Text = "님 환영합니다";
             // 
@@ -131,12 +111,20 @@
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
             appCloseButton1.TabIndex = 8;
             // 
+            // seatPanel1
+            // 
+            seatPanel1.Location = new System.Drawing.Point(225, 103);
+            seatPanel1.Name = "seatPanel1";
+            seatPanel1.Size = new System.Drawing.Size(547, 325);
+            seatPanel1.TabIndex = 9;
+            // 
             // user_seat
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
             ControlBox = false;
+            Controls.Add(seatPanel1);
             Controls.Add(appCloseButton1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -145,17 +133,13 @@
             Controls.Add(label1);
             Controls.Add(seat_used);
             Controls.Add(seat_opend);
-            Controls.Add(panel1);
             Name = "user_seat";
             Text = "user_seat";
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label seat_opend;
         private System.Windows.Forms.Label seat_used;
         private System.Windows.Forms.Label label1;
@@ -163,7 +147,7 @@
         private System.Windows.Forms.Button Back_Button;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
         private AppCloseButton appCloseButton1;
+        private Seats.SeatPanel seatPanel1;
     }
 }

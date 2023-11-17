@@ -87,7 +87,7 @@ namespace SeaStory.UI.TimeManagement
             // Add new rows with the fresh data
             foreach (var subscription in subscriptions)
             {
-                string formattedTime = $"{subscription.SubscriptionHours:00}:00";
+                string formattedTime = $"{subscription.SubscriptionHours}";
 
                 // Assuming SubscriptionTable has properties that match the columns you want to display
                 dataGridViewTimeTable.Rows.Add(

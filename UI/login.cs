@@ -78,14 +78,14 @@ namespace SeaStory
                         //관리자 폼 열기
                         admin_inter_main admin_Inter_Main = new admin_inter_main();
                         admin_Inter_Main.Show();
-                        this.Close();
+                        // this.Close();
                     }
                     else
                     {
                         //자리 선택 폼으로 이동
                         user_seat user_Seat = new user_seat(textBox1.Text, 0);
                         user_Seat.Show();
-                        this.Close();
+                        // this.Close();
                     }
                 }
                 //로그인 실패

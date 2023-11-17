@@ -195,6 +195,27 @@ namespace SeaStory.Model
         }
         // 비회원 시간 반환하는함수도 추가 
 
+        public static void SetUserTime(string userId, int time)
+        {
+            try
+            {
+                conn.Open();
+                string sql = "UPDATE Member SET RemainingHours = @time WHERE ID = @Id";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@time", time);
+                cmd.Parameters.AddWithValue("@Id", userId);
+                cmd.ExecuteNonQuery(); // Execute the command
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error updating time: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         //id에 대하여 소모시간을 5더하고 남은시간을 5 차감하는 메소드
         // 시간 소모관련하여서 사용하시면됨
         public static void SpendTime(string userId)

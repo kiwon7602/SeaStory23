@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using SeaStory.Model;
 using SeaStory.UI.AdminFoodManagement;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,8 @@ namespace SeaStory
         private string userID; // userID 추가
         private int userType; // userType 추가
         private string seatNumber; // seat_number 추가
+
+        private int seatNumberInt;
 
         public user_interface_main(string ID, int user_type, string seat_number)
         {
@@ -50,6 +53,10 @@ namespace SeaStory
             //자리 번호
             label8.Text = seat_number;
 
+            timeTable1.SetRowClickEventHandler(dataGridViewTimeTable_CellDoubleClick);
+            InitialConnection(ID);
+
+
             //타이머관련 함수 설계
             //1. 타이머 이벤트 생성 (5초 단위) 아래 내용 전부 넣기
             //2. GetUesrTime를 통해 유저의 잔여 시간 체크
@@ -66,6 +73,72 @@ namespace SeaStory
             //5. 이벤트는 결제 폼열기 (유저 ID(카드번호), 선택한 요금제 코드)
 
         }
+
+        private async void InitialConnection(string ID)
+        {
+            User user = Model.DatabaseAut.UserData(ID);
+            var clientWrapper = await ClientWrapper.Instance;
+
+            int timeAsInt;
+            bool isTimeValid = int.TryParse(user.Time, out timeAsInt);
+
+            bool isSeatNumberValid = int.TryParse(seatNumber, out seatNumberInt);
+
+            if (!isTimeValid || timeAsInt <= 0)
+            {
+                // Time is either not a number, empty, or a negative/zero number
+                await clientWrapper.ReserveUserAsync(ID, seatNumberInt);
+            }
+            else
+            {
+                await clientWrapper.ActivateUserAsync(ID, seatNumberInt);
+            }
+        }
+
+        private async void dataGridViewTimeTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            // Check if the click is on a row, not the column header
+            if (e.RowIndex != -1) // Header row has RowIndex -1
+            {
+                // Cast sender to DataGridView and get the current row
+                var dataGridView = sender as DataGridView;
+                if (dataGridView != null)
+                {
+                    DataGridViewRow row = dataGridView.Rows[e.RowIndex];
+
+                    // Perform the action you need on row click
+                    // For example, you can retrieve the data using the row index and show it
+                    // var subscriptionTime = row.Cells["time"].Value.ToString();
+                    // var subscriptionName = row.Cells["name"].Value.ToString();
+                    // var memberPrice = row.Cells["member_price"].Value.ToString();
+
+                    int subscriptionTime = 0; // Initialize with a default value
+
+                    if (row.Cells["time"].Value != null)
+                    {
+                        // Use int.TryParse for a safe conversion
+                        bool isConverted = int.TryParse(row.Cells["time"].Value.ToString(), out subscriptionTime);
+
+                        if (!isConverted)
+                        {
+                            // Handle the case where the conversion fails
+                            MessageBox.Show("The value in 'time' cell is not a valid integer.");
+                        }
+                    }
+
+                    var clientWrapper = await ClientWrapper.Instance;
+                    await clientWrapper.DeactivateUserAsync(userID, seatNumberInt);
+                    DatabaseAut.SetUserTime(userID, subscriptionTime);
+                    await clientWrapper.ActivateUserAsync(userID, seatNumberInt);
+                    MessageBox.Show("결제 완료, 시간 추가 완료");
+
+                }
+            }
+
+            return;
+        }
+
         //타이머 함수
         private void InitializeTimer()
         {
@@ -100,16 +173,23 @@ namespace SeaStory
             // GetUesrTime을 통해 남은 시간을 초 단위로 받아옴
             int remainingTimeInSeconds = Model.DatabaseAut.GetUesrTime(userID);
 
-            // 남은 시간을 시, 분, 초로 변환
-            int hours = remainingTimeInSeconds / 3600;
-            int minutes = (remainingTimeInSeconds % 3600) / 60;
-            int seconds = remainingTimeInSeconds % 60;
+            if (remainingTimeInSeconds <= 0)
+            {
+                label6.Text = "예약중";
+            }
+            else
+            {
+                // 남은 시간을 시, 분, 초로 변환
+                int hours = remainingTimeInSeconds / 3600;
+                int minutes = (remainingTimeInSeconds % 3600) / 60;
+                int seconds = remainingTimeInSeconds % 60;
 
-            // 시간을 00:00:00 형태의 문자열로 변환
-            string formattedTime = $"{hours:D2}:{minutes:D2}:{seconds:D2}";
+                // 시간을 00:00:00 형태의 문자열로 변환
+                string formattedTime = $"{hours:D2}:{minutes:D2}:{seconds:D2}";
 
-            // label6에 남은 시간 표시
-            label6.Text = formattedTime;
+                // label6에 남은 시간 표시
+                label6.Text = formattedTime;
+            }
         }
 
         //요리 주문 버튼 클릭 시
@@ -129,7 +209,7 @@ namespace SeaStory
 
 
         // 폼이 닫힐 때 타이머 정리
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        protected async override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
 
@@ -138,6 +218,8 @@ namespace SeaStory
                 timer.Stop();
                 timer.Dispose();
             }
+            var clientWrapper = await ClientWrapper.Instance;
+            await clientWrapper.DeactivateUserAsync(userID, seatNumberInt);
         }
 
         //프로그램 종료 추가 기능
