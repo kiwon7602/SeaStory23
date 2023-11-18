@@ -55,6 +55,7 @@
             button2.TabIndex = 1;
             button2.Text = "요리 주문 목록";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button24
             // 

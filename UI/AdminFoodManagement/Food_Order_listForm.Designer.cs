@@ -30,6 +30,8 @@
         {
             label1 = new System.Windows.Forms.Label();
             listView1 = new System.Windows.Forms.ListView();
+            button1 = new System.Windows.Forms.Button();
+            button2 = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // label1
@@ -54,11 +56,33 @@
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = System.Windows.Forms.View.Details;
             // 
+            // button1
+            // 
+            button1.Location = new System.Drawing.Point(676, 196);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(101, 38);
+            button1.TabIndex = 2;
+            button1.Text = "주문 삭제";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new System.Drawing.Point(676, 63);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(101, 39);
+            button2.TabIndex = 3;
+            button2.Text = "새로고침";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Food_Order_listForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(listView1);
             Controls.Add(label1);
             Name = "Food_Order_listForm";
@@ -71,5 +95,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

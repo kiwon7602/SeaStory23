@@ -122,6 +122,39 @@ namespace SeaStory.Model
             return orders;
         }
 
+        // 주문정보를 삭제하는 메소드
+        //푸드 코드, 자리 ,(구분이 안되는 경우 - 같은 자리에서 같음 음식을 2개 이상 구매 한 경우도 고려) 시간 을 받아서
+        //일치하는 내용 삭제
+        public static void DelOrders(string foodCode, string orderSeat)
+        {
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM OrderTable";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        MySqlCommand command = conn.CreateCommand();
+                        command.CommandText = "DELETE FROM OrderTable WHERE (FoodCode=@foodCode AND OrderSeat=@orderSeat)";
+                        command.Parameters.AddWithValue("@foodCode", foodCode);
+                        command.Parameters.AddWithValue("@orderSeat", orderSeat);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         // 리스트 형태로 자리정보를 반환하는 메소드
         public static List<Seat> GetSeats()
         {

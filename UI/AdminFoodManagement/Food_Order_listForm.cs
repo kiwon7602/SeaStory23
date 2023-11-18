@@ -24,7 +24,34 @@ namespace SeaStory.UI.AdminFoodManagement
             listView1.Columns.Add("주문한 요리", 150, HorizontalAlignment.Center);
             listView1.Columns.Add("주문한 시간", 150, HorizontalAlignment.Center);
             listView1.Columns.Add("주문한 자리", 80, HorizontalAlignment.Center);
+            list_Update();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //listview1에서 선택된 주문을 삭제하는 기능
+            if (listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = listView1.SelectedItems[0];
+                string foodCode = selectedItem.SubItems[0].Text;
+                string orderSeat = selectedItem.SubItems[2].Text;
+
+                // DelOrders 메소드 호출
+                DatabaseNonAut.DelOrders(foodCode, orderSeat);
+
+                list_Update();
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //주문 목록을 새로 받아오는 버튼
+            list_Update();
+        }
+
+        private void list_Update()
+        {
             List<OrderTable> orders = DatabaseNonAut.GetOrders();
 
             // listView1에 주문 목록 추가
@@ -37,6 +64,5 @@ namespace SeaStory.UI.AdminFoodManagement
                 listView1.Items.Add(item);
             }
         }
-
     }
 }

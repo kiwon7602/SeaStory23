@@ -58,11 +58,6 @@ namespace SeaStory
         //로그인 버튼 클릭
         private void button1_Click(object sender, EventArgs e)
         {
-
-            Food_Order_listForm food_Order_listForm = new Food_Order_listForm();
-            food_Order_listForm.Show();
-
-            ManageFoodChildUser 
             //회원 로그인
             if (radioButton1.Checked)
             {

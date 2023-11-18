@@ -199,8 +199,8 @@ namespace SeaStory
         //요리 주문 버튼 클릭 시
         private void button10_Click(object sender, EventArgs e)
         {
-            //요리 주문폼으로 showdialog 보내줄 정보는 회원id, 좌석 번호
-            ManageFoodChildUser manageFoodChildUser = new ManageFoodChildUser();
+            //요리 주문폼으로 showdialog 보내줄 정보는 좌석 번호
+            ManageFoodChildUser manageFoodChildUser = new ManageFoodChildUser(seatNumber);
             manageFoodChildUser.ShowDialog();
         }
         //사용 종료 버튼 클릭 시

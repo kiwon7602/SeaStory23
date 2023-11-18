@@ -16,7 +16,7 @@ namespace SeaStory.UI.AdminFoodManagement
 {
     public partial class ManageFoodChildUser : ManageFoodParent
     {
-        public ManageFoodChildUser()
+        public ManageFoodChildUser(string seatNumber)
         {
             InitializeComponent();
         }
