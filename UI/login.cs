@@ -23,8 +23,7 @@ namespace SeaStory
             textBox1.Visible = true;
             label2.Visible = true;
             textBox2.Visible = true;
-            label3.Visible = false;
-            textBox3.Visible = false;
+            
 
         }
 
@@ -43,8 +42,7 @@ namespace SeaStory
             textBox1.Visible = true;
             label2.Visible = true;
             textBox2.Visible = true;
-            label3.Visible = false;
-            textBox3.Visible = false;
+            
         }
         //비회원 라디오 버튼 값 변경 될 때
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -53,8 +51,7 @@ namespace SeaStory
             textBox1.Visible = false;
             label2.Visible = false;
             textBox2.Visible = false;
-            label3.Visible = true;
-            textBox3.Visible = true;
+            
         }
 
         //로그인 버튼 클릭
@@ -94,6 +91,7 @@ namespace SeaStory
                     MessageBox.Show("로그인 정보가 잘못되었습니다!", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
+            /*
             //비회원 로그인
             if (radioButton2.Checked)
             {
@@ -111,6 +109,8 @@ namespace SeaStory
                     MessageBox.Show("로그인 정보가 잘못되었습니다!", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
+            */
+
         }
     }
 }
