@@ -47,7 +47,7 @@ namespace SeaStory.UI.Seats
             }
         }
 
-        public void UpdateSeat(int seatNumber, string userID, string usageTime)
+        public void UpdateSeat(int seatNumber, string userID, string usageTime, bool disableEmtpySeatButton=true)
         {
             // Update properties
             SeatNumber = seatNumber;
@@ -61,10 +61,12 @@ namespace SeaStory.UI.Seats
             if (int.TryParse(usageTime, out int usageTimeSeconds))
             {
                 labelRemainingTime.Text = FormatTime(usageTimeSeconds);
+                buttonSelect.Enabled = !disableEmtpySeatButton;
             }
             else
             {
                 labelRemainingTime.Text = "";
+                buttonSelect.Enabled = disableEmtpySeatButton;
             }
         }
 
