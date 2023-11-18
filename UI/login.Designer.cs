@@ -31,7 +31,6 @@ namespace SeaStory
         {
             components = new System.ComponentModel.Container();
             radioButton1 = new System.Windows.Forms.RadioButton();
-            radioButton2 = new System.Windows.Forms.RadioButton();
             label1 = new System.Windows.Forms.Label();
             textBox1 = new System.Windows.Forms.TextBox();
             textBox2 = new System.Windows.Forms.TextBox();
@@ -39,8 +38,6 @@ namespace SeaStory
             button1 = new System.Windows.Forms.Button();
             imageList1 = new System.Windows.Forms.ImageList(components);
             button2 = new System.Windows.Forms.Button();
-            textBox3 = new System.Windows.Forms.TextBox();
-            label3 = new System.Windows.Forms.Label();
             register = new System.Windows.Forms.Button();
             appCloseButton1 = new UI.AppCloseButton();
             SuspendLayout();
@@ -58,18 +55,6 @@ namespace SeaStory
             radioButton1.Text = "회원 로그인";
             radioButton1.UseVisualStyleBackColor = true;
             radioButton1.CheckedChanged += radioButton1_CheckedChanged;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new System.Drawing.Point(191, 54);
-            radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new System.Drawing.Size(101, 19);
-            radioButton2.TabIndex = 1;
-            radioButton2.Text = "비회원 로그인";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // label1
             // 
@@ -136,24 +121,6 @@ namespace SeaStory
             button2.Text = "잔돈반환";
             button2.UseVisualStyleBackColor = true;
             // 
-            // textBox3
-            // 
-            textBox3.Location = new System.Drawing.Point(57, 232);
-            textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(288, 23);
-            textBox3.TabIndex = 10;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(55, 214);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(59, 15);
-            label3.TabIndex = 11;
-            label3.Text = "코드 입력";
-            label3.Visible = false;
-            // 
             // register
             // 
             register.Location = new System.Drawing.Point(612, 13);
@@ -180,15 +147,12 @@ namespace SeaStory
             ControlBox = false;
             Controls.Add(appCloseButton1);
             Controls.Add(register);
-            Controls.Add(label3);
-            Controls.Add(textBox3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "login";
@@ -200,7 +164,6 @@ namespace SeaStory
         #endregion
 
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -208,8 +171,6 @@ namespace SeaStory
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button register;
         private UI.AppCloseButton appCloseButton1;
     }
