@@ -1,5 +1,6 @@
 ﻿using SeaStory.ui;
 using SeaStory.UI;
+using SeaStory.UI.AdminFoodManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +59,10 @@ namespace SeaStory
         private void button1_Click(object sender, EventArgs e)
         {
 
+            Food_Order_listForm food_Order_listForm = new Food_Order_listForm();
+            food_Order_listForm.Show();
+
+            ManageFoodChildUser 
             //회원 로그인
             if (radioButton1.Checked)
             {
