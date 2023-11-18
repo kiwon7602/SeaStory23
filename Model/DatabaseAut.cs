@@ -422,6 +422,32 @@ namespace SeaStory.Model
             }
         }
 
+        //음식 이름을 넣으면 코드를 반환하는 함수
+        public static string GetFoodCode(string foodName)
+        {
+            try
+            {
+                {
+                    conn.Open();
+                    string sql = "SELECT FoodCode FROM Food WHERE FoodName = @FoodName";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@FoodName", foodName);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        return result.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error getting food code: " + ex.Message);
+            }
+
+            return null; // 해당 음식이 없는 경우
+        }
     }//aut 필드
 }//네임필드
 
