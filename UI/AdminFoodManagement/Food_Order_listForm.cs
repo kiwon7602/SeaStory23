@@ -1,0 +1,42 @@
+﻿using SeaStory.Model;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static SeaStory.Model.DataCalss;
+
+namespace SeaStory.UI.AdminFoodManagement
+{
+    public partial class Food_Order_listForm : Form
+    {
+        public Food_Order_listForm()
+        {
+            InitializeComponent();
+
+
+            listView1.Items.Clear();
+            listView1.Columns.Clear();
+            listView1.Columns.Add("주문한 요리", 150, HorizontalAlignment.Center);
+            listView1.Columns.Add("주문한 시간", 150, HorizontalAlignment.Center);
+            listView1.Columns.Add("주문한 자리", 80, HorizontalAlignment.Center);
+
+            List<OrderTable> orders = DatabaseNonAut.GetOrders();
+
+            // listView1에 주문 목록 추가
+            foreach (OrderTable order in orders)
+            {
+                ListViewItem item = new ListViewItem(order.FoodCode);
+                item.SubItems.Add(order.OrderTime.ToString());
+                item.SubItems.Add(order.OrderSeat);
+
+                listView1.Items.Add(item);
+            }
+        }
+
+    }
+}
