@@ -56,5 +56,7 @@ namespace SeaStory.Model
             public string UserID;
             public string UsageTime;
         }
+
+
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace SeaStory.ui
+﻿namespace SeaStory.UI
 {
     partial class user_interface_rank
     {
@@ -29,100 +29,51 @@
         private void InitializeComponent()
         {
             label1 = new System.Windows.Forms.Label();
-            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            label2 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
-            label5 = new System.Windows.Forms.Label();
-            tableLayoutPanel1.SuspendLayout();
+            listView1 = new System.Windows.Forms.ListView();
+            button2 = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(33, 23);
+            label1.Location = new System.Drawing.Point(37, 32);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(71, 15);
             label1.TabIndex = 0;
-            label1.Text = "이달의 랭킹";
+            label1.Text = "사용량 랭킹";
             // 
-            // tableLayoutPanel1
+            // listView1
             // 
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            tableLayoutPanel1.Controls.Add(label5, 3, 0);
-            tableLayoutPanel1.Controls.Add(label4, 2, 0);
-            tableLayoutPanel1.Controls.Add(label3, 1, 0);
-            tableLayoutPanel1.Controls.Add(label2, 0, 0);
-            tableLayoutPanel1.Location = new System.Drawing.Point(46, 55);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 7;
-            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2857113F));
-            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2857151F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(367, 250);
-            tableLayoutPanel1.TabIndex = 1;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
+            listView1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            listView1.FullRowSelect = true;
+            listView1.GridLines = true;
+            listView1.Location = new System.Drawing.Point(37, 78);
+            listView1.Name = "listView1";
+            listView1.Size = new System.Drawing.Size(606, 313);
+            listView1.TabIndex = 2;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = System.Windows.Forms.View.Details;
             // 
-            // label2
+            // button2
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(3, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(31, 15);
-            label2.TabIndex = 0;
-            label2.Text = "순위";
-            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(94, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(43, 15);
-            label3.TabIndex = 1;
-            label3.Text = "회원명";
-            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(185, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(43, 15);
-            label4.TabIndex = 2;
-            label4.Text = "아이디";
-            label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(276, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(59, 15);
-            label5.TabIndex = 3;
-            label5.Text = "사용 시간";
-            label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            label5.Click += label5_Click;
+            button2.Location = new System.Drawing.Point(671, 78);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(101, 39);
+            button2.TabIndex = 4;
+            button2.Text = "새로고침";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // user_interface_rank
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(button2);
+            Controls.Add(listView1);
             Controls.Add(label1);
             Name = "user_interface_rank";
             Text = "user_interface_rank";
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,10 +81,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button2;
     }
 }
