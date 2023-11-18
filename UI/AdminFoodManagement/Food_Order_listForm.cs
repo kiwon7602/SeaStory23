@@ -17,13 +17,7 @@ namespace SeaStory.UI.AdminFoodManagement
         public Food_Order_listForm()
         {
             InitializeComponent();
-
-
-            listView1.Items.Clear();
-            listView1.Columns.Clear();
-            listView1.Columns.Add("주문한 요리", 150, HorizontalAlignment.Center);
-            listView1.Columns.Add("주문한 시간", 150, HorizontalAlignment.Center);
-            listView1.Columns.Add("주문한 자리", 80, HorizontalAlignment.Center);
+            
             list_Update();
         }
 
@@ -52,6 +46,11 @@ namespace SeaStory.UI.AdminFoodManagement
 
         private void list_Update()
         {
+            listView1.Items.Clear();
+            listView1.Columns.Clear();
+            listView1.Columns.Add("주문한 요리", 150, HorizontalAlignment.Center);
+            listView1.Columns.Add("주문한 시간", 150, HorizontalAlignment.Center);
+            listView1.Columns.Add("주문한 자리", 80, HorizontalAlignment.Center);
             List<OrderTable> orders = DatabaseNonAut.GetOrders();
 
             // listView1에 주문 목록 추가

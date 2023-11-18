@@ -103,7 +103,7 @@ namespace SeaStory.Model
                     {
                         OrderTable order = new OrderTable();
                         order.FoodCode = reader["FoodCode"].ToString();
-                        order.OrderTime = Convert.ToInt32(reader["OrderTime"]);
+                        order.OrderTime = reader["OrderTime"].ToString();
                         order.OrderSeat = reader["OrderSeat"].ToString();
 
                         orders.Add(order);

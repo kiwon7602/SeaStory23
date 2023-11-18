@@ -46,7 +46,7 @@ namespace SeaStory.Model
         public class OrderTable
         {
             public string FoodCode;
-            public int OrderTime;
+            public object OrderTime;
             public string OrderSeat;
         }
 
