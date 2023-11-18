@@ -17,9 +17,17 @@ db_config = {
 async def initialize():
     # Initialize Database and Managers
     db = Database(asyncio.get_event_loop(), db_config)
-    await db.connect()
+    try:
+        await db.connect()
+    except Exception as e:
+        print(f"Database connection failed: {e}")
+        return None, None
     user_manager = UserManager(db)
-    await user_manager.initialize()
+    try:
+        await user_manager.initialize()
+    except Exception as e:
+        print(f"User manager initialization failed: {e}")
+        return None, None
     
     return db, user_manager
 
@@ -27,13 +35,17 @@ async def decrement_seats_periodically(user_manager):
     while True:
         try:
             await user_manager.decrement_all_seats()
-            # print("Seats decremented")  # Debug message
+            print("Seats decremented")
         except Exception as e:
             print(f"Error in decrement_seats_periodically: {e}")
         await asyncio.sleep(1)
 
 async def main():
     db, user_manager = await initialize()
+
+    if db is None or user_manager is None:
+        print("Initialization failed, exiting.")
+        return
 
     # Print the seats for testing purposes
     for seat in user_manager.seats.values():
@@ -61,7 +73,9 @@ async def main():
                 else:
                     print("Unknown command")
 
-                await websocket.send("Response or acknowledgment message")
+                # await websocket.send("Response or acknowledgment message")
+                # I really should keep this up but... 
+                # maybe later if I get the jsons sorted out for send messages back
         except websockets.exceptions.ConnectionClosedOK:
             print(f"Connection with client closed normally")
         except websockets.exceptions.ConnectionClosedError as e:

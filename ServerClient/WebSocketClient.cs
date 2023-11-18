@@ -5,6 +5,7 @@ using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace SeaStory
 {
@@ -13,6 +14,8 @@ namespace SeaStory
         private readonly ClientWebSocket _webSocket = new ClientWebSocket();
         private readonly Uri _serverUri;
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+        public event Action<string> MessageReceived;
+
 
         public WebSocketClient(string uri)
         {
@@ -46,8 +49,7 @@ namespace SeaStory
 
         protected virtual void OnMessageReceived(string message)
         {
-            Console.WriteLine("Message from server: " + message);
-            // You can raise an event or implement a callback mechanism here
+            MessageReceived?.Invoke(message);
         }
 
         public async Task SendAsync(string message)

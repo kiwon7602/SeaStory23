@@ -20,6 +20,7 @@ namespace SeaStory.UI
         private async void button1_Click(object sender, EventArgs e)
         {
             var clientWrapper = await ClientWrapper.Instance;
+            await clientWrapper.DeactivateUserAsync();
             await clientWrapper.CloseAsync();
             Application.Exit();
         }

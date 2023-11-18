@@ -93,6 +93,8 @@ namespace SeaStory
             {
                 await clientWrapper.ActivateUserAsync(ID, seatNumberInt);
             }
+            clientWrapper.ClearLogoutCommandReceived();
+            clientWrapper.LogoutCommandReceived += LogoutCommandHandler;
         }
 
         private async void dataGridViewTimeTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -128,7 +130,7 @@ namespace SeaStory
                     }
 
                     var clientWrapper = await ClientWrapper.Instance;
-                    await clientWrapper.DeactivateUserAsync(userID, seatNumberInt);
+                    await clientWrapper.DeactivateUserAsync();
                     DatabaseAut.SetUserTime(userID, subscriptionTime);
                     await clientWrapper.ActivateUserAsync(userID, seatNumberInt);
                     MessageBox.Show("결제 완료, 시간 추가 완료");
@@ -165,11 +167,13 @@ namespace SeaStory
         private void UpdateTime(string userID, int userType, string seatNumber)
         {
             //시간 변경 함수 들어가야됨
-
+            /* 서버에서 처리
             if (!(Model.DatabaseAut.GetUesrTime(userID) == 0))
             {
                 Model.DatabaseAut.SpendTime(userID);
             }
+            */
+
             // GetUesrTime을 통해 남은 시간을 초 단위로 받아옴
             int remainingTimeInSeconds = Model.DatabaseAut.GetUesrTime(userID);
 
@@ -200,11 +204,19 @@ namespace SeaStory
             manageFoodChildUser.ShowDialog();
         }
         //사용 종료 버튼 클릭 시
-        private void button11_Click(object sender, EventArgs e)
+        private async void button11_Click(object sender, EventArgs e)
         {
             login login = new login();
             login.Show();
+
+            var clientWrapper = await ClientWrapper.Instance;
+            await clientWrapper.DeactivateUserAsync();
             this.Close();
+        }
+        private void LogoutCommandHandler()
+        {
+            // Call button11_Click or directly the logic inside it
+            button11_Click(this, EventArgs.Empty);
         }
 
 
@@ -218,8 +230,6 @@ namespace SeaStory
                 timer.Stop();
                 timer.Dispose();
             }
-            var clientWrapper = await ClientWrapper.Instance;
-            await clientWrapper.DeactivateUserAsync(userID, seatNumberInt);
         }
 
         //프로그램 종료 추가 기능
