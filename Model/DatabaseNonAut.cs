@@ -130,20 +130,11 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM OrderTable";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-
-                using (MySqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        MySqlCommand command = conn.CreateCommand();
-                        command.CommandText = "DELETE FROM OrderTable WHERE (FoodCode=@foodCode AND OrderSeat=@orderSeat)";
-                        command.Parameters.AddWithValue("@foodCode", foodCode);
-                        command.Parameters.AddWithValue("@orderSeat", orderSeat);
-                        command.ExecuteNonQuery();
-                    }
-                }
+                string deleteSql = "DELETE FROM OrderTable WHERE (FoodCode=@foodCode AND OrderSeat=@orderSeat)";
+                MySqlCommand deleteCmd = new MySqlCommand(deleteSql, conn);
+                deleteCmd.Parameters.AddWithValue("@foodCode", foodCode);
+                deleteCmd.Parameters.AddWithValue("@orderSeat", orderSeat);
+                deleteCmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {

@@ -70,7 +70,7 @@ namespace SeaStory
                     User user = Model.DatabaseAut.UserData(textBox1.Text);
 
                     //관리자 체크
-                    if (user.UserType == true)
+                    if (user.UserType == false)
                     {
                         //관리자 폼 열기
                         admin_inter_main admin_Inter_Main = new admin_inter_main();
