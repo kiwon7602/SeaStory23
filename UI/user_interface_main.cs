@@ -130,7 +130,7 @@ namespace SeaStory
                     }
 
                     var clientWrapper = await ClientWrapper.Instance;
-                    await clientWrapper.DeactivateUserAsync();
+                    // await clientWrapper.DeactivateUserAsync();
                     DatabaseAut.SetUserTime(userID, subscriptionTime);
                     await clientWrapper.ActivateUserAsync(userID, seatNumberInt);
                     MessageBox.Show("결제 완료, 시간 추가 완료");

@@ -87,7 +87,7 @@ namespace SeaStory.Model
                     {
                         user.Name = reader["Username"].ToString();
                         user.PhoneNumber = reader["PhoneNumber"].ToString();
-                        user.Time = reader["RemainingHours"].ToString();
+                        user.Time = reader["RemainingTime"].ToString();
                         user.UsedTime = reader["UsageHours"].ToString();
                         user.LoginType = reader["LoginType"].ToString();
                         user.UserType = Convert.ToBoolean(reader["IsAdmin"]);
@@ -171,7 +171,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string sql = "SELECT RemainingHours FROM Member WHERE ID = @Id";
+                string sql = "SELECT RemainingTime FROM Member WHERE ID = @Id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Id", userId);
 
@@ -200,7 +200,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string sql = "UPDATE Member SET RemainingHours = @time WHERE ID = @Id";
+                string sql = "UPDATE Member SET RemainingTime = @time WHERE ID = @Id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@time", time);
                 cmd.Parameters.AddWithValue("@Id", userId);
@@ -223,7 +223,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string updateSql = "UPDATE Member SET UsageHours = UsageHours + 1, RemainingHours = RemainingHours - 1 WHERE ID = @Id";
+                string updateSql = "UPDATE Member SET UsageHours = UsageHours + 1, RemainingTime = RemainingTime - 1 WHERE ID = @Id";
                 MySqlCommand updateCmd = new MySqlCommand(updateSql, conn);
                 updateCmd.Parameters.AddWithValue("@Id", userId);
 
@@ -270,7 +270,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string updateSql = "UPDATE Seat SET UserID = @UserId, UsageTime = (SELECT RemainingHours FROM Member WHERE ID = @UserId) WHERE SeatNumber = @SeatNumber";
+                string updateSql = "UPDATE Seat SET UserID = @UserId, UsageTime = (SELECT RemainingTime FROM Member WHERE ID = @UserId) WHERE SeatNumber = @SeatNumber";
                 MySqlCommand updateCmd = new MySqlCommand(updateSql, conn);
                 updateCmd.Parameters.AddWithValue("@SeatNumber", seatNumber);
                 updateCmd.Parameters.AddWithValue("@UserId", userId);

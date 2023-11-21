@@ -1,6 +1,9 @@
 import asyncio
 import json
-  
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 class Seat:
     def __init__(self, seatNum, user, remaining_time, connection=None):
@@ -32,14 +35,14 @@ class UserManager:
     async def add_user(self, user_id, seat_num, connection):
         seat = self.seats[seat_num]
         async with seat.lock:
-            if self.seats[seat_num].user != None:
-                print("another user is already using the seat")
+            if self.seats[seat_num].user != None and self.seats[seat_num].user != user_id:
+                logger.warning(f"Seat {seat_num} is already occupied by another user.")
                 # handle error here
                 return
 
             user_data = await self.get_user(user_id)
-            if user_data:
-                id, _, _, _, remaining_sec, _, _, _ = user_data
+            if user_data is not None:
+                id, _, _, _, remaining_sec, usage_time, _, _ = user_data
                 seat.user = user_id
                 seat.remaining_time = remaining_sec
                 seat.connection = connection
@@ -48,9 +51,9 @@ class UserManager:
                 params = (remaining_sec, user_id, seat_num)
                 await self.db.execute_query(query, params, commit=True)
 
-                print(f'user {id} is active')
+                logger.info(f'User {id} (ID: {user_id}) has been activated on seat {seat_num}.')
             else:
-                print(f'user {user_id} not found')
+                logger.error(f'User {user_id} not found. Cannot assign to seat {seat_num}.')
                 # handle error here
 
                 return
@@ -59,7 +62,7 @@ class UserManager:
         seat = self.seats[seat_num]
         async with seat.lock:
             if seat.user is not None:
-                print("Another user is already using the seat")
+                logger.warning(f"Seat {seat_num} is already occupied by another user.")
                 return
 
             user_data = await self.get_user(user_id)
@@ -73,9 +76,9 @@ class UserManager:
                 params = (-1, user_id, seat_num)
                 await self.db.execute_query(query, params, commit=True)
 
-                print(f'user {id} is reserved')
+                logger.info(f'User {id} (ID: {user_id}) has been reserved on seat {seat_num}.')
             else:
-                print(f'user {user_id} not found')
+                logger.error(f'User {user_id} not found. Cannot assign to seat {seat_num}.')
                 # handle error here
 
                 return
@@ -84,7 +87,7 @@ class UserManager:
     async def remove_user(self, user_id, seat_num, websocket):
         seat = self.seats.get(seat_num)
         if not seat:
-            print("Invalid seat num")
+            logger.error(f"Invalid seat number: {seat_num}. Removal operation aborted.")
             return
 
         async with seat.lock:
@@ -93,14 +96,14 @@ class UserManager:
                 seat.remaining_time = 0
 
                 # Close the WebSocket connection if it exists
-                # if seat.connection:
-                #     try:
-                #         await seat.connection.close()
-                #         print(f"WebSocket connection closed for seat {seat_num}")
-                #     except Exception as e:
-                #         print(f"Error closing WebSocket connection for seat {seat_num}: {e}")
-                #     finally:
-                #         seat.connection = None  # Reset the connection attribute
+                if seat.connection:
+                    try:
+                        await seat.connection.close()
+                        logger.info(f"WebSocket connection closed for seat {seat_num}")
+                    except Exception as e:
+                        logger.error(f"Error closing WebSocket connection for seat {seat_num}: {e}")
+                    finally:
+                        seat.connection = None  # Reset the connection attribute
 
 
                 query = "UPDATE Seat SET UsageTime = %s, UserID = %s WHERE SeatNumber = %s"
@@ -108,26 +111,24 @@ class UserManager:
                 await self.db.execute_query(query, params, commit=True)
 
 
-                print(f'user {user_id} is deactive')
+                logger.info(f'User {user_id} has been deactivated from seat {seat_num}.')
             else:
-                print(f'user {user_id} not found in active users')
+                logger.warning(f'User {user_id} not found in active users on seat {seat_num}.')
                 # handle error
 
     async def update_member_table(self, seat):
-        query = "UPDATE Member SET RemainingHours = %s WHERE ID = %s"
+        query = "UPDATE Member SET RemainingTime = %s WHERE ID = %s"
         params = (seat.remaining_time, seat.user)
         await self.db.execute_query(query, params, commit=True)
-        # print(f"Updated Memeber table for user {seat.user} : {seat.remaining_time}")
         
         
     async def update_seat_table(self, seat):
         query = "UPDATE Seat SET UsageTime = %s WHERE UserID = %s"
         params = (seat.remaining_time, seat.user)
         await self.db.execute_query(query, params, commit=True)
-        # print(f"Updated Seat table for user {seat.user} : {seat.remaining_time}")
         
     async def get_remaining_hours(self, user_id):
-        query = "SELECT RemainingHours FROM Member WHERE ID = %s"
+        query = "SELECT RemainingTime FROM Member WHERE ID = %s"
         result = await self.db.fetch_one(query, (user_id,))
         return result[0] if result else None
 
@@ -147,7 +148,7 @@ class UserManager:
                     message = self.build_json({"command": "logout"})
                     await self.send_json(message, seat.connection)
                 except Exception as e:
-                    print(f"Error sending message to client: {e}")
+                    logger.error(f"Error sending message to client: {e}")
                 finally:
                     seat.user = None
                     seat.remaining_time = None
@@ -160,18 +161,18 @@ class UserManager:
         try:
             return json.dumps(data)
         except TypeError as e:
-            print(f"Error in building JSON: {e}")
+            logger.error(f"Error in building JSON: {e}")
             return None
 
     async def send_json(self, json_string, connection):
         if not json_string or not connection:
-            print("Invalid input for sending JSON")
+            logger.warning("Invalid input for sending JSON")
             return
 
         try:
             await connection.send(json_string)
         except Exception as e:
-            print(f"Error sending JSON to client: {e}")
+            logger.error(f"Error sending JSON to client: {e}")
 
     async def decrement_all_seats(self):
         for seat in self.seats.values():

@@ -4,6 +4,16 @@ from datetime import datetime
 import json
 from user_manager import *
 from database import Database
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    filename='app.log',  # Logs will be saved to app.log file
+                    filemode='w')  # 'w' to overwrite the log file on each run, 'a' to append
+
+logger = logging.getLogger(__name__)
+
 
 # Database Configuration
 db_config = {
@@ -20,13 +30,13 @@ async def initialize():
     try:
         await db.connect()
     except Exception as e:
-        print(f"Database connection failed: {e}")
+        logger.error(f"Database connection failed: {e}")
         return None, None
     user_manager = UserManager(db)
     try:
         await user_manager.initialize()
     except Exception as e:
-        print(f"User manager initialization failed: {e}")
+        logger.error(f"User manager initialization failed: {e}")
         return None, None
     
     return db, user_manager
@@ -35,21 +45,21 @@ async def decrement_seats_periodically(user_manager):
     while True:
         try:
             await user_manager.decrement_all_seats()
-            print("Seats decremented")
+            logger.info("Seats decremented")
         except Exception as e:
-            print(f"Error in decrement_seats_periodically: {e}")
+            logger.error(f"Error in decrement_seats_periodically: {e}")
         await asyncio.sleep(1)
 
 async def main():
     db, user_manager = await initialize()
 
     if db is None or user_manager is None:
-        print("Initialization failed, exiting.")
+        logger.critical("Initialization failed, exiting.")
         return
 
     # Print the seats for testing purposes
     for seat in user_manager.seats.values():
-        print(seat)
+        logger.debug(seat)
 
     # Command handlers dictionary
     command_handlers = {
@@ -59,7 +69,7 @@ async def main():
     }
 
     async def interact(websocket, path):
-        print(f"New connection opened at {datetime.now()}")
+        logger.info(f"New connection opened")
         try:
             async for message in websocket:
                 data = json.loads(message)
@@ -71,15 +81,15 @@ async def main():
                 if handler:
                     await handler(user_id, seat_num, websocket)
                 else:
-                    print("Unknown command")
+                    logger.warning("Unknown command")
 
                 # await websocket.send("Response or acknowledgment message")
                 # I really should keep this up but... 
                 # maybe later if I get the jsons sorted out for send messages back
         except websockets.exceptions.ConnectionClosedOK:
-            print(f"Connection with client closed normally")
+            logger.info(f"Connection with client closed normally")
         except websockets.exceptions.ConnectionClosedError as e:
-            print(f"Connection with client closed with error: {e}")
+            logger.error(f"Connection with client closed with error: {e}")
         finally:
             # Perform any cleanup here if needed
             pass
