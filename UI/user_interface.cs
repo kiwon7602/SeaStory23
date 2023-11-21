@@ -12,7 +12,7 @@ using System.Xml.Linq;
 namespace SeaStory
 {
     public partial class user_interface : Form
-    {   
+    {
         //중복 확인 체크 토클
         bool duplication_checker = false;
         public user_interface()
@@ -100,7 +100,7 @@ namespace SeaStory
             //ID_Box.text 값을 통해 유저 검색후
             //유저가 null이 아니면 이미 등록된 아이디입니다! 메세지 박스 출력
             //유저가 null인 경우 사용가능한 아이디입니다! 메세지 박스 출력후 중복 확인 체크 토글
-            if(Model.DatabaseAut.IDCheck(ID_Box.Text) == -1)
+            if (Model.DatabaseAut.IDCheck(ID_Box.Text) == -1)
             {
                 duplication_checker = true;
                 MessageBox.Show("사용 가능한 아이디입니다!", "ID 사용 가능", MessageBoxButtons.OK, MessageBoxIcon.Information);

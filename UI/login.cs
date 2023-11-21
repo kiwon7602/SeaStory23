@@ -23,7 +23,7 @@ namespace SeaStory
             textBox1.Visible = true;
             label2.Visible = true;
             textBox2.Visible = true;
-            
+
 
         }
 
@@ -42,7 +42,7 @@ namespace SeaStory
             textBox1.Visible = true;
             label2.Visible = true;
             textBox2.Visible = true;
-            
+
         }
         //비회원 라디오 버튼 값 변경 될 때
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace SeaStory
             textBox1.Visible = false;
             label2.Visible = false;
             textBox2.Visible = false;
-            
+
         }
 
         //로그인 버튼 클릭

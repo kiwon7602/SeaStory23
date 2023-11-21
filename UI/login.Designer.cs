@@ -39,17 +39,17 @@ namespace SeaStory
             imageList1 = new System.Windows.Forms.ImageList(components);
             button2 = new System.Windows.Forms.Button();
             register = new System.Windows.Forms.Button();
-            appCloseButton1 = new UI.AppCloseButton();
             SuspendLayout();
             // 
             // radioButton1
             // 
             radioButton1.AutoSize = true;
             radioButton1.Checked = true;
+            radioButton1.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             radioButton1.Location = new System.Drawing.Point(46, 54);
             radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new System.Drawing.Size(89, 19);
+            radioButton1.Size = new System.Drawing.Size(132, 29);
             radioButton1.TabIndex = 0;
             radioButton1.TabStop = true;
             radioButton1.Text = "회원 로그인";
@@ -96,13 +96,16 @@ namespace SeaStory
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(270, 385);
+            button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            button1.BackgroundImage = Properties.Resources.Button_PNG_Free_Download;
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button1.Location = new System.Drawing.Point(258, 359);
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(75, 29);
+            button1.Size = new System.Drawing.Size(88, 44);
             button1.TabIndex = 6;
             button1.Text = "로그인";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // imageList1
@@ -132,20 +135,14 @@ namespace SeaStory
             register.UseVisualStyleBackColor = true;
             register.Click += register_Click;
             // 
-            // appCloseButton1
-            // 
-            appCloseButton1.Location = new System.Drawing.Point(637, 491);
-            appCloseButton1.Name = "appCloseButton1";
-            appCloseButton1.Size = new System.Drawing.Size(111, 29);
-            appCloseButton1.TabIndex = 13;
-            // 
             // login
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.배경;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(800, 562);
             ControlBox = false;
-            Controls.Add(appCloseButton1);
             Controls.Add(register);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -154,6 +151,7 @@ namespace SeaStory
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(radioButton1);
+            DoubleBuffered = true;
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "login";
             Text = "login";

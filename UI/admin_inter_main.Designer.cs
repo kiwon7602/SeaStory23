@@ -33,25 +33,28 @@
             button24 = new System.Windows.Forms.Button();
             button25 = new System.Windows.Forms.Button();
             colorDialog1 = new System.Windows.Forms.ColorDialog();
-            appCloseButton1 = new UI.AppCloseButton();
-            seatPanel1 = new UI.Seats.SeatPanel();
             SuspendLayout();
             // 
             // button1
             // 
+            button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            button1.BackgroundImage = Properties.Resources._366033;
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button1.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button1.ForeColor = System.Drawing.Color.Red;
-            button1.Location = new System.Drawing.Point(34, 21);
+            button1.Location = new System.Drawing.Point(12, 21);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(75, 56);
+            button1.Size = new System.Drawing.Size(107, 91);
             button1.TabIndex = 0;
             button1.Text = "강제 종료";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(34, 118);
+            button2.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button2.Location = new System.Drawing.Point(12, 164);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(75, 81);
+            button2.Size = new System.Drawing.Size(107, 90);
             button2.TabIndex = 1;
             button2.Text = "요리 주문 목록";
             button2.UseVisualStyleBackColor = true;
@@ -76,32 +79,19 @@
             button25.UseVisualStyleBackColor = true;
             button25.Click += button25_Click;
             // 
-            // appCloseButton1
-            // 
-            appCloseButton1.Location = new System.Drawing.Point(34, 399);
-            appCloseButton1.Name = "appCloseButton1";
-            appCloseButton1.Size = new System.Drawing.Size(111, 29);
-            appCloseButton1.TabIndex = 5;
-            // 
-            // seatPanel1
-            // 
-            seatPanel1.Location = new System.Drawing.Point(213, 118);
-            seatPanel1.Name = "seatPanel1";
-            seatPanel1.Size = new System.Drawing.Size(512, 310);
-            seatPanel1.TabIndex = 6;
-            // 
             // admin_inter_main
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.배경;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(800, 450);
             ControlBox = false;
-            Controls.Add(seatPanel1);
-            Controls.Add(appCloseButton1);
             Controls.Add(button25);
             Controls.Add(button24);
             Controls.Add(button2);
             Controls.Add(button1);
+            DoubleBuffered = true;
             Name = "admin_inter_main";
             Text = "admin_inter_main";
             ResumeLayout(false);

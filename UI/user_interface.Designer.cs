@@ -116,10 +116,12 @@ namespace SeaStory
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(296, 62);
+            button1.BackgroundImage = Properties.Resources.Button_PNG_Free_Download;
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button1.Location = new System.Drawing.Point(281, 53);
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(75, 29);
+            button1.Size = new System.Drawing.Size(96, 46);
             button1.TabIndex = 8;
             button1.Text = "중복확인";
             button1.UseVisualStyleBackColor = true;
@@ -179,6 +181,8 @@ namespace SeaStory
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources._0268f49d4d229bcee46589954838b252d9aa3f89;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(800, 562);
             Controls.Add(CloseButton);
             Controls.Add(button3);
