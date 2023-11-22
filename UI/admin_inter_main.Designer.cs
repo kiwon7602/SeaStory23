@@ -34,7 +34,7 @@
             button25 = new System.Windows.Forms.Button();
             colorDialog1 = new System.Windows.Forms.ColorDialog();
             appCloseButton1 = new UI.AppCloseButton();
-            seatPanel1 = new UI.Seats.SeatPanel();
+            seatPanelAdmin1 = new UI.Seats.SeatPanelAdmin();
             SuspendLayout();
             // 
             // button1
@@ -83,12 +83,12 @@
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
             appCloseButton1.TabIndex = 5;
             // 
-            // seatPanel1
+            // seatPanelAdmin1
             // 
-            seatPanel1.Location = new System.Drawing.Point(213, 118);
-            seatPanel1.Name = "seatPanel1";
-            seatPanel1.Size = new System.Drawing.Size(512, 310);
-            seatPanel1.TabIndex = 6;
+            seatPanelAdmin1.Location = new System.Drawing.Point(254, 90);
+            seatPanelAdmin1.Name = "seatPanelAdmin1";
+            seatPanelAdmin1.Size = new System.Drawing.Size(502, 348);
+            seatPanelAdmin1.TabIndex = 6;
             // 
             // admin_inter_main
             // 
@@ -96,7 +96,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
             ControlBox = false;
-            Controls.Add(seatPanel1);
+            Controls.Add(seatPanelAdmin1);
             Controls.Add(appCloseButton1);
             Controls.Add(button25);
             Controls.Add(button24);
@@ -115,6 +115,6 @@
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private UI.AppCloseButton appCloseButton1;
-        private UI.Seats.SeatPanel seatPanel1;
+        private UI.Seats.SeatPanelAdmin seatPanelAdmin1;
     }
 }

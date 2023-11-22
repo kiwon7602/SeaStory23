@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Windows.Forms;
 using static SeaStory.Model.DataCalss;
 
 namespace SeaStory.Model
@@ -70,6 +71,7 @@ namespace SeaStory.Model
         //일치하는 아이디의 회원정보를 모두 반환한다. 
         public static User UserData(string Id)
         {
+            MessageBox.Show("called");
             User user = null;
 
             try
@@ -88,7 +90,7 @@ namespace SeaStory.Model
                         user.Name = reader["Username"].ToString();
                         user.PhoneNumber = reader["PhoneNumber"].ToString();
                         user.Time = reader["RemainingTime"].ToString();
-                        user.UsedTime = reader["UsageHours"].ToString();
+                        user.UsedTime = reader["UsageTime"].ToString(); 
                         user.LoginType = reader["LoginType"].ToString();
                         user.UserType = Convert.ToBoolean(reader["IsAdmin"]);
                     }
@@ -223,7 +225,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string updateSql = "UPDATE Member SET UsageHours = UsageHours + 1, RemainingTime = RemainingTime - 1 WHERE ID = @Id";
+                string updateSql = "UPDATE Member SET UsageTime = UsageTime + 1, RemainingTime = RemainingTime - 1 WHERE ID = @Id";
                 MySqlCommand updateCmd = new MySqlCommand(updateSql, conn);
                 updateCmd.Parameters.AddWithValue("@Id", userId);
 

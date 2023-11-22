@@ -47,6 +47,9 @@
     <Compile Update="UI\Seats\SeatPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UI\Seats\SeatPanelAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UI\TimeManagement\AddTime.cs">
       <SubType>Form</SubType>
     </Compile>

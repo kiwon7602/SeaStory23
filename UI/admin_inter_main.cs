@@ -29,7 +29,7 @@ namespace SeaStory.ui
         //음식 관리 버튼 클릭 시
         private void button25_Click(object sender, EventArgs e)
         {
-            
+
             ManageFoodChildAdmin manageFoodChildAdmin = new ManageFoodChildAdmin();
             manageFoodChildAdmin.ShowDialog();
         }

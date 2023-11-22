@@ -16,6 +16,7 @@ namespace SeaStory.UI.Seats
         public int SeatNumber { get; private set; }
         public string UserID { get; private set; }
         public string UsageTime { get; private set; }
+
         private EventHandler seatClickEventHandler;
 
         public Seat()
@@ -23,7 +24,7 @@ namespace SeaStory.UI.Seats
             InitializeComponent();
         }
 
-        public Seat(int seatNumber, string userID, string usageTime)
+        public Seat(int seatNumber, string userID, string usageTime, string buttonText="선택")
             : this() // Calls the default constructor to initialize components
         {
             // Store the parameters
@@ -31,6 +32,7 @@ namespace SeaStory.UI.Seats
             UserID = userID;
             UsageTime = usageTime;
 
+            buttonSelect.Text = buttonText;
             // Update UI elements with the stored data
             labelSeatNum.Text = seatNumber.ToString();
             labelUser.Text = userID;
