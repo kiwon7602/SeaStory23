@@ -32,7 +32,37 @@ class UserManager:
         result = await self.db.fetch_one(query, (user_id,))
         return result
 
-    async def add_user(self, user_id, seat_num, connection):
+    async def add_time(self, data, connection):
+        user_id = data["user_id"]
+        subscription_time = data["subscription_time"]
+        seat_num = data["seat_num"]
+        seat = self.seats[seat_num]
+        async with seat.lock:
+            if self.seats[seat_num].user != None and self.seats[seat_num].user != user_id:
+                logger.warning(f"Seat {seat_num} is already occupied by another user.")
+                # handle error here
+                return
+
+            user_data = await self.get_user(user_id)
+            if user_data is not None:
+                id, _, _, _, remaining_sec, usage_time, _, _ = user_data
+                query = "UPDATE Member SET RemainingTime = %s WHERE Username = %s"
+                params = (remaining_sec + subscription_time, user_id)
+                await self.db.execute_query(query, params, commit=True)
+
+                seat.user = user_id
+                seat.remaining_time = subscription_time if seat.remaining_time == -1 else remaining_sec + subscription_time
+                seat.connection = connection
+
+                logger.info(f'Subscription time {subscription_time} added to user {id} (ID: {user_id}).')
+            else:
+                logger.error(f'User {user_id} not found. Cannot add subscription time {subscription_time} to user..')
+                # handle error here
+                return
+
+    async def add_user(self, data, connection):
+        user_id = data["user_id"]
+        seat_num = data["seat_num"]
         seat = self.seats[seat_num]
         async with seat.lock:
             if self.seats[seat_num].user != None and self.seats[seat_num].user != user_id:
@@ -58,7 +88,10 @@ class UserManager:
 
                 return
         
-    async def reserve_user(self, user_id, seat_num, connection):
+    async def reserve_user(self, data, connection):
+        user_id = data["user_id"]
+        seat_num = data["seat_num"]
+
         seat = self.seats[seat_num]
         async with seat.lock:
             if seat.user is not None:
@@ -84,7 +117,10 @@ class UserManager:
                 return
 
 
-    async def remove_user(self, user_id, seat_num, websocket):
+    async def remove_user(self, data, websocket):
+        user_id = data["user_id"]
+        seat_num = data["seat_num"]
+
         seat = self.seats.get(seat_num)
         if not seat:
             logger.error(f"Invalid seat number: {seat_num}. Removal operation aborted.")
@@ -147,8 +183,6 @@ class UserManager:
                     # Optionally, you can close the connection here if needed
                     # await seat.connection.close()
             
-            await self.remove_user(seat.user, seat.seatNum, seat.connection)
-
     def build_json(self, data):
         try:
             return json.dumps(data)

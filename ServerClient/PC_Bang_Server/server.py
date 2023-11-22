@@ -66,6 +66,7 @@ async def main():
         "add": user_manager.add_user,
         "delete": user_manager.remove_user,
         "reserve": user_manager.reserve_user,
+        "add_time": user_manager.add_time,
     }
 
     async def interact(websocket, path):
@@ -74,12 +75,10 @@ async def main():
             async for message in websocket:
                 data = json.loads(message)
                 command = data["command"]
-                user_id = data["user_id"]
-                seat_num = data["seat_num"]
 
                 handler = command_handlers.get(command)
                 if handler:
-                    await handler(user_id, seat_num, websocket)
+                    await handler(data, websocket)
                 else:
                     logger.warning("Unknown command")
 

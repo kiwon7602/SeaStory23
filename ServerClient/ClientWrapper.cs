@@ -40,6 +40,27 @@ namespace SeaStory
         {
             await webSocketClient.CloseAsync();
         }
+        
+        public async Task AddTimeAync(string user_id, int seat_num, int subscription_time)
+        {
+            if (!webSocketClient.IsConnected())
+            {
+                Console.WriteLine("WebSocket connection is not active.");
+                return; // Exit the method if not connected
+            }
+
+            var message = new
+            {
+                command = "add_time",
+                user_id = user_id,
+                seat_num = seat_num,
+                subscription_time = subscription_time
+            };
+            string jsonMessage = JsonSerializer.Serialize(message);
+            await webSocketClient.SendAsync(jsonMessage);
+
+        }
+
 
         public async Task ReserveUserAsync(string user_id, int seat_num)
         {
