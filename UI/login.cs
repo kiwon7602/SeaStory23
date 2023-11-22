@@ -1,5 +1,6 @@
 ﻿using SeaStory.ui;
 using SeaStory.UI;
+using SeaStory.UI.AdminFoodManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,7 +58,6 @@ namespace SeaStory
         //로그인 버튼 클릭
         private void button1_Click(object sender, EventArgs e)
         {
-
             //회원 로그인
             if (radioButton1.Checked)
             {
@@ -70,7 +70,7 @@ namespace SeaStory
                     User user = Model.DatabaseAut.UserData(textBox1.Text);
 
                     //관리자 체크
-                    if (user.UserType == true)
+                    if (user.UserType == false)
                     {
                         //관리자 폼 열기
                         admin_inter_main admin_Inter_Main = new admin_inter_main();

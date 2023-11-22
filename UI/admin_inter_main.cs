@@ -33,5 +33,12 @@ namespace SeaStory.ui
             ManageFoodChildAdmin manageFoodChildAdmin = new ManageFoodChildAdmin();
             manageFoodChildAdmin.ShowDialog();
         }
+
+        //요리 주문 목록 버튼 클릭 시
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Food_Order_listForm food_Order_listForm = new Food_Order_listForm();
+            food_Order_listForm.ShowDialog();
+        }
     }
 }

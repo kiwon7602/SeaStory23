@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeaStory.ui
+namespace SeaStory.UI
 {
     public partial class user_interface_rank : Form
     {
@@ -17,14 +17,9 @@ namespace SeaStory.ui
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            //유저 랭킹 리스트 형태로 받아오는 함수 필요
         }
     }
 }

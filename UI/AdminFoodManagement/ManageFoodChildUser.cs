@@ -16,9 +16,10 @@ namespace SeaStory.UI.AdminFoodManagement
 {
     public partial class ManageFoodChildUser : ManageFoodParent
     {
-        private string SeatID;
+
 
         public ManageFoodChildUser(string seat)
+
         {
             DatabaseAut database = new DatabaseAut();
             SeatID = seat;

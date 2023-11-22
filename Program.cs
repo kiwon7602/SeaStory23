@@ -31,6 +31,7 @@ namespace SeaStory
             //부모폼을 생성하고 숨기는 경우의 동작
             //동작 방식은 다르지만 결과는 같으므로 주석처리함
             Application.Run(new login());
+            
         }
     }
 }
