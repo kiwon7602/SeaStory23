@@ -9,10 +9,10 @@ namespace SeaStory.UI.Seats
 {
     public partial class SeatPanel : UserControl
     {
-        private FlowLayoutPanel flowLayoutPanel;
+        protected FlowLayoutPanel flowLayoutPanel;
         private Timer updateTimer;
         public delegate void SeatClickHandler(string userId, int userType, string seat);
-        private SeatClickHandler seatClickHandler;
+        protected SeatClickHandler seatClickHandler;
 
         public SeatPanel()
         {
@@ -65,7 +65,7 @@ namespace SeaStory.UI.Seats
                 control.Dispose();
             }
         }
-        private void AttachEventHandler(Seat seatControl)
+        protected void AttachEventHandler(Seat seatControl)
         {    
             // Attach the new event handler
 

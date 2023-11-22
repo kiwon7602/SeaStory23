@@ -16,8 +16,13 @@ namespace SeaStory.UI.AdminFoodManagement
 {
     public partial class ManageFoodChildUser : ManageFoodParent
     {
-        public ManageFoodChildUser(string seatNumber)
+
+
+        public ManageFoodChildUser(string seat)
+
         {
+            DatabaseAut database = new DatabaseAut();
+            SeatID = seat;
             InitializeComponent();
         }
 
@@ -45,34 +50,41 @@ namespace SeaStory.UI.AdminFoodManagement
 
         private void GetInfoButton_Click(object sender, EventArgs e)
         {
-            var checkedItemsInfo = new List<string>();
-            decimal total_price = 0m;
+            var selectedItems = new List<MenuItemWithCheckboxControl>();
+            decimal totalPrice = 0m;
 
             foreach (Control control in flowLayoutPanelMenuItems.Controls)
             {
                 if (control is MenuItemWithCheckboxControl item && item.IsChecked())
                 {
-                    string info = $"Name: {item.FoodName}, Price: {item.FoodPrice}";
-                    checkedItemsInfo.Add(info);
+                    selectedItems.Add(item);
 
-                    total_price += item.FoodPrice;
-                    checkedItemsInfo.Add(info);
+                    // 가격 누적
+                    totalPrice += item.FoodPrice;
                 }
             }
 
-            Console.WriteLine("Hi mom");
-            foreach (var item in checkedItemsInfo)
+            Console.WriteLine("Selected items:");
+            foreach (var item in selectedItems)
             {
-                Console.WriteLine(item); // Or display in a UI element
+                Console.WriteLine($"Name: {item.FoodName}, Price: {item.FoodPrice}");
             }
 
-            
+            Console.WriteLine($"Total Price: {totalPrice}");
+
+            // SeatID 변수를 사용하여 주문 정보를 DB에 저장
+            int orderTime = (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds; // 예시: 현재 시간을 초 단위로 변환
+            foreach (var item in selectedItems)
+            {
+                DatabaseAut.AddOrder(DatabaseAut.GetFoodCode(item.FoodName), orderTime, SeatID); // SeatID 변수 사용
+            }
+
+            // Payment Form 열기 (필요에 따라 주석 처리하세요)
             using (UserInterFacePayment payment = new UserInterFacePayment())
             {
-                payment.SetPrice((int)total_price);
-                payment.ShowDialog(); // If you need to show the payment form
+                payment.SetPrice((int)totalPrice);
+                payment.ShowDialog();
             }
-
         }
 
     }

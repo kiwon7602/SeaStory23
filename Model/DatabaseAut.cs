@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Windows.Forms;
 using static SeaStory.Model.DataCalss;
 
 namespace SeaStory.Model
@@ -70,6 +71,7 @@ namespace SeaStory.Model
         //일치하는 아이디의 회원정보를 모두 반환한다. 
         public static User UserData(string Id)
         {
+            MessageBox.Show("called");
             User user = null;
 
             try
@@ -87,8 +89,8 @@ namespace SeaStory.Model
                     {
                         user.Name = reader["Username"].ToString();
                         user.PhoneNumber = reader["PhoneNumber"].ToString();
-                        user.Time = reader["RemainingHours"].ToString();
-                        user.UsedTime = reader["UsageHours"].ToString();
+                        user.Time = reader["RemainingTime"].ToString();
+                        user.UsedTime = reader["UsageTime"].ToString(); 
                         user.LoginType = reader["LoginType"].ToString();
                         user.UserType = Convert.ToBoolean(reader["IsAdmin"]);
                     }
@@ -171,7 +173,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string sql = "SELECT RemainingHours FROM Member WHERE ID = @Id";
+                string sql = "SELECT RemainingTime FROM Member WHERE ID = @Id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Id", userId);
 
@@ -200,7 +202,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string sql = "UPDATE Member SET RemainingHours = @time WHERE ID = @Id";
+                string sql = "UPDATE Member SET RemainingTime = @time WHERE ID = @Id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@time", time);
                 cmd.Parameters.AddWithValue("@Id", userId);
@@ -223,7 +225,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string updateSql = "UPDATE Member SET UsageHours = UsageHours + 1, RemainingHours = RemainingHours - 1 WHERE ID = @Id";
+                string updateSql = "UPDATE Member SET UsageTime = UsageTime + 1, RemainingTime = RemainingTime - 1 WHERE ID = @Id";
                 MySqlCommand updateCmd = new MySqlCommand(updateSql, conn);
                 updateCmd.Parameters.AddWithValue("@Id", userId);
 
@@ -270,7 +272,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string updateSql = "UPDATE Seat SET UserID = @UserId, UsageTime = (SELECT RemainingHours FROM Member WHERE ID = @UserId) WHERE SeatNumber = @SeatNumber";
+                string updateSql = "UPDATE Seat SET UserID = @UserId, UsageTime = (SELECT RemainingTime FROM Member WHERE ID = @UserId) WHERE SeatNumber = @SeatNumber";
                 MySqlCommand updateCmd = new MySqlCommand(updateSql, conn);
                 updateCmd.Parameters.AddWithValue("@SeatNumber", seatNumber);
                 updateCmd.Parameters.AddWithValue("@UserId", userId);
@@ -422,6 +424,32 @@ namespace SeaStory.Model
             }
         }
 
+        //음식 이름을 넣으면 코드를 반환하는 함수
+        public static string GetFoodCode(string foodName)
+        {
+            try
+            {
+                {
+                    conn.Open();
+                    string sql = "SELECT FoodCode FROM Food WHERE FoodName = @FoodName";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@FoodName", foodName);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        return result.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error getting food code: " + ex.Message);
+            }
+
+            return null; // 해당 음식이 없는 경우
+        }
     }//aut 필드
 }//네임필드
 
