@@ -379,29 +379,31 @@ namespace SeaStory.Model
             }
         }
 
-        //Foodcode와 주문시각, 주문한 자리 정보를 받아 저장하는 메소드
-        public static void AddOrder(string foodCode, int orderTime, string orderSeat)
+        public static void AddOrder(string foodCode, string orderSeat)
         {
             try
             {
                 conn.Open();
-                string insertSql = "INSERT INTO OrderTable (FoodCode, OrderTime, OrderSeat) VALUES (@FoodCode, @OrderTime, @OrderSeat)";
+                string insertSql = "INSERT INTO OrderTable (FoodCode, OrderSeat) VALUES (@FoodCode, @OrderSeat)";
                 MySqlCommand insertCmd = new MySqlCommand(insertSql, conn);
-                insertCmd.Parameters.AddWithValue("@FoodCode", foodCode);
-                insertCmd.Parameters.AddWithValue("@OrderTime", orderTime);
-                insertCmd.Parameters.AddWithValue("@OrderSeat", orderSeat);
+                insertCmd.Parameters.AddWithValue("@FoodCode", "3");
+                insertCmd.Parameters.AddWithValue("@OrderSeat", "5");
 
                 insertCmd.ExecuteNonQuery();
+
+                MessageBox.Show($"Order information saved successfully.\nFood Code: {foodCode}\nOrder Seat: {orderSeat}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error saving order information: " + ex.Message);
+                MessageBox.Show("오류남.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 conn.Close();
             }
         }
+
         //Foodcode와 주문자리 정보를 받아 삭제하는 메소드
         public static void DeleteOrder(string orderSeat)
         {

@@ -19,7 +19,6 @@ namespace SeaStory.UI.AdminFoodManagement
         private string SeatID;
 
         public ManageFoodChildUser(string seat)
-
         {
             DatabaseAut database = new DatabaseAut();
             SeatID = seat;
@@ -73,10 +72,9 @@ namespace SeaStory.UI.AdminFoodManagement
             Console.WriteLine($"Total Price: {totalPrice}");
 
             // SeatID 변수를 사용하여 주문 정보를 DB에 저장
-            int orderTime = (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds; // 예시: 현재 시간을 초 단위로 변환
             foreach (var item in selectedItems)
             {
-                DatabaseAut.AddOrder(DatabaseAut.GetFoodCode(item.FoodName), orderTime, SeatID); // SeatID 변수 사용
+                DatabaseAut.AddOrder(DatabaseAut.GetFoodCode(item.FoodName), SeatID); // SeatID 변수 사용
             }
 
             // Payment Form 열기 (필요에 따라 주석 처리하세요)
@@ -86,6 +84,5 @@ namespace SeaStory.UI.AdminFoodManagement
                 payment.ShowDialog();
             }
         }
-
     }
 }

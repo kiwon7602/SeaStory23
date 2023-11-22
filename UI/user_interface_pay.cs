@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SeaStory.ui
@@ -21,6 +14,27 @@ namespace SeaStory.ui
         public void SetPrice(int n)
         {
             labelPrice.Text = n.ToString("C", new CultureInfo("ko-KR"));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProcessPayment();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProcessPayment();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ProcessPayment();
+        }
+
+        private void ProcessPayment()
+        {
+            MessageBox.Show("결제되었습니다.", "확인", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }
