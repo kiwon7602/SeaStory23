@@ -43,6 +43,12 @@ namespace SeaStory
 
         public async Task ReserveUserAsync(string user_id, int seat_num)
         {
+            if (!webSocketClient.IsConnected())
+            {
+                Console.WriteLine("WebSocket connection is not active.");
+                return; // Exit the method if not connected
+            }
+
             _lastUserId = user_id;
             _lastSeatNum = seat_num;
 
@@ -58,6 +64,12 @@ namespace SeaStory
 
         public async Task ActivateUserAsync(string user_id, int seat_num)
         {
+            if (!webSocketClient.IsConnected())
+            {
+                Console.WriteLine("WebSocket connection is not active.");
+                return; // Exit the method if not connected
+            }
+
             _lastUserId = user_id;
             _lastSeatNum = seat_num;
 
@@ -74,6 +86,12 @@ namespace SeaStory
 
         public async Task DeactivateUserAsync()
         {
+            if (!webSocketClient.IsConnected())
+            {
+                Console.WriteLine("WebSocket connection is not active.");
+                return; // Exit the method if not connected
+            }
+
             var message = new
             {
                 command = "delete",

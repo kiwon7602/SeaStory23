@@ -45,7 +45,7 @@ async def decrement_seats_periodically(user_manager):
     while True:
         try:
             await user_manager.decrement_all_seats()
-            logger.info("Seats decremented")
+            # logger.info("Seats decremented")
         except Exception as e:
             logger.error(f"Error in decrement_seats_periodically: {e}")
         await asyncio.sleep(1)

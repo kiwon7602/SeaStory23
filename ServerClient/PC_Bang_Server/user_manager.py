@@ -95,17 +95,6 @@ class UserManager:
                 seat.user = None
                 seat.remaining_time = 0
 
-                # Close the WebSocket connection if it exists
-                if seat.connection:
-                    try:
-                        await seat.connection.close()
-                        logger.info(f"WebSocket connection closed for seat {seat_num}")
-                    except Exception as e:
-                        logger.error(f"Error closing WebSocket connection for seat {seat_num}: {e}")
-                    finally:
-                        seat.connection = None  # Reset the connection attribute
-
-
                 query = "UPDATE Seat SET UsageTime = %s, UserID = %s WHERE SeatNumber = %s"
                 params = (None, None, seat_num)
                 await self.db.execute_query(query, params, commit=True)
@@ -117,10 +106,9 @@ class UserManager:
                 # handle error
 
     async def update_member_table(self, seat):
-        query = "UPDATE Member SET RemainingTime = %s WHERE ID = %s"
+        query = "UPDATE Member SET RemainingTime = %s, UsageTime = UsageTime+1 WHERE ID = %s"
         params = (seat.remaining_time, seat.user)
         await self.db.execute_query(query, params, commit=True)
-        
         
     async def update_seat_table(self, seat):
         query = "UPDATE Seat SET UsageTime = %s WHERE UserID = %s"
@@ -147,11 +135,15 @@ class UserManager:
                     # await seat.connection.send("Your remaining time is 0. Please vacate the seat.")
                     message = self.build_json({"command": "logout"})
                     await self.send_json(message, seat.connection)
+                    # close connection and remove user from seat
                 except Exception as e:
                     logger.error(f"Error sending message to client: {e}")
                 finally:
-                    seat.user = None
-                    seat.remaining_time = None
+                    pass
+                    # This is a bit odd because ideally I think you would want to remove the user here
+                    # But instead, we're delegating the duty to the client so that it invokes the remove_user function
+                    # seat.user = None
+                    # seat.remaining_time = None
                     # Optionally, you can close the connection here if needed
                     # await seat.connection.close()
             

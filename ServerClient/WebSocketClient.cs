@@ -27,6 +27,10 @@ namespace SeaStory
             await _webSocket.ConnectAsync(_serverUri, _cancellationTokenSource.Token);
             StartListening();
         }
+        public bool IsConnected()
+        {
+            return _webSocket != null && _webSocket.State == WebSocketState.Open;
+        }
 
         private async void StartListening()
         {
