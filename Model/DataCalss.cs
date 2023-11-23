@@ -18,6 +18,18 @@ namespace SeaStory.Model
             public string LoginType { get; set; }
             public bool UserType { get; set; }
         }
+
+        public class User2
+        {
+            public string ID { get; set; }
+            public string Name { get; set; }
+            public string PW { get; set; }
+            public string PhoneNumber { get; set; }
+            public int RemainingTime { get; set; }
+            public int UsedTime { get; set; }
+
+        }
+
         //비회원 정보 데이터 클래스
         public class NonMember
         {

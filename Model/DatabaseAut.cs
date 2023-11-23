@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using static SeaStory.Model.DataCalss;
 
@@ -68,7 +69,7 @@ namespace SeaStory.Model
             return -1;
         }
 
-        //일치하는 아이디의 회원정보를 모두 반환한다. 
+        //일치하는 아이디의 회원정보를 모두 반환한다 .
         public static User UserData(string Id)
         {
             MessageBox.Show("called");
@@ -108,27 +109,54 @@ namespace SeaStory.Model
             return user;
         }
 
-        //비회원 카드정보를 입력하면 모두 반환한다.
-        public static NonMember GetNonMembers(string CardNumber)
+
+        //일치하는 아이디의 회원을 삭제하는 함수 .
+        public static void DeleteMember(string memberId)
         {
-            NonMember nonMembers = null;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE FROM Member WHERE ID = @Id";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Id", memberId);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error deleting member: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        
+        //랭크를 반환하는 함수 아이디 이름 사용시간 반환 
+        public static List<User2> GetRanking()
+        {
+            List<User2> ranking = new List<User2>();
 
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM NonMember WHERE CardNumber  = @CardNumber";
+                string sql = "SELECT * FROM Member ORDER BY UsageTime DESC";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    nonMembers = new NonMember();
+                    while (reader.Read())
+                    {
+                        User2 user = new User2
+                        {
+                            ID = reader["ID"].ToString(),
+                            Name = reader["Username"].ToString(),
+                            UsedTime = Convert.ToInt32(reader["UsageTime"])
+                        };
 
-                    nonMembers.CardNumber = reader["CardNumber"].ToString();
-                    nonMembers.RemainingHours = Convert.ToInt32(reader["RemainingHours"]);
-                    nonMembers.IsActive = Convert.ToBoolean(reader["IsActive"]);
+                        ranking.Add(user);
+                    }
                 }
             }
-
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
@@ -138,7 +166,47 @@ namespace SeaStory.Model
                 conn.Close();
             }
 
-            return nonMembers;
+            return ranking;
+        }
+        //모든회원의 아이디 이름 비밀번호 남은시간 사용시간 반환 함수 
+        public static List<User2> GetAllMembers()
+        {
+            List<User2> members = new List<User2>();
+
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM Member";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        User2 user = new User2
+                        {
+                            ID = reader["ID"].ToString(),
+                            Name = reader["Username"].ToString(),
+                            PW = reader["Password"].ToString(),
+                            PhoneNumber = reader["PhoneNumber"].ToString(),
+                            RemainingTime = Convert.ToInt32(reader["RemainingTime"]),
+                            UsedTime = Convert.ToInt32(reader["UsageTime"]),
+                        };
+
+                        members.Add(user);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return members;
         }
 
         //회원가입을 위해 유저 ID, PW, 이름, 연락처를 받고 DB에 새로운 회원을 생성하는 함수
