@@ -35,6 +35,7 @@
             colorDialog1 = new System.Windows.Forms.ColorDialog();
             appCloseButton1 = new UI.AppCloseButton();
             seatPanelAdmin1 = new UI.Seats.SeatPanelAdmin();
+            button3 = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // button1
@@ -91,12 +92,23 @@
             seatPanelAdmin1.Size = new System.Drawing.Size(502, 348);
             seatPanelAdmin1.TabIndex = 6;
             // 
+            // button3
+            // 
+            button3.Location = new System.Drawing.Point(347, 21);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(100, 56);
+            button3.TabIndex = 7;
+            button3.Text = "회원 관리";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // admin_inter_main
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
             ControlBox = false;
+            Controls.Add(button3);
             Controls.Add(seatPanelAdmin1);
             Controls.Add(appCloseButton1);
             Controls.Add(button25);
@@ -117,5 +129,6 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private UI.AppCloseButton appCloseButton1;
         private UI.Seats.SeatPanelAdmin seatPanelAdmin1;
+        private System.Windows.Forms.Button button3;
     }
 }
