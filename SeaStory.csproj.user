@@ -32,6 +32,12 @@
     <Compile Update="UI\AdminFoodManagement\MenuItemWithCheckboxControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UI\AdminFoodManagement\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\AdminFoodManagement\UserManagement_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UI\admin_inter_main.cs">
       <SubType>Form</SubType>
     </Compile>
