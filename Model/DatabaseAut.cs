@@ -523,6 +523,92 @@ namespace SeaStory.Model
             }
             return null; // 해당 음식이 없는 경우
         }
+
+        // 요금제 추가하는 함수 
+        public static void UpdateSubscription(string name, int amount, string hours)
+        {
+            try
+            {
+                conn.Open();
+
+                // Find an unused SubscriptionKey from 1 to 100
+                int unusedKey = FindUnusedSubscriptionKey();
+
+                if (unusedKey != -1)
+                {
+                    string sql = "INSERT INTO Subscription (SubscriptionKey, SubscriptionName, SubscriptionAmount, SubscriptionHours, MemberType) " +
+                                 "VALUES (@Key, @Name, @Amount, @Hours, 0)";
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@Key", unusedKey);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@Amount", amount);
+                    cmd.Parameters.AddWithValue("@Hours", hours);
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    Console.WriteLine("No available SubscriptionKey found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error updating subscription: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        // 보조용 빈 요금제키 찾는 함수 
+        private static int FindUnusedSubscriptionKey()
+        {
+            for (int key = 1; key <= 100; key++)
+            {
+                if (!SubscriptionKeyExists(key))
+                {
+                    return key;
+                }
+            }
+
+            return -1; // No available key found
+        }
+
+        // 요금제 키값을 모두 불러오는 함수단일로 쓰지 말것!!!!!!!!!!!
+        private static bool SubscriptionKeyExists(int key)
+        {
+            string sql = "SELECT COUNT(*) FROM Subscription WHERE SubscriptionKey = @Key";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@Key", key);
+
+            object count = cmd.ExecuteScalar();
+
+            return (count != null && Convert.ToInt32(count) > 0);
+        }
+
+        // 요금제 삭제하는 함수
+        public static void DeleteSubscription(string time, string name)
+        {
+            try
+            {
+                conn.Open();
+
+                // Subscription을 삭제
+                string sql = "DELETE FROM Subscription WHERE SubscriptionHours = @Time AND SubscriptionName = @Name";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Time", time);
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Subscription을 삭제하는 중 오류 발생: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }//aut 필드
 }//네임필드
 

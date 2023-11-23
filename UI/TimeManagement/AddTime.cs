@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeaStory.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace SeaStory.UI.TimeManagement
     {
         public AddTime()
         {
+            DatabaseAut database = new DatabaseAut();
             InitializeComponent();
         }
 
@@ -24,10 +26,7 @@ namespace SeaStory.UI.TimeManagement
             int price = (int)numericUpDownPrice.Value;
             string name = textBoxName.Text;
 
-            // Placeholder for sending data to the database
-            // Replace with actual database interaction code
-            // SendDataToDatabase(time, price, name);
-
+            DatabaseAut.UpdateSubscription(name,price, time.ToString());
             // Optionally close the form if needed after adding
             this.Close();
         }
