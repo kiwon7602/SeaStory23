@@ -31,7 +31,6 @@
             label1 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             PW_Box2 = new System.Windows.Forms.TextBox();
-            button1 = new System.Windows.Forms.Button();
             label4 = new System.Windows.Forms.Label();
             NAME_Box = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
@@ -70,16 +69,6 @@
             PW_Box2.Name = "PW_Box2";
             PW_Box2.Size = new System.Drawing.Size(100, 23);
             PW_Box2.TabIndex = 21;
-            // 
-            // button1
-            // 
-            button1.Location = new System.Drawing.Point(322, 88);
-            button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(75, 29);
-            button1.TabIndex = 20;
-            button1.Text = "중복확인";
-            button1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -143,6 +132,7 @@
             // 
             // ID_Box
             // 
+            ID_Box.Enabled = false;
             ID_Box.Location = new System.Drawing.Point(120, 91);
             ID_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             ID_Box.Name = "ID_Box";
@@ -178,7 +168,6 @@
             Controls.Add(button2);
             Controls.Add(label5);
             Controls.Add(PW_Box2);
-            Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(NAME_Box);
             Controls.Add(label3);
@@ -199,7 +188,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox PW_Box2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox NAME_Box;
         private System.Windows.Forms.Label label3;
