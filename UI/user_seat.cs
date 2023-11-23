@@ -1,18 +1,12 @@
-﻿using System;
+﻿using SeaStory.Model;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Media;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.ApplicationServices;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static SeaStory.Model.DataCalss;
 using User = SeaStory.Model.DataCalss.User;
-using SeaStory.Model;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace SeaStory.UI
 {
@@ -73,6 +67,7 @@ namespace SeaStory.UI
 
             seatPanel1.SetSeatClickHandler(button1_Click);
         }
+        
 
         private void Back_Button_Click(object sender, EventArgs e)
         {
@@ -92,9 +87,40 @@ namespace SeaStory.UI
 
             //좌석 번호와 ID를 넘겼을 때 DB에서 좌석 테이블에 해당 좌석 번호에 사용자 이름과 남은 시간이 등록되도록 하는 함수
             // string seat = "01";
+            PlayAudioForSeat(int.Parse(seat));
             user_interface_main user_Interface_main = new user_interface_main(userID, userType, seat);
             user_Interface_main.Show();
             this.Close();
         }
+
+        public void PlayAudioForSeat(int seatNumber)
+        {
+            // 재생할 음성 파일 경로
+            string basePath = @"C:\Users\admin\Documents\GitHub\SeaStory23\UI\tts\seattts"; // 적절한 상대 경로로 수정
+            string audioFileName = $"audio_{seatNumber}.wav"; // 예시 파일명, 필요에 따라 수정
+
+            string audioFilePath = Path.Combine(basePath, audioFileName);
+
+            // 음성 파일이 존재하는지 확인 후 재생
+            if (File.Exists(audioFilePath))
+            {
+                try
+                {
+                    SoundPlayer soundPlayer = new SoundPlayer(audioFilePath);
+                    soundPlayer.Play();
+                }
+                catch (Exception ex)
+                {
+                    // 재생 중 오류가 발생한 경우 처리
+                    Console.WriteLine("음성 파일을 재생하는 중 오류가 발생했습니다: " + ex.Message);
+                }
+            }
+            else
+            {
+                // 파일이 존재하지 않을 경우 처리
+                Console.WriteLine("음성 파일이 존재하지 않습니다: " + audioFilePath);
+            }
+        }
+
     }
 }

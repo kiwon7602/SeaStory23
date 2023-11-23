@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,6 +48,8 @@ namespace SeaStory.UI.Seats
                 labelRemainingTime.Text = "";
             }
         }
+
+
 
         public void UpdateSeat(int seatNumber, string userID, string usageTime, bool disableEmtpySeatButton=true)
         {
