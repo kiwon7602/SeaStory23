@@ -72,7 +72,7 @@ namespace SeaStory.Model
         //일치하는 아이디의 회원정보를 모두 반환한다 .
         public static User UserData(string Id)
         {
-            MessageBox.Show("called");
+            
             User user = null;
 
             try

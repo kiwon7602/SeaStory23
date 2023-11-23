@@ -40,5 +40,11 @@ namespace SeaStory.ui
             Food_Order_listForm food_Order_listForm = new Food_Order_listForm();
             food_Order_listForm.ShowDialog();
         }
+
+        //회원 관리 버튼 클릭 시
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
