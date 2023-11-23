@@ -54,6 +54,7 @@ namespace SeaStory
             button7.TabIndex = 7;
             button7.Text = "랭킹보기";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -111,7 +112,7 @@ namespace SeaStory
             label3.AutoSize = true;
             label3.Location = new System.Drawing.Point(334, 41);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(38, 15);
+            label3.Size = new System.Drawing.Size(39, 15);
             label3.TabIndex = 14;
             label3.Text = "label3";
             // 
@@ -129,7 +130,7 @@ namespace SeaStory
             label5.AutoSize = true;
             label5.Location = new System.Drawing.Point(494, 41);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(85, 15);
+            label5.Size = new System.Drawing.Size(87, 15);
             label5.TabIndex = 16;
             label5.Text = "남은 적립 시간";
             // 
@@ -138,7 +139,7 @@ namespace SeaStory
             label6.AutoSize = true;
             label6.Location = new System.Drawing.Point(640, 41);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(38, 15);
+            label6.Size = new System.Drawing.Size(39, 15);
             label6.TabIndex = 17;
             label6.Text = "label6";
             // 
@@ -147,7 +148,7 @@ namespace SeaStory
             label7.AutoSize = true;
             label7.Location = new System.Drawing.Point(334, 92);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(58, 15);
+            label7.Size = new System.Drawing.Size(59, 15);
             label7.TabIndex = 18;
             label7.Text = "좌석 번호";
             // 
@@ -157,7 +158,7 @@ namespace SeaStory
             label8.ForeColor = System.Drawing.Color.Red;
             label8.Location = new System.Drawing.Point(334, 119);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(38, 15);
+            label8.Size = new System.Drawing.Size(39, 15);
             label8.TabIndex = 19;
             label8.Text = "label8";
             // 

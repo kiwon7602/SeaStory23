@@ -44,7 +44,8 @@ namespace SeaStory.ui
         //회원 관리 버튼 클릭 시
         private void button3_Click(object sender, EventArgs e)
         {
-
+            UserManagement userManagement = new UserManagement();
+            userManagement.ShowDialog();
         }
     }
 }

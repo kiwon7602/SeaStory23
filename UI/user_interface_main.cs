@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using SeaStory.Model;
+using SeaStory.UI;
 using SeaStory.UI.AdminFoodManagement;
 using System;
 using System.Collections.Generic;
@@ -238,6 +239,13 @@ namespace SeaStory
         {
             //자리 테이블 자리코드 받고 네임 잔여시간 null
             //요리 주문 목록테이블에도 자리 코드 맞는거 다 지워줘야됨
+        }
+
+        //랭킹 보기 버튼 클릭 시
+        private void button7_Click(object sender, EventArgs e)
+        {
+            user_interface_rank user_Interface_Rank = new user_interface_rank();
+            user_Interface_Rank.ShowDialog();
         }
     }
 }
