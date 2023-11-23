@@ -176,7 +176,7 @@ namespace SeaStory.Model
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM Member";
+                string sql = "SELECT * FROM Member  ORDER BY ID ASC";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())

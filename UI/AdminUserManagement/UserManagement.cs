@@ -1,4 +1,5 @@
-﻿using SeaStory.Model;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using SeaStory.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,13 +73,16 @@ namespace SeaStory.UI.AdminFoodManagement
             // listView1에 주문 목록 추가
             foreach (User2 user in Users)
             {
-                ListViewItem item = new ListViewItem(user.ID);
-                item.SubItems.Add(user.Name);
-                item.SubItems.Add(user.PW);
-                item.SubItems.Add(user.PhoneNumber);
-                item.SubItems.Add(Time_fomat(user.RemainingTime));
-                item.SubItems.Add(Time_fomat(user.UsedTime));
-                listView1.Items.Add(item);
+                if (!(user.ID == "admin"))
+                {
+                    ListViewItem item = new ListViewItem(user.ID);
+                    item.SubItems.Add(user.Name);
+                    item.SubItems.Add(user.PW);
+                    item.SubItems.Add(user.PhoneNumber);
+                    item.SubItems.Add(Time_fomat(user.RemainingTime));
+                    item.SubItems.Add(Time_fomat(user.UsedTime));
+                    listView1.Items.Add(item);
+                }
             }
         }
 
