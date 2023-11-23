@@ -35,14 +35,16 @@ namespace SeaStory.UI
             listView1.Columns.Add("사용시간", 250, HorizontalAlignment.Center);
             List<User2> users = DatabaseAut.GetRanking();
 
-            // listView1에 주문 목록 추가
+            // listView1에 랭킹 목록 추가
             foreach (User2 userss in users)
             {
-                ListViewItem item = new ListViewItem(userss.ID);
-                item.SubItems.Add(userss.Name);
-                item.SubItems.Add(userss.UsedTime.ToString());
-
-                listView1.Items.Add(item);
+                if(!(userss.ID == "admin"))
+                { 
+                    ListViewItem item = new ListViewItem(userss.ID);
+                    item.SubItems.Add(userss.Name);
+                    item.SubItems.Add(userss.UsedTime.ToString());
+                    listView1.Items.Add(item);
+                }
             }
         }
 

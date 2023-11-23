@@ -45,6 +45,7 @@ namespace SeaStory
             textBox2.Visible = true;
             
         }
+        /*
         //비회원 라디오 버튼 값 변경 될 때
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
@@ -54,6 +55,7 @@ namespace SeaStory
             textBox2.Visible = false;
             
         }
+        */
 
         //로그인 버튼 클릭
         private void button1_Click(object sender, EventArgs e)
