@@ -383,20 +383,18 @@ namespace SeaStory.Model
         {
             try
             {
-                conn.Open();
                 string insertSql = "INSERT INTO OrderTable (FoodCode, OrderSeat) VALUES (@FoodCode, @OrderSeat)";
-                MySqlCommand insertCmd = new MySqlCommand(insertSql, conn);
-                insertCmd.Parameters.AddWithValue("@FoodCode", "3");
-                insertCmd.Parameters.AddWithValue("@OrderSeat", "5");
+                MySqlCommand insertCmd = new(insertSql, conn);
+                insertCmd.Parameters.AddWithValue("@FoodCode", foodCode);
+                insertCmd.Parameters.AddWithValue("@OrderSeat", orderSeat);
 
                 insertCmd.ExecuteNonQuery();
 
-                MessageBox.Show($"Order information saved successfully.\nFood Code: {foodCode}\nOrder Seat: {orderSeat}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"주문성공했습니다.\nFood Code: {foodCode}\nOrder Seat: {orderSeat}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error saving order information: " + ex.Message);
-                MessageBox.Show("오류남.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"주문실패했습니다.\n{ex.Message} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
