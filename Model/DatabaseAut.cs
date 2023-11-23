@@ -451,6 +451,7 @@ namespace SeaStory.Model
         {
             try
             {
+                conn.Open();
                 string insertSql = "INSERT INTO OrderTable (FoodCode, OrderSeat) VALUES (@FoodCode, @OrderSeat)";
                 MySqlCommand insertCmd = new(insertSql, conn);
                 insertCmd.Parameters.AddWithValue("@FoodCode", foodCode);
@@ -507,6 +508,7 @@ namespace SeaStory.Model
 
                     if (result != null)
                     {
+
                         return result.ToString();
                     }
                 }
@@ -515,7 +517,10 @@ namespace SeaStory.Model
             {
                 Console.WriteLine("Error getting food code: " + ex.Message);
             }
-
+            finally
+            {
+                conn.Close();
+            }
             return null; // 해당 음식이 없는 경우
         }
     }//aut 필드
