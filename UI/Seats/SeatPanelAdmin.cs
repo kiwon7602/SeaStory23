@@ -18,7 +18,7 @@ namespace SeaStory.UI.Seats
             InitializeComponent();
         }
 
-        private void UpdateSeats()
+        protected override void UpdateSeats()
         {
             var seats = DatabaseNonAut.GetSeats();
             var currentSeatControls = flowLayoutPanel.Controls.OfType<Seat>().ToList();
@@ -30,7 +30,7 @@ namespace SeaStory.UI.Seats
                 if (existingSeatControl != null)
                 {
                     // Update existing control
-                    existingSeatControl.UpdateSeat(seat.SeatNumber, seat.UserID, seat.UsageTime);
+                    existingSeatControl.UpdateSeat(seat.SeatNumber, seat.UserID, seat.UsageTime, false);
                     seatControl = existingSeatControl;
                 }
                 else

@@ -17,6 +17,7 @@ namespace SeaStory.ui
         public admin_inter_main()
         {
             InitializeComponent();
+            seatPanelAdmin1.SetSeatClickHandler(ForceClose);
         }
 
         //요금제 관리 버튼 클릭 시
@@ -47,5 +48,17 @@ namespace SeaStory.ui
             UserManagement userManagement = new UserManagement();
             userManagement.ShowDialog();
         }
+
+        private async void ForceClose(string userId, int userType, string seat)
+        {
+            // var clientWrapper = await ClientWrapper.Instance;
+            // await clientWrapper.ForceDeactivateUserAsync(seat, userId);
+            // await clientWrapper.CloseAsync();
+
+            MessageBox.Show("강제 종료되었습니다");
+        }
+
+
+
     }
 }

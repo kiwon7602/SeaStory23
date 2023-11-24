@@ -124,6 +124,25 @@ namespace SeaStory
             await webSocketClient.SendAsync(jsonMessage);
         }
 
+        public async Task ForceDeactivateUserAsync(string seat, string id)
+        {
+            if (!webSocketClient.IsConnected())
+            {
+                Console.WriteLine("WebSocket connection is not active.");
+                return; // Exit the method if not connected
+            }
+
+            var message = new
+            {
+                command = "force_delete",
+                user_id = id,
+                seat_num = seat
+            };
+
+            string jsonMessage = JsonSerializer.Serialize(message);
+            await webSocketClient.SendAsync(jsonMessage);
+        }
+
         private void WebSocketClient_MessageReceived(string message)
         {
             try
@@ -136,6 +155,12 @@ namespace SeaStory
                     if (root.TryGetProperty("command", out JsonElement commandElement) &&
                         commandElement.GetString() == "logout")
                     {
+                        // Raise the event
+                        LogoutCommandReceived?.Invoke();
+                    }
+                    else if (commandElement.GetString() == "logout")
+                    {
+                        MessageBox.Show("관리자에 의해 강제종료 되었습니다.");
                         // Raise the event
                         LogoutCommandReceived?.Invoke();
                     }
