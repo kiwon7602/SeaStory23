@@ -37,7 +37,6 @@ namespace SeaStory
             label2 = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
             imageList1 = new System.Windows.Forms.ImageList(components);
-            button2 = new System.Windows.Forms.Button();
             register = new System.Windows.Forms.Button();
             appCloseButton1 = new UI.AppCloseButton();
             SuspendLayout();
@@ -46,7 +45,7 @@ namespace SeaStory
             // 
             radioButton1.AutoSize = true;
             radioButton1.Checked = true;
-            radioButton1.Location = new System.Drawing.Point(46, 54);
+            radioButton1.Location = new System.Drawing.Point(55, 72);
             radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new System.Drawing.Size(89, 19);
@@ -54,7 +53,6 @@ namespace SeaStory
             radioButton1.TabStop = true;
             radioButton1.Text = "회원 로그인";
             radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // label1
             // 
@@ -111,19 +109,9 @@ namespace SeaStory
             imageList1.ImageSize = new System.Drawing.Size(16, 16);
             imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // button2
-            // 
-            button2.Location = new System.Drawing.Point(709, 13);
-            button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(79, 58);
-            button2.TabIndex = 8;
-            button2.Text = "잔돈반환";
-            button2.UseVisualStyleBackColor = true;
-            // 
             // register
             // 
-            register.Location = new System.Drawing.Point(612, 13);
+            register.Location = new System.Drawing.Point(669, 33);
             register.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             register.Name = "register";
             register.Size = new System.Drawing.Size(79, 58);
@@ -147,7 +135,6 @@ namespace SeaStory
             ControlBox = false;
             Controls.Add(appCloseButton1);
             Controls.Add(register);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(label2);
@@ -170,7 +157,6 @@ namespace SeaStory
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button register;
         private UI.AppCloseButton appCloseButton1;
     }
