@@ -30,8 +30,6 @@ namespace SeaStory
         private void InitializeComponent()
         {
             button7 = new System.Windows.Forms.Button();
-            button8 = new System.Windows.Forms.Button();
-            button9 = new System.Windows.Forms.Button();
             button10 = new System.Windows.Forms.Button();
             button11 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
@@ -55,26 +53,6 @@ namespace SeaStory
             button7.Text = "랭킹보기";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
-            // 
-            // button8
-            // 
-            button8.Location = new System.Drawing.Point(610, 105);
-            button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new System.Drawing.Size(80, 29);
-            button8.TabIndex = 8;
-            button8.Text = "0원";
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            button9.Location = new System.Drawing.Point(610, 188);
-            button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            button9.Name = "button9";
-            button9.Size = new System.Drawing.Size(80, 29);
-            button9.TabIndex = 10;
-            button9.Text = "잔돈반환";
-            button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
@@ -193,9 +171,7 @@ namespace SeaStory
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(button11);
-            Controls.Add(button9);
             Controls.Add(button10);
-            Controls.Add(button8);
             Controls.Add(button7);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "user_interface_main";
@@ -206,8 +182,6 @@ namespace SeaStory
 
         #endregion
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label1;

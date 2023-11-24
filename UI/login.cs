@@ -24,7 +24,7 @@ namespace SeaStory
             textBox1.Visible = true;
             label2.Visible = true;
             textBox2.Visible = true;
-            
+
 
         }
 
@@ -36,26 +36,7 @@ namespace SeaStory
             user_Interface.ShowDialog();
         }
 
-        //회원 라디오 버튼 값 변경 될 때
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            label1.Visible = true;
-            textBox1.Visible = true;
-            label2.Visible = true;
-            textBox2.Visible = true;
-            
-        }
-        /*
-        //비회원 라디오 버튼 값 변경 될 때
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            label1.Visible = false;
-            textBox1.Visible = false;
-            label2.Visible = false;
-            textBox2.Visible = false;
-            
-        }
-        */
+
 
         //로그인 버튼 클릭
         private void button1_Click(object sender, EventArgs e)
@@ -77,14 +58,14 @@ namespace SeaStory
                         //관리자 폼 열기
                         admin_inter_main admin_Inter_Main = new admin_inter_main();
                         admin_Inter_Main.Show();
-                        // this.Close();
+                        this.Close();
                     }
                     else
                     {
                         //자리 선택 폼으로 이동
                         user_seat user_Seat = new user_seat(textBox1.Text, 0);
                         user_Seat.Show();
-                        // this.Close();
+                        this.Close();
                     }
                 }
                 //로그인 실패
@@ -93,25 +74,6 @@ namespace SeaStory
                     MessageBox.Show("로그인 정보가 잘못되었습니다!", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
-            /*
-            //비회원 로그인
-            if (radioButton2.Checked)
-            {
-                //int login_check = Model.DatabaseAut.UserCheck(textBox3.Text);
-                int login_check = 1;
-
-                if (login_check == 1)
-                {
-                    user_seat user_Seat = new user_seat(textBox3.Text, 1);
-                    user_Seat.Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("로그인 정보가 잘못되었습니다!", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                }
-            }
-            */
 
         }
     }

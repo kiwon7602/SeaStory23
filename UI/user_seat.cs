@@ -19,7 +19,7 @@ namespace SeaStory.UI
     public partial class user_seat : Form
     {
         //user_type = 0 회원 유저
-        //user_type = 1 비회원 유저
+        
 
         private string userID;
         private int userType;
@@ -51,12 +51,6 @@ namespace SeaStory.UI
                 //유저 정보 기반 유저명 호출 및 표시
                 label3.Text = user.Name;
             }
-            //비회원 로그인
-            if (userType == 1)
-            {
-                //카드 번호 출력
-                label3.Text = userID;
-            }
         }
         private void InitializeSeats()
         {
@@ -81,17 +75,9 @@ namespace SeaStory.UI
             this.Close();
         }
 
-        //1번 좌석 클릭
-        //추후 좌석 버튼을 오브젝트화해서 따로 제작할 예정
-        //테스트를 위해 제작
+        
         private void button1_Click(string userId, int userType, string seat)
         {
-            //1.해당 좌석에 ID기반으로 DB에 사용 유저와 적립 시간을 넣는다
-            //2.유저 ID, 회원 비회원 토글 ,좌석의 번호를 main폼으로 넘긴다
-            //임의로 seat = "01" 로 생성해서 테스트
-
-            //좌석 번호와 ID를 넘겼을 때 DB에서 좌석 테이블에 해당 좌석 번호에 사용자 이름과 남은 시간이 등록되도록 하는 함수
-            // string seat = "01";
             user_interface_main user_Interface_main = new user_interface_main(userID, userType, seat);
             user_Interface_main.Show();
             this.Close();

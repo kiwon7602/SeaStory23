@@ -43,35 +43,13 @@ namespace SeaStory
                 label1.Text = "회원 요금제";
                 //유저 정보 기반 유저명 호출 및 표시
                 label3.Text = user.Name;
-                //남은 시간
-                //label6.Text = user.Time;
-            }
-            if (user_type == 1)
-            {
-                //비회원 로그인
-                label1.Text = "비회원 요금제";
+                
             }
             //자리 번호
             label8.Text = seat_number;
 
             timeTable1.SetRowClickEventHandler(dataGridViewTimeTable_CellDoubleClick);
             InitialConnection(ID);
-
-
-            //타이머관련 함수 설계
-            //1. 타이머 이벤트 생성 (5초 단위) 아래 내용 전부 넣기
-            //2. GetUesrTime를 통해 유저의 잔여 시간 체크
-            //3. 잔여시간이 0 이 아니라면 SpendTime( DB 유저 잔여시간 5초 감소 사용시간 5초 증가)
-            //4. GetUesrTime를 통해 유저의 갱신된 잔여시간 받아와서 받아온 값을 기준으로 잔여시간 표시 (DB 2번 접근으로 인해 속도 문제 발생 가능성 야기)
-            //4-2. 처음에 받아온 데이터에 5를 감소한 값을 잔여 시간으로 표시
-
-
-            //요금제 버튼 동적 할당 설계
-            //1. 회원 비회원 유저 타입에 따른 요금제 라벨 수정
-            //2. DB에서 유저 타입에 맞게 회원 요금제 비회원 요금제를 리스트로 가져옴
-            //3. 리스트 내용을 기반으로 foreach 버튼 동적 생성
-            //4. 버튼 동적 생성될 때 이벤트도 달아주기
-            //5. 이벤트는 결제 폼열기 (유저 ID(카드번호), 선택한 요금제 코드)
 
         }
 
@@ -150,7 +128,7 @@ namespace SeaStory
             // 타이머 생성
             timer = new Timer();
 
-            // 타이머 간격 설정 (5초 = 5000밀리초)
+            // 타이머 간격 설정 (1초 = 1000밀리초)
             timer.Interval = 1000;
 
             // 타이머 이벤트 핸들러 등록
@@ -169,14 +147,6 @@ namespace SeaStory
         //시간 업데이트 함수
         private void UpdateTime(string userID, int userType, string seatNumber)
         {
-            //시간 변경 함수 들어가야됨
-            /* 서버에서 처리
-            if (!(Model.DatabaseAut.GetUesrTime(userID) == 0))
-            {
-                Model.DatabaseAut.SpendTime(userID);
-            }
-            */
-
             // GetUesrTime을 통해 남은 시간을 초 단위로 받아옴
             int remainingTimeInSeconds = Model.DatabaseAut.GetUesrTime(userID);
 
@@ -237,8 +207,7 @@ namespace SeaStory
         //프로그램 종료 추가 기능
         private void appCloseButton1_Load(object sender, EventArgs e)
         {
-            //자리 테이블 자리코드 받고 네임 잔여시간 null
-            //요리 주문 목록테이블에도 자리 코드 맞는거 다 지워줘야됨
+            //프로그램 종료시 필요한 기능이 있다면 여기 추가
         }
 
         //랭킹 보기 버튼 클릭 시
