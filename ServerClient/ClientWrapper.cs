@@ -23,7 +23,7 @@ namespace SeaStory
 
         private ClientWrapper()
         {
-            webSocketClient = new WebSocketClient("ws://218.150.181.67:8765");
+            webSocketClient = new WebSocketClient("ws://220.123.227.97:8765");
             webSocketClient.MessageReceived += WebSocketClient_MessageReceived;
         }
 
@@ -124,7 +124,7 @@ namespace SeaStory
             await webSocketClient.SendAsync(jsonMessage);
         }
 
-        public async Task ForceDeactivateUserAsync(string seat, string id)
+        public async Task ForceDeactivateUserAsync(string user_id, int seat_num)
         {
             if (!webSocketClient.IsConnected())
             {
@@ -135,8 +135,8 @@ namespace SeaStory
             var message = new
             {
                 command = "force_delete",
-                user_id = id,
-                seat_num = seat
+                user_id = user_id,
+                seat_num = seat_num
             };
 
             string jsonMessage = JsonSerializer.Serialize(message);
@@ -152,17 +152,20 @@ namespace SeaStory
                     JsonElement root = document.RootElement;
 
                     // Check for "logout" command
-                    if (root.TryGetProperty("command", out JsonElement commandElement) &&
-                        commandElement.GetString() == "logout")
+                    if (root.TryGetProperty("command", out JsonElement commandElement))
                     {
-                        // Raise the event
-                        LogoutCommandReceived?.Invoke();
-                    }
-                    else if (commandElement.GetString() == "logout")
-                    {
-                        MessageBox.Show("관리자에 의해 강제종료 되었습니다.");
-                        // Raise the event
-                        LogoutCommandReceived?.Invoke();
+                        if (commandElement.GetString() == "logout")
+                        {
+                            // Raise the event
+                            LogoutCommandReceived?.Invoke();
+                        }
+                        else if (commandElement.GetString() == "force_logout")
+                        {
+                            MessageBox.Show("관리자에 의해 강제종료 되었습니다.");
+                            // Raise the event
+                            LogoutCommandReceived?.Invoke();
+                        }
+                        
                     }
                 }
             }

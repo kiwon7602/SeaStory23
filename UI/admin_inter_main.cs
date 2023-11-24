@@ -1,4 +1,5 @@
-﻿using SeaStory.UI.AdminFoodManagement;
+﻿using SeaStory.UI;
+using SeaStory.UI.AdminFoodManagement;
 using SeaStory.UI.TimeManagement;
 using System;
 using System.Collections.Generic;
@@ -51,9 +52,9 @@ namespace SeaStory.ui
 
         private async void ForceClose(string userId, int userType, string seat)
         {
-            // var clientWrapper = await ClientWrapper.Instance;
-            // await clientWrapper.ForceDeactivateUserAsync(seat, userId);
-            // await clientWrapper.CloseAsync();
+            var clientWrapper = await ClientWrapper.Instance;
+            await clientWrapper.ForceDeactivateUserAsync(userId, int.Parse(seat));
+            await clientWrapper.CloseAsync();
 
             MessageBox.Show("강제 종료되었습니다");
         }
