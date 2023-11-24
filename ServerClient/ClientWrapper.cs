@@ -23,7 +23,7 @@ namespace SeaStory
 
         private ClientWrapper()
         {
-            webSocketClient = new WebSocketClient("ws://220.123.227.97:8765");
+            webSocketClient = new WebSocketClient("ws://localhost:8765");
             webSocketClient.MessageReceived += WebSocketClient_MessageReceived;
         }
 
