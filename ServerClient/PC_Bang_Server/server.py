@@ -5,6 +5,7 @@ import json
 from user_manager import *
 from database import Database
 import logging
+# from save_image import save_image
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG,
@@ -67,6 +68,8 @@ async def main():
         "delete": user_manager.remove_user,
         "reserve": user_manager.reserve_user,
         "add_time": user_manager.add_time,
+        "force_delete": user_manager.force_remove_user,
+        # "save_image": save_image,
     }
 
     async def interact(websocket, path):

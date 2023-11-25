@@ -51,7 +51,7 @@ namespace SeaStory.UI.AdminFoodManagement
             foreach (var foodItem in foodItemList)
             {
                 Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
-                var menuItemControl = new MenuItemControl(foodImage, foodItem.FoodName, foodItem.FoodPrice);
+                var menuItemControl = new MenuItemControl(foodImage, foodItem.FoodName, foodItem.FoodPrice, foodItem.FoodCode);
 
                 flowLayoutPanelMenuItems.Controls.Add(menuItemControl);
             }

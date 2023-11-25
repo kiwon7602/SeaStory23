@@ -523,6 +523,67 @@ namespace SeaStory.Model
             }
             return null; // 해당 음식이 없는 경우
         }
+
+        public static void AddFood(string foodName, int foodPrice, string imageURL)
+        {
+            try
+            {
+                conn.Open();
+
+                // Retrieve the greatest FoodCode from the Food table
+                string getMaxCodeSql = "SELECT MAX(FoodCode) FROM Food";
+                MySqlCommand getMaxCodeCmd = new MySqlCommand(getMaxCodeSql, conn);
+                object result = getMaxCodeCmd.ExecuteScalar();
+                int newFoodCode = result != DBNull.Value ? Convert.ToInt32(result) + 1 : 1; // Start from 1 if table is empty
+
+                // Insert the new food item with the new FoodCode
+                string insertSql = "INSERT INTO Food (FoodName, FoodCode, FoodPrice, ImageURL) VALUES (@FoodName, @FoodCode, @FoodPrice, @ImageURL)";
+                MySqlCommand insertCmd = new MySqlCommand(insertSql, conn);
+                insertCmd.Parameters.AddWithValue("@FoodName", foodName);
+                insertCmd.Parameters.AddWithValue("@FoodCode", newFoodCode);
+                insertCmd.Parameters.AddWithValue("@FoodPrice", foodPrice);
+                insertCmd.Parameters.AddWithValue("@ImageURL", imageURL);
+
+                insertCmd.ExecuteNonQuery();
+
+                // MessageBox.Show($"Food added successfully.\nFood Code: {newFoodCode}\nFood Name: {foodName}\nFood Price: {foodPrice}\nImage URL: {imageURL}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show($"Failed to add food.\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static void DeleteFood(int foodCode)
+        {
+            try
+            {
+                conn.Open();
+
+                // SQL command to delete the food item with the given FoodCode
+                string deleteSql = "DELETE FROM Food WHERE FoodCode = @FoodCode";
+                MySqlCommand deleteCmd = new MySqlCommand(deleteSql, conn);
+                deleteCmd.Parameters.AddWithValue("@FoodCode", foodCode);
+
+                int rowsAffected = deleteCmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show($"Failed to delete food item.\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+ 
+
+
     }//aut 필드
 }//네임필드
 
