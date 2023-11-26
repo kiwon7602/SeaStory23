@@ -525,8 +525,6 @@ namespace SeaStory.Model
         }
 
         public static void AddFood(string foodName, int foodPrice, string imageURL)
-        // 요금제 추가하는 함수 
-        public static void UpdateSubscription(string name, int amount, string hours)
         {
             try
             {
@@ -553,6 +551,19 @@ namespace SeaStory.Model
             catch (Exception ex)
             {
                 // MessageBox.Show($"Failed to add food.\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static void UpdateSubscription(string name, int amount, string hours)
+        {
+            try
+            {
+                conn.Open();
+
                 // Find an unused SubscriptionKey from 1 to 100
                 int unusedKey = FindUnusedSubscriptionKey();
 
@@ -608,24 +619,22 @@ namespace SeaStory.Model
             return (count != null && Convert.ToInt32(count) > 0);
         }
 
-        // 요금제 삭제하는 함수
         public static void DeleteSubscription(string time, string name)
         {
             try
             {
                 conn.Open();
 
-                // SQL command to delete the food item with the given FoodCode
-                string deleteSql = "DELETE FROM Food WHERE FoodCode = @FoodCode";
-                MySqlCommand deleteCmd = new MySqlCommand(deleteSql, conn);
-                deleteCmd.Parameters.AddWithValue("@FoodCode", foodCode);
-
-                int rowsAffected = deleteCmd.ExecuteNonQuery();
-
+                // Subscription을 삭제
+                string sql = "DELETE FROM Subscription WHERE SubscriptionHours = @Time AND SubscriptionName = @Name";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Time", time);
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                // MessageBox.Show($"Failed to delete food item.\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Subscription을 삭제하는 중 오류 발생: " + ex.Message);
             }
             finally
             {
@@ -633,8 +642,7 @@ namespace SeaStory.Model
             }
         }
 
-
-        //좌석 정보를 받고 리스트 형태로 주문정보를 반환하는 메소드
+        // 좌석 정보를 받고 리스트 형태로 주문정보를 반환하는 메소드
         public static List<OrderTable> UserGetOrders(string seat)
         {
             List<OrderTable> orders = new List<OrderTable>();
@@ -661,17 +669,7 @@ namespace SeaStory.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
-                // Subscription을 삭제
-                string sql = "DELETE FROM Subscription WHERE SubscriptionHours = @Time AND SubscriptionName = @Name";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@Time", time);
-                cmd.Parameters.AddWithValue("@Name", name);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Subscription을 삭제하는 중 오류 발생: " + ex.Message);
+
             }
             finally
             {
@@ -680,7 +678,6 @@ namespace SeaStory.Model
 
             return orders;
         }
-
 
 
     }//aut 필드
