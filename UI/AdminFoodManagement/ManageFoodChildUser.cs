@@ -74,7 +74,8 @@ namespace SeaStory.UI.AdminFoodManagement
             // SeatID 변수를 사용하여 주문 정보를 DB에 저장
             foreach (var item in selectedItems)
             {
-                DatabaseAut.AddOrder(DatabaseAut.GetFoodCode(item.FoodName), SeatID); // SeatID 변수 사용
+                //DatabaseAut.AddOrder(DatabaseAut.GetFoodCode(item.FoodName), SeatID); // SeatID 변수 사용
+                DatabaseAut.AddOrder(item.FoodName, SeatID); // SeatID 변수 사용
             }
             /*
             // Payment Form 열기 (필요에 따라 주석 처리하세요)
