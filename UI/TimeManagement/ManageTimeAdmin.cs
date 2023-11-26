@@ -25,7 +25,7 @@ namespace SeaStory.UI.TimeManagement
             {
                 addTimeForm.ShowDialog(this);
             }
-            timeTable.Refresh();
+            timeTable.RefreshTimeTable();
         }
 
 
@@ -35,7 +35,7 @@ namespace SeaStory.UI.TimeManagement
             {
                 deleteTimeForm.ShowDialog(this);
             }
-            timeTable.Refresh();
+            timeTable.RefreshTimeTable();
         }
 
         private void dataGridViewTimeTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
