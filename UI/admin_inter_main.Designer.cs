@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             button24 = new System.Windows.Forms.Button();
             button25 = new System.Windows.Forms.Button();
@@ -38,19 +37,9 @@
             button3 = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
-            // button1
-            // 
-            button1.ForeColor = System.Drawing.Color.Red;
-            button1.Location = new System.Drawing.Point(34, 21);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(75, 56);
-            button1.TabIndex = 0;
-            button1.Text = "강제 종료";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(34, 118);
+            button2.Location = new System.Drawing.Point(34, 21);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(75, 81);
             button2.TabIndex = 1;
@@ -114,15 +103,12 @@
             Controls.Add(button25);
             Controls.Add(button24);
             Controls.Add(button2);
-            Controls.Add(button1);
             Name = "admin_inter_main";
             Text = "admin_inter_main";
             ResumeLayout(false);
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
