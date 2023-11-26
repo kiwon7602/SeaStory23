@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SeaStory.Model.DataCalss;
 
 namespace SeaStory.UI.AdminFoodManagement
 {
@@ -48,7 +49,7 @@ namespace SeaStory.UI.AdminFoodManagement
             foreach (var foodItem in foodItemList)
             {
                 Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
-                var menuItemControl = new MenuItemWithCheckboxControl(foodImage, foodItem.FoodName, foodItem.FoodPrice);
+                var menuItemControl = new MenuItemWithCheckboxControl(foodImage, foodItem.FoodName, foodItem.FoodPrice, foodItem.FoodCode);
 
                 flowLayoutPanelMenuItems.Controls.Add(menuItemControl);
 
@@ -60,7 +61,7 @@ namespace SeaStory.UI.AdminFoodManagement
         private void DeleteFoodItemFromDatabase(MenuItemControl menuItemControl)
         {
             // Implement the logic to delete the menu item from your database.
-
+            DatabaseAut.DeleteFood(menuItemControl.FoodCode);
         }
 
         private void buttonDeleteCheckedFood_Click(object sender, EventArgs e)

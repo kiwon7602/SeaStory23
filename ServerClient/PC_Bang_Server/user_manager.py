@@ -141,6 +141,34 @@ class UserManager:
                 logger.warning(f'User {user_id} not found in active users on seat {seat_num}.')
                 # handle error
 
+    async def force_remove_user(self, data, websocket):
+        user_id = data["user_id"]
+        seat_num = data["seat_num"]
+
+        seat = self.seats.get(seat_num)
+        if not seat:
+            logger.error(f"Invalid seat number: {seat_num}. Removal operation aborted.")
+            return
+
+        async with seat.lock:
+            if seat.user == user_id:
+                seat.user = None
+                seat.remaining_time = 0
+
+                query = "UPDATE Seat SET UsageTime = %s, UserID = %s WHERE SeatNumber = %s"
+                params = (None, None, seat_num)
+                await self.db.execute_query(query, params, commit=True)
+                logger.info(f'User {user_id} has been deactivated from seat {seat_num}.')
+
+                message = self.build_json({"command": "force_logout"})
+                await self.send_json(message, seat.connection)
+
+                logger.info(f'Force logout message sent to user {user_id}.')
+
+            else:
+                logger.warning(f'User {user_id} not found in active users on seat {seat_num}.')
+                # handle error
+
     async def update_member_table(self, seat):
         query = "UPDATE Member SET RemainingTime = %s, UsageTime = UsageTime+1 WHERE ID = %s"
         params = (seat.remaining_time, seat.user)

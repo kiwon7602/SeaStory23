@@ -33,7 +33,7 @@ namespace SeaStory.UI.Seats
             this.Controls.Add(flowLayoutPanel);
             UpdateSeats();
         }
-        private void UpdateSeats()
+        protected virtual void UpdateSeats()
         {
             var seats = DatabaseNonAut.GetSeats();
             var currentSeatControls = flowLayoutPanel.Controls.OfType<Seat>().ToList();

@@ -36,7 +36,7 @@ namespace SeaStory.UI.AdminFoodManagement
             foreach (var foodItem in foodItemList)
             {
                 Image foodImage = await ImageDownloader.LoadImageAsync(foodItem.ImageURL);
-                var menuItemControl = new MenuItemWithCheckboxControl(foodImage, foodItem.FoodName, foodItem.FoodPrice);
+                var menuItemControl = new MenuItemWithCheckboxControl(foodImage, foodItem.FoodName, foodItem.FoodPrice, foodItem.FoodCode);
 
                 flowLayoutPanelMenuItems.Controls.Add(menuItemControl);
             }
@@ -76,13 +76,17 @@ namespace SeaStory.UI.AdminFoodManagement
             {
                 DatabaseAut.AddOrder(DatabaseAut.GetFoodCode(item.FoodName), SeatID); // SeatID 변수 사용
             }
-
+            /*
             // Payment Form 열기 (필요에 따라 주석 처리하세요)
             using (UserInterFacePayment payment = new UserInterFacePayment())
             {
                 payment.SetPrice((int)totalPrice);
                 payment.ShowDialog();
             }
+            */
+            UserInterFacePayment userInterFacePayment = new UserInterFacePayment(SeatID);
+            userInterFacePayment.ShowDialog();
+            this.Close();
         }
     }
 }

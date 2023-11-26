@@ -40,7 +40,6 @@ namespace SeaStory
             button1 = new System.Windows.Forms.Button();
             label5 = new System.Windows.Forms.Label();
             PW_Box2 = new System.Windows.Forms.TextBox();
-            button2 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
             CloseButton = new System.Windows.Forms.Button();
             SuspendLayout();
@@ -142,17 +141,6 @@ namespace SeaStory
             PW_Box2.Size = new System.Drawing.Size(100, 23);
             PW_Box2.TabIndex = 9;
             // 
-            // button2
-            // 
-            button2.Location = new System.Drawing.Point(296, 308);
-            button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(75, 29);
-            button2.TabIndex = 11;
-            button2.Text = "본인인증";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // button3
             // 
             button3.Location = new System.Drawing.Point(222, 426);
@@ -182,7 +170,6 @@ namespace SeaStory
             ClientSize = new System.Drawing.Size(800, 562);
             Controls.Add(CloseButton);
             Controls.Add(button3);
-            Controls.Add(button2);
             Controls.Add(label5);
             Controls.Add(PW_Box2);
             Controls.Add(button1);
@@ -214,7 +201,6 @@ namespace SeaStory
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox PW_Box2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button CloseButton;
     }

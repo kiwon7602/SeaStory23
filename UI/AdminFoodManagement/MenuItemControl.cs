@@ -17,6 +17,8 @@ namespace SeaStory.UI.AdminFoodManagement
         public Image FoodImage { get; private set; }
         public int FoodPrice { get; private set; }
 
+        public string FoodCode { get; private set; }
+
         // You could use a custom constructor or properties to pass in the image, name, and price.
 
         public MenuItemControl()
@@ -24,13 +26,14 @@ namespace SeaStory.UI.AdminFoodManagement
             InitializeComponent();
         }
 
-        public MenuItemControl(Image foodImage, string foodName, int foodPrice)
+        public MenuItemControl(Image foodImage, string foodName, int foodPrice, string foodCode)
         {
             InitializeComponent();
 
             this.FoodImage = foodImage;
             this.FoodName = foodName;
             this.FoodPrice = foodPrice; 
+            this.FoodCode = foodCode;
 
             this.pictureBoxFood.Image = foodImage;
             this.labelFoodName.Text = foodName;

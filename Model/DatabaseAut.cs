@@ -471,7 +471,7 @@ namespace SeaStory.Model
             }
         }
 
-        //Foodcode와 주문자리 정보를 받아 삭제하는 메소드
+        //주문자리 정보를 받아 삭제하는 메소드
         public static void DeleteOrder(string orderSeat)
         {
             try
@@ -524,6 +524,7 @@ namespace SeaStory.Model
             return null; // 해당 음식이 없는 경우
         }
 
+        public static void AddFood(string foodName, int foodPrice, string imageURL)
         // 요금제 추가하는 함수 
         public static void UpdateSubscription(string name, int amount, string hours)
         {
@@ -531,6 +532,27 @@ namespace SeaStory.Model
             {
                 conn.Open();
 
+                // Retrieve the greatest FoodCode from the Food table
+                string getMaxCodeSql = "SELECT MAX(FoodCode) FROM Food";
+                MySqlCommand getMaxCodeCmd = new MySqlCommand(getMaxCodeSql, conn);
+                object result = getMaxCodeCmd.ExecuteScalar();
+                int newFoodCode = result != DBNull.Value ? Convert.ToInt32(result) + 1 : 1; // Start from 1 if table is empty
+
+                // Insert the new food item with the new FoodCode
+                string insertSql = "INSERT INTO Food (FoodName, FoodCode, FoodPrice, ImageURL) VALUES (@FoodName, @FoodCode, @FoodPrice, @ImageURL)";
+                MySqlCommand insertCmd = new MySqlCommand(insertSql, conn);
+                insertCmd.Parameters.AddWithValue("@FoodName", foodName);
+                insertCmd.Parameters.AddWithValue("@FoodCode", newFoodCode);
+                insertCmd.Parameters.AddWithValue("@FoodPrice", foodPrice);
+                insertCmd.Parameters.AddWithValue("@ImageURL", imageURL);
+
+                insertCmd.ExecuteNonQuery();
+
+                // MessageBox.Show($"Food added successfully.\nFood Code: {newFoodCode}\nFood Name: {foodName}\nFood Price: {foodPrice}\nImage URL: {imageURL}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show($"Failed to add food.\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // Find an unused SubscriptionKey from 1 to 100
                 int unusedKey = FindUnusedSubscriptionKey();
 
@@ -593,6 +615,53 @@ namespace SeaStory.Model
             {
                 conn.Open();
 
+                // SQL command to delete the food item with the given FoodCode
+                string deleteSql = "DELETE FROM Food WHERE FoodCode = @FoodCode";
+                MySqlCommand deleteCmd = new MySqlCommand(deleteSql, conn);
+                deleteCmd.Parameters.AddWithValue("@FoodCode", foodCode);
+
+                int rowsAffected = deleteCmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show($"Failed to delete food item.\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
+        //좌석 정보를 받고 리스트 형태로 주문정보를 반환하는 메소드
+        public static List<OrderTable> UserGetOrders(string seat)
+        {
+            List<OrderTable> orders = new List<OrderTable>();
+
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM OrderTable WHERE OrderSeat = @seat";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@seat", seat);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        OrderTable order = new OrderTable();
+                        order.FoodCode = reader["FoodCode"].ToString();
+                        order.OrderTime = reader["OrderTime"].ToString();
+                        order.OrderSeat = reader["OrderSeat"].ToString();
+
+                        orders.Add(order);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
                 // Subscription을 삭제
                 string sql = "DELETE FROM Subscription WHERE SubscriptionHours = @Time AND SubscriptionName = @Name";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -608,7 +677,12 @@ namespace SeaStory.Model
             {
                 conn.Close();
             }
+
+            return orders;
         }
+
+
+
     }//aut 필드
 }//네임필드
 

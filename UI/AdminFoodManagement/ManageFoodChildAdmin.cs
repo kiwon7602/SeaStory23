@@ -30,6 +30,7 @@ namespace SeaStory.UI.AdminFoodManagement
                     CreateMenuItemsAsync().ConfigureAwait(false);
                 }
             }
+            CreateMenuItemsAsync().ConfigureAwait(false);
         }
 
 
@@ -45,6 +46,7 @@ namespace SeaStory.UI.AdminFoodManagement
                     CreateMenuItemsAsync().ConfigureAwait(false);
                 }
             }
+            CreateMenuItemsAsync().ConfigureAwait(false);
         }
 
     }
