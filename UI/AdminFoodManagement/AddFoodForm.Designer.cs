@@ -62,7 +62,7 @@
             labelFoodName.AutoSize = true;
             labelFoodName.Location = new System.Drawing.Point(243, 107);
             labelFoodName.Name = "labelFoodName";
-            labelFoodName.Size = new System.Drawing.Size(58, 15);
+            labelFoodName.Size = new System.Drawing.Size(59, 15);
             labelFoodName.TabIndex = 3;
             labelFoodName.Text = "음식 이름";
             // 
@@ -71,7 +71,7 @@
             labelFoodPrice.AutoSize = true;
             labelFoodPrice.Location = new System.Drawing.Point(243, 161);
             labelFoodPrice.Name = "labelFoodPrice";
-            labelFoodPrice.Size = new System.Drawing.Size(58, 15);
+            labelFoodPrice.Size = new System.Drawing.Size(59, 15);
             labelFoodPrice.TabIndex = 4;
             labelFoodPrice.Text = "음식 가격";
             // 
@@ -108,6 +108,7 @@
             // numericUpDownFoodPrice
             // 
             numericUpDownFoodPrice.Location = new System.Drawing.Point(344, 159);
+            numericUpDownFoodPrice.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
             numericUpDownFoodPrice.Name = "numericUpDownFoodPrice";
             numericUpDownFoodPrice.Size = new System.Drawing.Size(181, 23);
             numericUpDownFoodPrice.TabIndex = 8;
@@ -117,7 +118,7 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(59, 24);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(58, 15);
+            label1.Size = new System.Drawing.Size(59, 15);
             label1.TabIndex = 9;
             label1.Text = "음식 추가";
             // 

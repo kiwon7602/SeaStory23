@@ -52,7 +52,7 @@
             labelTime.AutoSize = true;
             labelTime.Location = new System.Drawing.Point(274, 102);
             labelTime.Name = "labelTime";
-            labelTime.Size = new System.Drawing.Size(58, 15);
+            labelTime.Size = new System.Drawing.Size(59, 15);
             labelTime.TabIndex = 3;
             labelTime.Text = "추가 시간";
             // 
@@ -61,7 +61,7 @@
             labelMemberPrice.AutoSize = true;
             labelMemberPrice.Location = new System.Drawing.Point(274, 198);
             labelMemberPrice.Name = "labelMemberPrice";
-            labelMemberPrice.Size = new System.Drawing.Size(58, 15);
+            labelMemberPrice.Size = new System.Drawing.Size(59, 15);
             labelMemberPrice.TabIndex = 4;
             labelMemberPrice.Text = "회원 요금";
             labelMemberPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -71,7 +71,7 @@
             labelName.AutoSize = true;
             labelName.Location = new System.Drawing.Point(274, 149);
             labelName.Name = "labelName";
-            labelName.Size = new System.Drawing.Size(58, 15);
+            labelName.Size = new System.Drawing.Size(59, 15);
             labelName.TabIndex = 5;
             labelName.Text = "요금제 명";
             // 
@@ -98,6 +98,7 @@
             // numericUpDownTime
             // 
             numericUpDownTime.Location = new System.Drawing.Point(418, 94);
+            numericUpDownTime.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
             numericUpDownTime.Name = "numericUpDownTime";
             numericUpDownTime.Size = new System.Drawing.Size(120, 23);
             numericUpDownTime.TabIndex = 8;
@@ -105,9 +106,11 @@
             // numericUpDownPrice
             // 
             numericUpDownPrice.Location = new System.Drawing.Point(418, 196);
+            numericUpDownPrice.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
             numericUpDownPrice.Name = "numericUpDownPrice";
             numericUpDownPrice.Size = new System.Drawing.Size(120, 23);
             numericUpDownPrice.TabIndex = 9;
+            
             // 
             // AddTime
             // 

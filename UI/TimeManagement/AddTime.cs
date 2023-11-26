@@ -26,7 +26,7 @@ namespace SeaStory.UI.TimeManagement
             int price = (int)numericUpDownPrice.Value;
             string name = textBoxName.Text;
 
-            DatabaseAut.UpdateSubscription(name,price, time.ToString());
+            DatabaseAut.UpdateSubscription(name, price, time.ToString());
             // Optionally close the form if needed after adding
             this.Close();
         }
@@ -47,6 +47,7 @@ namespace SeaStory.UI.TimeManagement
 
             Console.WriteLine($"Data to be sent to DB: Time: {time}, Price: {price}, Name: {name}");
         }
+
     }
 
 
