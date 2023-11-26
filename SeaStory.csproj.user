@@ -86,6 +86,9 @@
     <Compile Update="UI\user_interface_rank.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI\User_Order_list_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UI\user_seat.cs">
       <SubType>Form</SubType>
     </Compile>

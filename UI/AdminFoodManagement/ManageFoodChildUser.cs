@@ -76,13 +76,17 @@ namespace SeaStory.UI.AdminFoodManagement
             {
                 DatabaseAut.AddOrder(DatabaseAut.GetFoodCode(item.FoodName), SeatID); // SeatID 변수 사용
             }
-
+            /*
             // Payment Form 열기 (필요에 따라 주석 처리하세요)
             using (UserInterFacePayment payment = new UserInterFacePayment())
             {
                 payment.SetPrice((int)totalPrice);
                 payment.ShowDialog();
             }
+            */
+            UserInterFacePayment userInterFacePayment = new UserInterFacePayment(SeatID);
+            userInterFacePayment.ShowDialog();
+            this.Close();
         }
     }
 }

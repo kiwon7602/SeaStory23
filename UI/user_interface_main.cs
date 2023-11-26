@@ -43,7 +43,7 @@ namespace SeaStory
                 label1.Text = "회원 요금제";
                 //유저 정보 기반 유저명 호출 및 표시
                 label3.Text = user.Name;
-                
+
             }
             //자리 번호
             label8.Text = seat_number;
@@ -178,6 +178,7 @@ namespace SeaStory
         //사용 종료 버튼 클릭 시
         private async void button11_Click(object sender, EventArgs e)
         {
+            DatabaseAut.DeleteOrder(seatNumber);
             login login = new login();
             login.Show();
 
@@ -208,6 +209,7 @@ namespace SeaStory
         private void appCloseButton1_Load(object sender, EventArgs e)
         {
             //프로그램 종료시 필요한 기능이 있다면 여기 추가
+            DatabaseAut.DeleteOrder(seatNumber);
         }
 
         //랭킹 보기 버튼 클릭 시
@@ -215,6 +217,13 @@ namespace SeaStory
         {
             user_interface_rank user_Interface_Rank = new user_interface_rank();
             user_Interface_Rank.ShowDialog();
+        }
+
+        //주문 목록 버튼 클릭 시
+        private void button1_Click(object sender, EventArgs e)
+        {
+            User_Order_list_form user_Order_list_Form = new User_Order_list_form(seatNumber);
+            user_Order_list_Form.ShowDialog();
         }
     }
 }

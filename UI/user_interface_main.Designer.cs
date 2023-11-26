@@ -41,6 +41,7 @@ namespace SeaStory
             label8 = new System.Windows.Forms.Label();
             appCloseButton1 = new UI.AppCloseButton();
             timeTable1 = new UI.TimeManagement.TimeTable();
+            button1 = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // button7
@@ -155,12 +156,24 @@ namespace SeaStory
             timeTable1.Size = new System.Drawing.Size(259, 311);
             timeTable1.TabIndex = 21;
             // 
+            // button1
+            // 
+            button1.Location = new System.Drawing.Point(470, 263);
+            button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(80, 29);
+            button1.TabIndex = 22;
+            button1.Text = "주문목록";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // user_interface_main
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 562);
             ControlBox = false;
+            Controls.Add(button1);
             Controls.Add(timeTable1);
             Controls.Add(appCloseButton1);
             Controls.Add(label8);
@@ -193,5 +206,6 @@ namespace SeaStory
         private System.Windows.Forms.Label label8;
         private UI.AppCloseButton appCloseButton1;
         private UI.TimeManagement.TimeTable timeTable1;
+        private System.Windows.Forms.Button button1;
     }
 }

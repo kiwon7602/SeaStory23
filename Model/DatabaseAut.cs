@@ -471,7 +471,7 @@ namespace SeaStory.Model
             }
         }
 
-        //Foodcode와 주문자리 정보를 받아 삭제하는 메소드
+        //주문자리 정보를 받아 삭제하는 메소드
         public static void DeleteOrder(string orderSeat)
         {
             try
@@ -581,7 +581,45 @@ namespace SeaStory.Model
                 conn.Close();
             }
         }
- 
+
+
+        //좌석 정보를 받고 리스트 형태로 주문정보를 반환하는 메소드
+        public static List<OrderTable> UserGetOrders(string seat)
+        {
+            List<OrderTable> orders = new List<OrderTable>();
+
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM OrderTable WHERE OrderSeat = @seat";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@seat", seat);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        OrderTable order = new OrderTable();
+                        order.FoodCode = reader["FoodCode"].ToString();
+                        order.OrderTime = reader["OrderTime"].ToString();
+                        order.OrderSeat = reader["OrderSeat"].ToString();
+
+                        orders.Add(order);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return orders;
+        }
+
 
 
     }//aut 필드
