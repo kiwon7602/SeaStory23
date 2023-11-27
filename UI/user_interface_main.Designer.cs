@@ -50,7 +50,7 @@ namespace SeaStory
             button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button7.Name = "button7";
             button7.Size = new System.Drawing.Size(80, 29);
-            button7.TabIndex = 7;
+            button7.TabIndex = 1;
             button7.Text = "랭킹보기";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
@@ -61,7 +61,7 @@ namespace SeaStory
             button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button10.Name = "button10";
             button10.Size = new System.Drawing.Size(80, 29);
-            button10.TabIndex = 9;
+            button10.TabIndex = 2;
             button10.Text = "요리주문";
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
@@ -72,7 +72,7 @@ namespace SeaStory
             button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button11.Name = "button11";
             button11.Size = new System.Drawing.Size(80, 29);
-            button11.TabIndex = 11;
+            button11.TabIndex = 4;
             button11.Text = "사용종료";
             button11.UseVisualStyleBackColor = true;
             button11.Click += button11_Click;
@@ -146,7 +146,7 @@ namespace SeaStory
             appCloseButton1.Location = new System.Drawing.Point(677, 521);
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
-            appCloseButton1.TabIndex = 20;
+            appCloseButton1.TabIndex = 5;
             appCloseButton1.Load += appCloseButton1_Load;
             // 
             // timeTable1
@@ -155,6 +155,7 @@ namespace SeaStory
             timeTable1.Name = "timeTable1";
             timeTable1.Size = new System.Drawing.Size(259, 311);
             timeTable1.TabIndex = 21;
+            timeTable1.TabStop = false;
             // 
             // button1
             // 
@@ -162,7 +163,7 @@ namespace SeaStory
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(80, 29);
-            button1.TabIndex = 22;
+            button1.TabIndex = 3;
             button1.Text = "주문목록";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;

@@ -42,7 +42,7 @@
             button2.Location = new System.Drawing.Point(34, 21);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(75, 81);
-            button2.TabIndex = 1;
+            button2.TabIndex = 3;
             button2.Text = "요리 주문 목록";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -52,7 +52,7 @@
             button24.Location = new System.Drawing.Point(492, 21);
             button24.Name = "button24";
             button24.Size = new System.Drawing.Size(100, 56);
-            button24.TabIndex = 3;
+            button24.TabIndex = 1;
             button24.Text = "요금제 관리";
             button24.UseVisualStyleBackColor = true;
             button24.Click += button24_Click;
@@ -62,7 +62,7 @@
             button25.Location = new System.Drawing.Point(625, 21);
             button25.Name = "button25";
             button25.Size = new System.Drawing.Size(100, 56);
-            button25.TabIndex = 4;
+            button25.TabIndex = 2;
             button25.Text = "음식 관리";
             button25.UseVisualStyleBackColor = true;
             button25.Click += button25_Click;
@@ -72,7 +72,7 @@
             appCloseButton1.Location = new System.Drawing.Point(34, 399);
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
-            appCloseButton1.TabIndex = 5;
+            appCloseButton1.TabIndex = 4;
             // 
             // seatPanelAdmin1
             // 
@@ -80,13 +80,14 @@
             seatPanelAdmin1.Name = "seatPanelAdmin1";
             seatPanelAdmin1.Size = new System.Drawing.Size(502, 348);
             seatPanelAdmin1.TabIndex = 6;
+            seatPanelAdmin1.TabStop = false;
             // 
             // button3
             // 
             button3.Location = new System.Drawing.Point(347, 21);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(100, 56);
-            button3.TabIndex = 7;
+            button3.TabIndex = 0;
             button3.Text = "회원 관리";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;

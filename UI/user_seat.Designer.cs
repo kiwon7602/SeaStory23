@@ -63,7 +63,7 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(46, 108);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(38, 15);
+            label1.Size = new System.Drawing.Size(39, 15);
             label1.TabIndex = 3;
             label1.Text = "label1";
             // 
@@ -72,16 +72,16 @@
             label2.AutoSize = true;
             label2.Location = new System.Drawing.Point(162, 108);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(38, 15);
+            label2.Size = new System.Drawing.Size(39, 15);
             label2.TabIndex = 4;
             label2.Text = "label2";
             // 
             // Back_Button
             // 
-            Back_Button.Location = new System.Drawing.Point(697, 28);
+            Back_Button.Location = new System.Drawing.Point(697, 32);
             Back_Button.Name = "Back_Button";
             Back_Button.Size = new System.Drawing.Size(75, 23);
-            Back_Button.TabIndex = 5;
+            Back_Button.TabIndex = 99;
             Back_Button.Text = "뒤로 가기";
             Back_Button.UseVisualStyleBackColor = true;
             Back_Button.Click += Back_Button_Click;
@@ -91,7 +91,7 @@
             label3.AutoSize = true;
             label3.Location = new System.Drawing.Point(345, 59);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(38, 15);
+            label3.Size = new System.Drawing.Size(39, 15);
             label3.TabIndex = 6;
             label3.Text = "label3";
             // 
@@ -100,7 +100,7 @@
             label4.AutoSize = true;
             label4.Location = new System.Drawing.Point(441, 59);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(82, 15);
+            label4.Size = new System.Drawing.Size(83, 15);
             label4.TabIndex = 7;
             label4.Text = "님 환영합니다";
             // 
@@ -109,7 +109,7 @@
             appCloseButton1.Location = new System.Drawing.Point(46, 399);
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
-            appCloseButton1.TabIndex = 8;
+            appCloseButton1.TabIndex = 100;
             // 
             // seatPanel1
             // 

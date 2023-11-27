@@ -50,17 +50,16 @@ namespace SeaStory
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new System.Drawing.Size(89, 19);
             radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
             radioButton1.Text = "회원 로그인";
             radioButton1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(55, 172);
+            label1.Location = new System.Drawing.Point(57, 172);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(43, 15);
-            label1.TabIndex = 2;
+            label1.TabIndex = 5;
             label1.Text = "아이디";
             label1.Visible = false;
             // 
@@ -70,7 +69,7 @@ namespace SeaStory
             textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.Size = new System.Drawing.Size(289, 23);
-            textBox1.TabIndex = 3;
+            textBox1.TabIndex = 0;
             textBox1.Visible = false;
             // 
             // textBox2
@@ -79,7 +78,7 @@ namespace SeaStory
             textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.Size = new System.Drawing.Size(289, 23);
-            textBox2.TabIndex = 5;
+            textBox2.TabIndex = 2;
             textBox2.Visible = false;
             // 
             // label2
@@ -88,7 +87,7 @@ namespace SeaStory
             label2.Location = new System.Drawing.Point(55, 262);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(55, 15);
-            label2.TabIndex = 4;
+            label2.TabIndex = 6;
             label2.Text = "비밀번호";
             label2.Visible = false;
             // 
@@ -98,7 +97,7 @@ namespace SeaStory
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(75, 29);
-            button1.TabIndex = 6;
+            button1.TabIndex = 3;
             button1.Text = "로그인";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -115,7 +114,7 @@ namespace SeaStory
             register.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             register.Name = "register";
             register.Size = new System.Drawing.Size(79, 58);
-            register.TabIndex = 12;
+            register.TabIndex = 4;
             register.Text = "회원가입";
             register.UseVisualStyleBackColor = true;
             register.Click += register_Click;
@@ -125,7 +124,7 @@ namespace SeaStory
             appCloseButton1.Location = new System.Drawing.Point(637, 491);
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
-            appCloseButton1.TabIndex = 13;
+            appCloseButton1.TabIndex = 7;
             // 
             // login
             // 

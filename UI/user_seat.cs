@@ -19,7 +19,7 @@ namespace SeaStory.UI
     public partial class user_seat : Form
     {
         //user_type = 0 회원 유저
-        
+
 
         private string userID;
         private int userType;
@@ -32,7 +32,7 @@ namespace SeaStory.UI
             userType = user_type;
 
             InitializeUser();
-            InitializeSeats(); 
+            InitializeSeats();
 
             //버튼에 대한 정보 초기화 부분
             //DB에서 리스트 형태로 좌석 정보 받음
@@ -75,7 +75,7 @@ namespace SeaStory.UI
             this.Close();
         }
 
-        
+
         private void button1_Click(string userId, int userType, string seat)
         {
             user_interface_main user_Interface_main = new user_interface_main(userID, userType, seat);
