@@ -26,6 +26,8 @@ namespace SeaStory
             textBox2.Visible = true;
 
 
+            // KeyDown 이벤트 등록
+            this.AcceptButton = button1;
         }
 
         //회원가입 버튼 클릭
@@ -36,11 +38,10 @@ namespace SeaStory
             user_Interface.ShowDialog();
         }
 
-
-
-        //로그인 버튼 클릭
+        // 로그인 버튼 클릭 또는 Enter 키 누를 때 실행되는 이벤트
         private void button1_Click(object sender, EventArgs e)
         {
+
             //회원 로그인
             if (radioButton1.Checked)
             {
@@ -74,7 +75,7 @@ namespace SeaStory
                     MessageBox.Show("로그인 정보가 잘못되었습니다!", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
-
         }
+
     }
 }
