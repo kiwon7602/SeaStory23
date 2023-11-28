@@ -57,6 +57,7 @@ namespace SeaStory
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Red;
             label1.Location = new System.Drawing.Point(31, 69);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(43, 15);
@@ -66,6 +67,7 @@ namespace SeaStory
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.Red;
             label2.Location = new System.Drawing.Point(31, 155);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(55, 15);
@@ -83,6 +85,7 @@ namespace SeaStory
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.Yellow;
             label3.Location = new System.Drawing.Point(31, 311);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(43, 15);
@@ -100,6 +103,7 @@ namespace SeaStory
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = System.Drawing.Color.Yellow;
             label4.Location = new System.Drawing.Point(31, 231);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(31, 15);
@@ -116,6 +120,7 @@ namespace SeaStory
             // 
             // button1
             // 
+            button1.BackColor = System.Drawing.Color.Blue;
             button1.BackgroundImage = (System.Drawing.Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             button1.Location = new System.Drawing.Point(296, 62);
@@ -124,12 +129,13 @@ namespace SeaStory
             button1.Size = new System.Drawing.Size(75, 29);
             button1.TabIndex = 8;
             button1.Text = "중복확인";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = System.Drawing.Color.Red;
             label5.Location = new System.Drawing.Point(294, 151);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(83, 15);
@@ -146,6 +152,9 @@ namespace SeaStory
             // 
             // button3
             // 
+            button3.BackgroundImage = (System.Drawing.Image)resources.GetObject("button3.BackgroundImage");
+            button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button3.ForeColor = System.Drawing.Color.Red;
             button3.Location = new System.Drawing.Point(222, 426);
             button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button3.Name = "button3";
@@ -157,6 +166,9 @@ namespace SeaStory
             // 
             // CloseButton
             // 
+            CloseButton.BackgroundImage = (System.Drawing.Image)resources.GetObject("CloseButton.BackgroundImage");
+            CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            CloseButton.ForeColor = System.Drawing.Color.Red;
             CloseButton.Location = new System.Drawing.Point(393, 426);
             CloseButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             CloseButton.Name = "CloseButton";
@@ -170,6 +182,8 @@ namespace SeaStory
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = (System.Drawing.Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(800, 562);
             Controls.Add(CloseButton);
             Controls.Add(button3);
