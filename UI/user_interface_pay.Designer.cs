@@ -84,7 +84,7 @@
             button4.ForeColor = System.Drawing.Color.Red;
             button4.Location = new System.Drawing.Point(640, 369);
             button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(112, 40);
+            button4.Size = new System.Drawing.Size(112, 46);
             button4.TabIndex = 4;
             button4.Text = "주문 취소";
             button4.UseVisualStyleBackColor = true;
@@ -94,6 +94,8 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.White;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(800, 450);
             Controls.Add(button4);
             Controls.Add(labelPrice);
