@@ -29,6 +29,7 @@ namespace SeaStory
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user_interface));
             ID_Box = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -115,6 +116,8 @@ namespace SeaStory
             // 
             // button1
             // 
+            button1.BackgroundImage = (System.Drawing.Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             button1.Location = new System.Drawing.Point(296, 62);
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";

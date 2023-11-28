@@ -37,7 +37,7 @@
             title.AutoSize = true;
             title.Location = new System.Drawing.Point(49, 33);
             title.Name = "title";
-            title.Size = new System.Drawing.Size(58, 15);
+            title.Size = new System.Drawing.Size(59, 15);
             title.TabIndex = 0;
             title.Text = "음식 목록";
             // 
@@ -53,11 +53,13 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(800, 450);
             Controls.Add(flowLayoutPanelMenuItems);
             Controls.Add(title);
             Name = "ManageFoodParent";
             Text = "ManageFood";
+            Load += ManageFoodParent_Load;
             ResumeLayout(false);
             PerformLayout();
         }
