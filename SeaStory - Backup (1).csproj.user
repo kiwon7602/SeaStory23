@@ -5,16 +5,10 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Starting.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="UI\AdminFoodManagement\AddFoodForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\AdminFoodManagement\DeleteFoodForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="UI\AdminFoodManagement\Food_Order_listForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\AdminFoodManagement\ManageFoodChildAdmin.cs">
@@ -32,32 +26,11 @@
     <Compile Update="UI\AdminFoodManagement\MenuItemWithCheckboxControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UI\AdminUserManagement\UserManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="UI\AdminUserManagement\UserManagement_update.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="UI\admin_inter_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\AppCloseButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="UI\login.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="UI\Seats\SeatOverview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="UI\Seats\Seat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UI\Seats\SeatPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="UI\Seats\SeatPanelAdmin.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UI\TimeManagement\AddTime.cs">
       <SubType>Form</SubType>
@@ -65,16 +38,23 @@
     <Compile Update="UI\TimeManagement\DeleteTime.cs">
       <SubType>Form</SubType>
     </Compile>
+
+    <Compile Update="UI\tts\tts_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\UserSeat.cs">
+
     <Compile Update="UI\TimeManagement\ManageTimeAdmin.cs">
+
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\TimeManagement\TimeTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UI\tts\tts_test.cs">
+    <Compile Update="UI\user_interface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\user_interface.cs">
+    <Compile Update="UI\user_interface_food.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\user_interface_main.cs">
@@ -84,9 +64,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\user_interface_rank.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="UI\User_Order_list_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\user_seat.cs">
