@@ -72,6 +72,7 @@ namespace SeaStory.UI
             label2.Text = usedSeatsCount.ToString();
 
             seatPanel1.SetSeatClickHandler(button1_Click);
+           
         }
 
         private void Back_Button_Click(object sender, EventArgs e)
