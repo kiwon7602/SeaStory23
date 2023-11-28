@@ -46,35 +46,45 @@ namespace SeaStory
             // 
             // button7
             // 
-            button7.Location = new System.Drawing.Point(470, 105);
+            button7.BackColor = System.Drawing.Color.White;
+            button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button7.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button7.Location = new System.Drawing.Point(334, 226);
             button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(80, 29);
+            button7.Size = new System.Drawing.Size(111, 46);
             button7.TabIndex = 1;
             button7.Text = "랭킹보기";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
             // button10
             // 
-            button10.Location = new System.Drawing.Point(470, 188);
+            button10.BackColor = System.Drawing.Color.White;
+            button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button10.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button10.Location = new System.Drawing.Point(334, 309);
             button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button10.Name = "button10";
-            button10.Size = new System.Drawing.Size(80, 29);
+            button10.Size = new System.Drawing.Size(111, 46);
             button10.TabIndex = 2;
             button10.Text = "요리주문";
-            button10.UseVisualStyleBackColor = true;
+            button10.UseVisualStyleBackColor = false;
             button10.Click += button10_Click;
             // 
             // button11
             // 
-            button11.Location = new System.Drawing.Point(610, 434);
+            button11.BackColor = System.Drawing.Color.White;
+            button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button11.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button11.ForeColor = System.Drawing.Color.Black;
+            button11.Location = new System.Drawing.Point(599, 349);
             button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button11.Name = "button11";
-            button11.Size = new System.Drawing.Size(80, 29);
+            button11.Size = new System.Drawing.Size(104, 81);
             button11.TabIndex = 4;
             button11.Text = "사용종료";
-            button11.UseVisualStyleBackColor = true;
+            button11.UseVisualStyleBackColor = false;
             button11.Click += button11_Click;
             // 
             // label1
@@ -143,6 +153,7 @@ namespace SeaStory
             // 
             // appCloseButton1
             // 
+            appCloseButton1.BackColor = System.Drawing.Color.White;
             appCloseButton1.Location = new System.Drawing.Point(677, 521);
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
@@ -159,19 +170,23 @@ namespace SeaStory
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(470, 263);
+            button1.BackColor = System.Drawing.Color.White;
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button1.Location = new System.Drawing.Point(334, 384);
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(80, 29);
+            button1.Size = new System.Drawing.Size(111, 46);
             button1.TabIndex = 3;
             button1.Text = "주문목록";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // user_interface_main
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(800, 562);
             ControlBox = false;
             Controls.Add(button1);
@@ -187,6 +202,7 @@ namespace SeaStory
             Controls.Add(button11);
             Controls.Add(button10);
             Controls.Add(button7);
+            DoubleBuffered = true;
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "user_interface_main";
             Text = "Form2";

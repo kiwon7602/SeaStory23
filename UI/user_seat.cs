@@ -82,5 +82,10 @@ namespace SeaStory.UI
             user_Interface_main.Show();
             this.Close();
         }
+
+        private void seatPanel1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
