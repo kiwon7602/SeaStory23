@@ -17,7 +17,7 @@ namespace SeaStory.UI.AdminFoodManagement
         public Food_Order_listForm()
         {
             InitializeComponent();
-            
+
             list_Update();
         }
 
