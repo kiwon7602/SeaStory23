@@ -19,8 +19,9 @@ namespace SeaStory.UI
         //종료 버튼 눌러졋을 때
         private async void button1_Click(object sender, EventArgs e)
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\종료.wav");
-            simpleSound.Play();
+            // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\종료.wav");
+            // SoundPlayer simpleSound = new SoundPlayer(@"..\..\..\UI\tts\종료.wav");
+            // simpleSound.Play();
             var clientWrapper = await ClientWrapper.Instance;
             await clientWrapper.DeactivateUserAsync();
             await clientWrapper.CloseAsync();

@@ -29,61 +29,57 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button buttonAddFood;
-            this.buttonDeleteFood = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            buttonDeleteFood = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
             buttonAddFood = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // flowLayoutPanelMenuItems
-            // 
-            this.flowLayoutPanelMenuItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // buttonAddFood
             // 
-            buttonAddFood.Location = new System.Drawing.Point(33, 80);
-            buttonAddFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            buttonAddFood.Location = new System.Drawing.Point(26, 60);
             buttonAddFood.Name = "buttonAddFood";
-            buttonAddFood.Size = new System.Drawing.Size(109, 49);
+            buttonAddFood.Size = new System.Drawing.Size(85, 37);
             buttonAddFood.TabIndex = 4;
             buttonAddFood.Text = "음식 추가";
             buttonAddFood.UseVisualStyleBackColor = true;
+            buttonAddFood.Click += buttonAddFood_Click;
             // 
             // buttonDeleteFood
             // 
-            this.buttonDeleteFood.Location = new System.Drawing.Point(33, 156);
-            this.buttonDeleteFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonDeleteFood.Name = "buttonDeleteFood";
-            this.buttonDeleteFood.Size = new System.Drawing.Size(109, 49);
-            this.buttonDeleteFood.TabIndex = 5;
-            this.buttonDeleteFood.Text = "음식 삭제";
-            this.buttonDeleteFood.UseVisualStyleBackColor = true;
+            buttonDeleteFood.Location = new System.Drawing.Point(26, 117);
+            buttonDeleteFood.Name = "buttonDeleteFood";
+            buttonDeleteFood.Size = new System.Drawing.Size(85, 37);
+            buttonDeleteFood.TabIndex = 5;
+            buttonDeleteFood.Text = "음식 삭제";
+            buttonDeleteFood.UseVisualStyleBackColor = true;
+            buttonDeleteFood.Click += buttonDeleteFood_Click;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(buttonAddFood);
-            this.panel1.Controls.Add(this.buttonDeleteFood);
-            this.panel1.Location = new System.Drawing.Point(843, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(174, 445);
-            this.panel1.TabIndex = 6;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(buttonAddFood);
+            panel1.Controls.Add(buttonDeleteFood);
+            panel1.Location = new System.Drawing.Point(656, 75);
+            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(136, 334);
+            panel1.TabIndex = 6;
             // 
             // ManageFoodChildAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 600);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "ManageFoodChildAdmin";
-            this.Text = "ManageFoodChildAdmin";
-            this.Controls.SetChildIndex(this.flowLayoutPanelMenuItems, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(panel1);
+            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Name = "ManageFoodChildAdmin";
+            Text = "ManageFoodChildAdmin";
+            Controls.SetChildIndex(flowLayoutPanelMenuItems, 0);
+            Controls.SetChildIndex(panel1, 0);
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
