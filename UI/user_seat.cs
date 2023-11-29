@@ -51,6 +51,7 @@ namespace SeaStory.UI
                 //유저 정보 기반 유저명 호출 및 표시
                 label3.Text = user.Name;
             }
+
         }
         private void InitializeSeats()
         {
@@ -66,7 +67,56 @@ namespace SeaStory.UI
             label2.Text = usedSeatsCount.ToString();
 
             seatPanel1.SetSeatClickHandler(button1_Click);
+
+
         }
+        /*private void InitializeSeats()
+        {
+            List<Seat> seats = DatabaseNonAut.GetSeats();
+
+            int usedSeatsCount = seats.Count(seat => !string.IsNullOrEmpty(seat.UserID));
+            int availableSeatsCount = seats.Count - usedSeatsCount;
+
+            label1.Text = availableSeatsCount.ToString(); // "잔여석" 레이블 업데이트
+            label2.Text = usedSeatsCount.ToString(); // "사용중" 레이블 업데이트
+
+            // FlowLayoutPanel 설정
+            FlowLayoutPanel seatPanel1 = new FlowLayoutPanel
+            {
+                AutoScroll = true,
+                Dock = DockStyle.Fill, // 패널을 부모 컨테이너 크기에 맞게 조정
+                FlowDirection = FlowDirection.LeftToRight, // 흐름 방향 설정
+                WrapContents = true, // 내용이 많을 경우 다음 줄로 넘김
+                Location = new Point(10, 10), // 시작 위치 설정
+                Size = new Size(780, 500) // 패널 크기 설정
+            };
+
+            this.Controls.Add(seatPanel1); // Form에 seatPanel1 추가
+
+            foreach (var seat in seats)
+            {
+                Panel seatContainerPanel = new Panel
+                {
+                    Size = new Size(100, 100),
+                    BorderStyle = BorderStyle.FixedSingle,
+                    Margin = new Padding(5),
+                    Padding = new Padding(3)
+                };
+
+                System.Windows.Forms.Button seatButton = new System.Windows.Forms.Button
+                {
+                    Text = $"Seat {seat.SeatNumber}",
+                    Dock = DockStyle.Fill,
+                    Enabled = string.IsNullOrEmpty(seat.UserID)
+                };
+
+                seatButton.Click += (sender, e) => button1_Click(seat.UserID, userType, seat.SeatNumber.ToString());
+                seatContainerPanel.Controls.Add(seatButton);
+
+                seatPanel1.Controls.Add(seatContainerPanel); // FlowLayoutPanel에 패널 추가
+            }
+        }*/
+
 
         private void Back_Button_Click(object sender, EventArgs e)
         {
@@ -84,6 +134,16 @@ namespace SeaStory.UI
         }
 
         private void seatPanel1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void appCloseButton1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void user_seat_Load(object sender, EventArgs e)
         {
 
         }

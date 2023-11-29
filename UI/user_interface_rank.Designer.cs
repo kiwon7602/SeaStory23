@@ -28,54 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new System.Windows.Forms.Label();
-            listView1 = new System.Windows.Forms.ListView();
-            button2 = new System.Windows.Forms.Button();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(37, 32);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(71, 15);
-            label1.TabIndex = 0;
-            label1.Text = "사용량 랭킹";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(48, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "사용량 랭킹";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // listView1
             // 
-            listView1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            listView1.FullRowSelect = true;
-            listView1.GridLines = true;
-            listView1.Location = new System.Drawing.Point(37, 78);
-            listView1.Name = "listView1";
-            listView1.Size = new System.Drawing.Size(606, 313);
-            listView1.TabIndex = 2;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(48, 104);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(778, 416);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(671, 78);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(101, 39);
-            button2.TabIndex = 4;
-            button2.Text = "새로고침";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Location = new System.Drawing.Point(863, 104);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 52);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "새로고침";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // user_interface_rank
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(listView1);
-            Controls.Add(label1);
-            Name = "user_interface_rank";
-            Text = "user_interface_rank";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1029, 600);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "user_interface_rank";
+            this.Text = "user_interface_rank";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

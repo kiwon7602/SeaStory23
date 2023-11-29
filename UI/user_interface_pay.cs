@@ -2,7 +2,7 @@
 using System;
 using System.Globalization;
 using System.Windows.Forms;
-
+using System.Media;
 namespace SeaStory.ui
 {
     public partial class UserInterFacePayment : Form
@@ -21,16 +21,22 @@ namespace SeaStory.ui
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\신용카드.wav");
+            simpleSound.Play();
             ProcessPayment();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\페이코.wav");
+            simpleSound.Play();
             ProcessPayment();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\현금.wav");
+            simpleSound.Play();
             ProcessPayment();
         }
 
