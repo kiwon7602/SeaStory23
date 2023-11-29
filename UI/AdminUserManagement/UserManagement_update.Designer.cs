@@ -28,213 +28,206 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.PW_Box2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.NAME_Box = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.PHONE_Box = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PW_Box = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ID_Box = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.SuspendLayout();
+            label1 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            PW_Box2 = new System.Windows.Forms.TextBox();
+            button2 = new System.Windows.Forms.Button();
+            button3 = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
+            label4 = new System.Windows.Forms.Label();
+            NAME_Box = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            PHONE_Box = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
+            PW_Box = new System.Windows.Forms.TextBox();
+            label6 = new System.Windows.Forms.Label();
+            ID_Box = new System.Windows.Forms.TextBox();
+            panel2 = new System.Windows.Forms.Panel();
+            panel3 = new System.Windows.Forms.Panel();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(53, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "유저 정보 수정";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(41, 22);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(146, 28);
+            label1.TabIndex = 0;
+            label1.Text = "유저 정보 수정";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(37, 43);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 35);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "비밀번호 확인";
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label5.Location = new System.Drawing.Point(29, 32);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(139, 28);
+            label5.TabIndex = 22;
+            label5.Text = "비밀번호 확인";
             // 
             // PW_Box2
             // 
-            this.PW_Box2.Location = new System.Drawing.Point(223, 50);
-            this.PW_Box2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PW_Box2.Name = "PW_Box2";
-            this.PW_Box2.Size = new System.Drawing.Size(127, 27);
-            this.PW_Box2.TabIndex = 21;
+            PW_Box2.Location = new System.Drawing.Point(173, 38);
+            PW_Box2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            PW_Box2.Name = "PW_Box2";
+            PW_Box2.Size = new System.Drawing.Size(100, 23);
+            PW_Box2.TabIndex = 21;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(46, 29);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 63);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "정보 수정";
-            this.button2.UseVisualStyleBackColor = false;
+            button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            button2.Location = new System.Drawing.Point(36, 22);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(117, 47);
+            button2.TabIndex = 23;
+            button2.Text = "정보 수정";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(266, 29);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 63);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "취소";
-            this.button3.UseVisualStyleBackColor = false;
+            button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            button3.Location = new System.Drawing.Point(207, 22);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(117, 47);
+            button3.TabIndex = 24;
+            button3.Text = "취소";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.NAME_Box);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.PHONE_Box);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.PW_Box);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.ID_Box);
-            this.panel1.Location = new System.Drawing.Point(53, 71);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(361, 443);
-            this.panel1.TabIndex = 25;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(NAME_Box);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(PHONE_Box);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(PW_Box);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(ID_Box);
+            panel1.Location = new System.Drawing.Point(41, 53);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(281, 333);
+            panel1.TabIndex = 25;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(41, 272);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 35);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "이름";
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label4.Location = new System.Drawing.Point(32, 204);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(52, 28);
+            label4.TabIndex = 27;
+            label4.Text = "이름";
             // 
             // NAME_Box
             // 
-            this.NAME_Box.Location = new System.Drawing.Point(167, 280);
-            this.NAME_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.NAME_Box.Name = "NAME_Box";
-            this.NAME_Box.Size = new System.Drawing.Size(127, 27);
-            this.NAME_Box.TabIndex = 26;
+            NAME_Box.Location = new System.Drawing.Point(130, 210);
+            NAME_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            NAME_Box.Name = "NAME_Box";
+            NAME_Box.Size = new System.Drawing.Size(100, 23);
+            NAME_Box.TabIndex = 26;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(41, 379);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 35);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "연락처";
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(32, 284);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(72, 28);
+            label3.TabIndex = 25;
+            label3.Text = "연락처";
             // 
             // PHONE_Box
             // 
-            this.PHONE_Box.Location = new System.Drawing.Point(167, 387);
-            this.PHONE_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PHONE_Box.Name = "PHONE_Box";
-            this.PHONE_Box.Size = new System.Drawing.Size(127, 27);
-            this.PHONE_Box.TabIndex = 24;
+            PHONE_Box.Location = new System.Drawing.Point(130, 290);
+            PHONE_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            PHONE_Box.Name = "PHONE_Box";
+            PHONE_Box.Size = new System.Drawing.Size(100, 23);
+            PHONE_Box.TabIndex = 24;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(41, 171);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 35);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "비밀번호";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(32, 128);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(92, 28);
+            label2.TabIndex = 23;
+            label2.Text = "비밀번호";
             // 
             // PW_Box
             // 
-            this.PW_Box.Location = new System.Drawing.Point(167, 177);
-            this.PW_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PW_Box.Name = "PW_Box";
-            this.PW_Box.Size = new System.Drawing.Size(127, 27);
-            this.PW_Box.TabIndex = 22;
+            PW_Box.Location = new System.Drawing.Point(130, 133);
+            PW_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            PW_Box.Name = "PW_Box";
+            PW_Box.Size = new System.Drawing.Size(100, 23);
+            PW_Box.TabIndex = 22;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(41, 56);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 35);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "아이디";
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label6.Location = new System.Drawing.Point(32, 42);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(72, 28);
+            label6.TabIndex = 21;
+            label6.Text = "아이디";
             // 
             // ID_Box
             // 
-            this.ID_Box.Enabled = false;
-            this.ID_Box.Location = new System.Drawing.Point(167, 63);
-            this.ID_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ID_Box.Name = "ID_Box";
-            this.ID_Box.Size = new System.Drawing.Size(127, 27);
-            this.ID_Box.TabIndex = 20;
+            ID_Box.Enabled = false;
+            ID_Box.Location = new System.Drawing.Point(130, 47);
+            ID_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            ID_Box.Name = "ID_Box";
+            ID_Box.Size = new System.Drawing.Size(100, 23);
+            ID_Box.TabIndex = 20;
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(445, 389);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(465, 125);
-            this.panel2.TabIndex = 26;
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button3);
+            panel2.Location = new System.Drawing.Point(346, 292);
+            panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(362, 94);
+            panel2.TabIndex = 26;
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.PW_Box2);
-            this.panel3.Location = new System.Drawing.Point(445, 213);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(455, 125);
-            this.panel3.TabIndex = 27;
+            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(PW_Box2);
+            panel3.Location = new System.Drawing.Point(346, 160);
+            panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(354, 94);
+            panel3.TabIndex = 27;
             // 
             // UserManagement_update
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 600);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "UserManagement_update";
-            this.Text = "UserManagement_update";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(label1);
+            Name = "UserManagement_update";
+            Text = "UserManagement_update";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

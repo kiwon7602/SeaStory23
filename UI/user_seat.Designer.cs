@@ -30,10 +30,10 @@
         {
             seat_opend = new System.Windows.Forms.Label();
             seat_used = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
+            labelAvailableSeatCount = new System.Windows.Forms.Label();
+            labelUsedSeatCount = new System.Windows.Forms.Label();
             Back_Button = new System.Windows.Forms.Button();
-            label3 = new System.Windows.Forms.Label();
+            labelUserName = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             appCloseButton1 = new AppCloseButton();
             panel2 = new System.Windows.Forms.Panel();
@@ -66,27 +66,27 @@
             seat_used.TabIndex = 2;
             seat_used.Text = "사용중";
             // 
-            // label1
+            // labelAvailableSeatCount
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(16, 84);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(54, 21);
-            label1.TabIndex = 3;
-            label1.Text = "label1";
+            labelAvailableSeatCount.AutoSize = true;
+            labelAvailableSeatCount.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelAvailableSeatCount.Location = new System.Drawing.Point(16, 84);
+            labelAvailableSeatCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            labelAvailableSeatCount.Name = "labelAvailableSeatCount";
+            labelAvailableSeatCount.Size = new System.Drawing.Size(19, 21);
+            labelAvailableSeatCount.TabIndex = 3;
+            labelAvailableSeatCount.Text = "0";
             // 
-            // label2
+            // labelUsedSeatCount
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(165, 84);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(54, 21);
-            label2.TabIndex = 4;
-            label2.Text = "label2";
+            labelUsedSeatCount.AutoSize = true;
+            labelUsedSeatCount.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelUsedSeatCount.Location = new System.Drawing.Point(165, 84);
+            labelUsedSeatCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            labelUsedSeatCount.Name = "labelUsedSeatCount";
+            labelUsedSeatCount.Size = new System.Drawing.Size(19, 21);
+            labelUsedSeatCount.TabIndex = 4;
+            labelUsedSeatCount.Text = "0";
             // 
             // Back_Button
             // 
@@ -98,17 +98,18 @@
             Back_Button.TabIndex = 99;
             Back_Button.Text = "뒤로 가기";
             Back_Button.UseVisualStyleBackColor = true;
+            Back_Button.Click += Back_Button_Click;
             // 
-            // label3
+            // labelUserName
             // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(51, 41);
-            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(54, 21);
-            label3.TabIndex = 6;
-            label3.Text = "label3";
+            labelUserName.AutoSize = true;
+            labelUserName.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelUserName.Location = new System.Drawing.Point(51, 41);
+            labelUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            labelUserName.Name = "labelUserName";
+            labelUserName.Size = new System.Drawing.Size(58, 21);
+            labelUserName.TabIndex = 6;
+            labelUserName.Text = "UserID";
             // 
             // label4
             // 
@@ -129,15 +130,14 @@
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(142, 43);
             appCloseButton1.TabIndex = 100;
-            appCloseButton1.Load += appCloseButton1_Load;
             // 
             // panel2
             // 
             panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel2.Controls.Add(seat_opend);
             panel2.Controls.Add(seat_used);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(labelAvailableSeatCount);
+            panel2.Controls.Add(labelUsedSeatCount);
             panel2.Location = new System.Drawing.Point(47, 45);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(250, 125);
@@ -146,7 +146,7 @@
             // panel3
             // 
             panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel3.Controls.Add(label3);
+            panel3.Controls.Add(labelUserName);
             panel3.Controls.Add(label4);
             panel3.Location = new System.Drawing.Point(315, 45);
             panel3.Name = "panel3";
@@ -180,7 +180,6 @@
             Margin = new System.Windows.Forms.Padding(4);
             Name = "user_seat";
             Text = "user_seat";
-            Load += user_seat_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
@@ -192,10 +191,10 @@
         #endregion
         private System.Windows.Forms.Label seat_opend;
         private System.Windows.Forms.Label seat_used;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelAvailableSeatCount;
+        private System.Windows.Forms.Label labelUsedSeatCount;
         private System.Windows.Forms.Button Back_Button;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Label label4;
         private AppCloseButton appCloseButton1;
         private System.Windows.Forms.Panel panel2;

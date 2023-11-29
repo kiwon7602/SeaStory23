@@ -19,24 +19,24 @@ namespace SeaStory.ui
             labelPrice.Text = n.ToString("C", new CultureInfo("ko-KR"));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonCreditCard(object sender, EventArgs e)
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\신용카드.wav");
-            simpleSound.Play();
+            // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\신용카드.wav");
+            // simpleSound.Play();
             ProcessPayment();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonPayco(object sender, EventArgs e)
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\페이코.wav");
-            simpleSound.Play();
+            // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\페이코.wav");
+            // simpleSound.Play();
             ProcessPayment();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonCash(object sender, EventArgs e)
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\현금.wav");
-            simpleSound.Play();
+            // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\현금.wav");
+            // simpleSound.Play();
             ProcessPayment();
         }
 
@@ -47,7 +47,7 @@ namespace SeaStory.ui
         }
 
         //주문취소 버튼 클릭 시
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonCancelOrder(object sender, EventArgs e)
         {
             //해당 좌석의 주문을 주문목록에서 지움
             DatabaseAut.DeleteOrder(SeatID);

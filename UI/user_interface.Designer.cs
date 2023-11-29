@@ -29,261 +29,264 @@ namespace SeaStory
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.CloseButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ID_Box = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.NAME_Box = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.PHONE_Box = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.PW_Box2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PW_Box = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.SuspendLayout();
+            button3 = new System.Windows.Forms.Button();
+            CloseButton = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
+            panel6 = new System.Windows.Forms.Panel();
+            label5 = new System.Windows.Forms.Label();
+            PW_Box2 = new System.Windows.Forms.TextBox();
+            panel4 = new System.Windows.Forms.Panel();
+            panel5 = new System.Windows.Forms.Panel();
+            label2 = new System.Windows.Forms.Label();
+            PW_Box = new System.Windows.Forms.TextBox();
+            panel3 = new System.Windows.Forms.Panel();
+            label4 = new System.Windows.Forms.Label();
+            NAME_Box = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            PHONE_Box = new System.Windows.Forms.TextBox();
+            panel2 = new System.Windows.Forms.Panel();
+            label1 = new System.Windows.Forms.Label();
+            ID_Box = new System.Windows.Forms.TextBox();
+            button1 = new System.Windows.Forms.Button();
+            panel1.SuspendLayout();
+            panel6.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(274, 568);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 107);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "등록";
-            this.button3.UseVisualStyleBackColor = false;
+            button3.BackColor = System.Drawing.Color.White;
+            button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button3.ForeColor = System.Drawing.Color.Red;
+            button3.Location = new System.Drawing.Point(213, 426);
+            button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(84, 80);
+            button3.TabIndex = 12;
+            button3.Text = "등록";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += buttonRegister;
             // 
             // CloseButton
             // 
-            this.CloseButton.BackColor = System.Drawing.Color.White;
-            this.CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CloseButton.ForeColor = System.Drawing.Color.Red;
-            this.CloseButton.Location = new System.Drawing.Point(527, 568);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(112, 107);
-            this.CloseButton.TabIndex = 13;
-            this.CloseButton.Text = "취소";
-            this.CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.BackColor = System.Drawing.Color.White;
+            CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            CloseButton.ForeColor = System.Drawing.Color.Red;
+            CloseButton.Location = new System.Drawing.Point(410, 426);
+            CloseButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            CloseButton.Name = "CloseButton";
+            CloseButton.Size = new System.Drawing.Size(87, 80);
+            CloseButton.TabIndex = 13;
+            CloseButton.Text = "취소";
+            CloseButton.UseVisualStyleBackColor = false;
+            CloseButton.Click += buttonClose;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(74, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(869, 472);
-            this.panel1.TabIndex = 14;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(300, 32);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 39);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "중복확인";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(4, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 37);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "아이디";
-            // 
-            // ID_Box
-            // 
-            this.ID_Box.Location = new System.Drawing.Point(163, 38);
-            this.ID_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ID_Box.Name = "ID_Box";
-            this.ID_Box.Size = new System.Drawing.Size(127, 27);
-            this.ID_Box.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.ID_Box);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(26, 19);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(805, 102);
-            this.panel2.TabIndex = 22;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.NAME_Box);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.PHONE_Box);
-            this.panel3.Location = new System.Drawing.Point(26, 283);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(805, 169);
-            this.panel3.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(4, 18);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 37);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "이름";
-            // 
-            // NAME_Box
-            // 
-            this.NAME_Box.Location = new System.Drawing.Point(163, 28);
-            this.NAME_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.NAME_Box.Name = "NAME_Box";
-            this.NAME_Box.Size = new System.Drawing.Size(127, 27);
-            this.NAME_Box.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(4, 125);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 37);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "연락처";
-            // 
-            // PHONE_Box
-            // 
-            this.PHONE_Box.Location = new System.Drawing.Point(163, 135);
-            this.PHONE_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PHONE_Box.Name = "PHONE_Box";
-            this.PHONE_Box.Size = new System.Drawing.Size(127, 27);
-            this.PHONE_Box.TabIndex = 19;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.PW_Box);
-            this.panel4.Location = new System.Drawing.Point(26, 141);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(396, 125);
-            this.panel4.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(22, 42);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 37);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "비밀번호 확인";
-            // 
-            // PW_Box2
-            // 
-            this.PW_Box2.Location = new System.Drawing.Point(218, 51);
-            this.PW_Box2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PW_Box2.Name = "PW_Box2";
-            this.PW_Box2.Size = new System.Drawing.Size(127, 27);
-            this.PW_Box2.TabIndex = 24;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(4, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 37);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "비밀번호";
-            // 
-            // PW_Box
-            // 
-            this.PW_Box.Location = new System.Drawing.Point(163, 52);
-            this.PW_Box.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PW_Box.Name = "PW_Box";
-            this.PW_Box.Size = new System.Drawing.Size(127, 27);
-            this.PW_Box.TabIndex = 22;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(402, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(250, 125);
-            this.panel5.TabIndex = 25;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(panel6);
+            panel1.Controls.Add(panel4);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(panel2);
+            panel1.Location = new System.Drawing.Point(58, 38);
+            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(676, 354);
+            panel1.TabIndex = 14;
             // 
             // panel6
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.PW_Box2);
-            this.panel6.Location = new System.Drawing.Point(431, 141);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(400, 125);
-            this.panel6.TabIndex = 25;
+            panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel6.Controls.Add(label5);
+            panel6.Controls.Add(PW_Box2);
+            panel6.Location = new System.Drawing.Point(335, 106);
+            panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel6.Name = "panel6";
+            panel6.Size = new System.Drawing.Size(312, 94);
+            panel6.TabIndex = 25;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = System.Drawing.Color.White;
+            label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label5.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label5.Location = new System.Drawing.Point(17, 32);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(141, 30);
+            label5.TabIndex = 25;
+            label5.Text = "비밀번호 확인";
+            // 
+            // PW_Box2
+            // 
+            PW_Box2.Location = new System.Drawing.Point(170, 38);
+            PW_Box2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            PW_Box2.Name = "PW_Box2";
+            PW_Box2.Size = new System.Drawing.Size(100, 23);
+            PW_Box2.TabIndex = 24;
+            // 
+            // panel4
+            // 
+            panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel4.Controls.Add(panel5);
+            panel4.Controls.Add(label2);
+            panel4.Controls.Add(PW_Box);
+            panel4.Location = new System.Drawing.Point(20, 106);
+            panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel4.Name = "panel4";
+            panel4.Size = new System.Drawing.Size(308, 94);
+            panel4.TabIndex = 24;
+            // 
+            // panel5
+            // 
+            panel5.Location = new System.Drawing.Point(313, 0);
+            panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new System.Drawing.Size(194, 94);
+            panel5.TabIndex = 25;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.White;
+            label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label2.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(3, 32);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(94, 30);
+            label2.TabIndex = 23;
+            label2.Text = "비밀번호";
+            // 
+            // PW_Box
+            // 
+            PW_Box.Location = new System.Drawing.Point(127, 39);
+            PW_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            PW_Box.Name = "PW_Box";
+            PW_Box.Size = new System.Drawing.Size(100, 23);
+            PW_Box.TabIndex = 22;
+            // 
+            // panel3
+            // 
+            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(NAME_Box);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(PHONE_Box);
+            panel3.Location = new System.Drawing.Point(20, 212);
+            panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(627, 127);
+            panel3.TabIndex = 23;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = System.Drawing.Color.White;
+            label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label4.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label4.Location = new System.Drawing.Point(3, 14);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(54, 30);
+            label4.TabIndex = 22;
+            label4.Text = "이름";
+            // 
+            // NAME_Box
+            // 
+            NAME_Box.Location = new System.Drawing.Point(127, 21);
+            NAME_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            NAME_Box.Name = "NAME_Box";
+            NAME_Box.Size = new System.Drawing.Size(100, 23);
+            NAME_Box.TabIndex = 21;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.White;
+            label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label3.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(3, 94);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(74, 30);
+            label3.TabIndex = 20;
+            label3.Text = "연락처";
+            // 
+            // PHONE_Box
+            // 
+            PHONE_Box.Location = new System.Drawing.Point(127, 101);
+            PHONE_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            PHONE_Box.Name = "PHONE_Box";
+            PHONE_Box.Size = new System.Drawing.Size(100, 23);
+            PHONE_Box.TabIndex = 19;
+            // 
+            // panel2
+            // 
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(ID_Box);
+            panel2.Controls.Add(button1);
+            panel2.Location = new System.Drawing.Point(20, 14);
+            panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(627, 77);
+            panel2.TabIndex = 22;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.White;
+            label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(3, 20);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(74, 30);
+            label1.TabIndex = 12;
+            label1.Text = "아이디";
+            // 
+            // ID_Box
+            // 
+            ID_Box.Location = new System.Drawing.Point(127, 28);
+            ID_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            ID_Box.Name = "ID_Box";
+            ID_Box.Size = new System.Drawing.Size(100, 23);
+            ID_Box.TabIndex = 11;
+            // 
+            // button1
+            // 
+            button1.BackColor = System.Drawing.Color.White;
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button1.Location = new System.Drawing.Point(233, 24);
+            button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(75, 29);
+            button1.TabIndex = 19;
+            button1.Text = "중복확인";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += buttonCheckDuplicate;
             // 
             // user_interface
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1029, 749);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.CloseButton);
-            this.Controls.Add(this.button3);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "user_interface";
-            this.Text = "user_interface";
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            ClientSize = new System.Drawing.Size(800, 562);
+            Controls.Add(panel1);
+            Controls.Add(CloseButton);
+            Controls.Add(button3);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "user_interface";
+            Text = "user_interface";
+            panel1.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

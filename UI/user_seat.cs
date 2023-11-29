@@ -49,7 +49,7 @@ namespace SeaStory.UI
                 User user = Model.DatabaseAut.UserData(userID);
 
                 //유저 정보 기반 유저명 호출 및 표시
-                label3.Text = user.Name;
+                labelUserName.Text = user.Name;
             }
 
         }
@@ -63,8 +63,8 @@ namespace SeaStory.UI
             int usedSeatsCount = seats.Count(seat => !string.IsNullOrEmpty(seat.UserID));
             int availableSeatsCount = seats.Count - usedSeatsCount;
 
-            label1.Text = availableSeatsCount.ToString();
-            label2.Text = usedSeatsCount.ToString();
+            labelAvailableSeatCount.Text = availableSeatsCount.ToString();
+            labelUsedSeatCount.Text = usedSeatsCount.ToString();
 
             seatPanel1.SetSeatClickHandler(button1_Click);
 
@@ -133,19 +133,5 @@ namespace SeaStory.UI
             this.Close();
         }
 
-        private void seatPanel1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void appCloseButton1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void user_seat_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -47,7 +47,7 @@ namespace SeaStory.UI.AdminFoodManagement
             this.Close();
         }
 
-        private void GetInfoButton_Click(object sender, EventArgs e)
+        private void MakePayment_Click(object sender, EventArgs e)
         {
             var selectedItems = new List<MenuItemWithCheckboxControl>();
             decimal totalPrice = 0m;

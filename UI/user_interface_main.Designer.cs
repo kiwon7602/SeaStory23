@@ -29,252 +29,253 @@ namespace SeaStory
         /// </summary>
         private void InitializeComponent()
         {
-            this.button7 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.appCloseButton1 = new SeaStory.UI.AppCloseButton();
-            this.timeTable1 = new SeaStory.UI.TimeManagement.TimeTable();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.SuspendLayout();
+            button7 = new System.Windows.Forms.Button();
+            button10 = new System.Windows.Forms.Button();
+            button11 = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            appCloseButton1 = new UI.AppCloseButton();
+            timeTable1 = new UI.TimeManagement.TimeTable();
+            button1 = new System.Windows.Forms.Button();
+            panel1 = new System.Windows.Forms.Panel();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            panel2 = new System.Windows.Forms.Panel();
+            panel3 = new System.Windows.Forms.Panel();
+            panel4 = new System.Windows.Forms.Panel();
+            panel5 = new System.Windows.Forms.Panel();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            SuspendLayout();
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(19, 14);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(143, 61);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "랭킹보기";
-            this.button7.UseVisualStyleBackColor = false;
+            button7.BackColor = System.Drawing.Color.White;
+            button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button7.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button7.Location = new System.Drawing.Point(15, 10);
+            button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            button7.Name = "button7";
+            button7.Size = new System.Drawing.Size(111, 46);
+            button7.TabIndex = 1;
+            button7.Text = "랭킹보기";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += buttonViewRankings;
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.White;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.Location = new System.Drawing.Point(19, 104);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(143, 61);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "요리주문";
-            this.button10.UseVisualStyleBackColor = false;
+            button10.BackColor = System.Drawing.Color.White;
+            button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button10.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button10.Location = new System.Drawing.Point(15, 78);
+            button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            button10.Name = "button10";
+            button10.Size = new System.Drawing.Size(111, 46);
+            button10.TabIndex = 2;
+            button10.Text = "요리주문";
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += buttonOrderFood;
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.White;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(27, 79);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(134, 108);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "사용종료";
-            this.button11.UseVisualStyleBackColor = false;
+            button11.BackColor = System.Drawing.Color.White;
+            button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button11.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button11.ForeColor = System.Drawing.Color.Black;
+            button11.Location = new System.Drawing.Point(21, 59);
+            button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            button11.Name = "button11";
+            button11.Size = new System.Drawing.Size(104, 81);
+            button11.TabIndex = 4;
+            button11.Text = "사용종료";
+            button11.UseVisualStyleBackColor = false;
+            button11.Click += buttonLogOut;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(108, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 35);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "회원요금";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(84, 13);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(92, 28);
+            label1.TabIndex = 12;
+            label1.Text = "회원요금";
             // 
             // appCloseButton1
             // 
-            this.appCloseButton1.BackColor = System.Drawing.Color.White;
-            this.appCloseButton1.Location = new System.Drawing.Point(761, 648);
-            this.appCloseButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.appCloseButton1.Name = "appCloseButton1";
-            this.appCloseButton1.Size = new System.Drawing.Size(143, 39);
-            this.appCloseButton1.TabIndex = 5;
+            appCloseButton1.BackColor = System.Drawing.Color.White;
+            appCloseButton1.Location = new System.Drawing.Point(592, 486);
+            appCloseButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            appCloseButton1.Name = "appCloseButton1";
+            appCloseButton1.Size = new System.Drawing.Size(111, 29);
+            appCloseButton1.TabIndex = 5;
             // 
             // timeTable1
             // 
-            this.timeTable1.Location = new System.Drawing.Point(5, 20);
-            this.timeTable1.Margin = new System.Windows.Forms.Padding(5);
-            this.timeTable1.Name = "timeTable1";
-            this.timeTable1.Size = new System.Drawing.Size(333, 415);
-            this.timeTable1.TabIndex = 21;
-            this.timeTable1.TabStop = false;
+            timeTable1.Location = new System.Drawing.Point(4, 15);
+            timeTable1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            timeTable1.Name = "timeTable1";
+            timeTable1.Size = new System.Drawing.Size(259, 311);
+            timeTable1.TabIndex = 21;
+            timeTable1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(19, 198);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 61);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "주문목록";
-            this.button1.UseVisualStyleBackColor = false;
+            button1.BackColor = System.Drawing.Color.White;
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button1.Location = new System.Drawing.Point(15, 148);
+            button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(111, 46);
+            button1.TabIndex = 3;
+            button1.Text = "주문목록";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += buttonViewOrderList;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(429, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 185);
-            this.panel1.TabIndex = 22;
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Location = new System.Drawing.Point(334, 32);
+            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(370, 139);
+            panel1.TabIndex = 22;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 16);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "label3";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(19, 12);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(38, 15);
+            label3.TabIndex = 14;
+            label3.Text = "label3";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(119, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 20);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "님";
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(93, 12);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(19, 15);
+            label4.TabIndex = 15;
+            label4.Text = "님";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(151, 16);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 20);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "남은 적립 시간";
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(117, 12);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(85, 15);
+            label5.TabIndex = 16;
+            label5.Text = "남은 적립 시간";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(339, 16);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "label6";
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(264, 12);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(38, 15);
+            label6.TabIndex = 17;
+            label6.Text = "label6";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(25, 103);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "label8";
+            label8.AutoSize = true;
+            label8.ForeColor = System.Drawing.Color.Red;
+            label8.Location = new System.Drawing.Point(19, 77);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(38, 15);
+            label8.TabIndex = 19;
+            label8.Text = "label8";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 67);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 20);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "좌석 번호";
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(19, 50);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(58, 15);
+            label7.TabIndex = 18;
+            label7.Text = "좌석 번호";
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(429, 267);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 307);
-            this.panel2.TabIndex = 23;
+            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel2.Controls.Add(button7);
+            panel2.Controls.Add(button10);
+            panel2.Controls.Add(button1);
+            panel2.Location = new System.Drawing.Point(334, 200);
+            panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(195, 231);
+            panel2.TabIndex = 23;
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Location = new System.Drawing.Point(715, 268);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(189, 306);
-            this.panel3.TabIndex = 24;
+            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel3.Controls.Add(button11);
+            panel3.Location = new System.Drawing.Point(556, 201);
+            panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel3.Name = "panel3";
+            panel3.Size = new System.Drawing.Size(147, 230);
+            panel3.TabIndex = 24;
             // 
             // panel4
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.timeTable1);
-            this.panel4.Location = new System.Drawing.Point(38, 116);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(355, 458);
-            this.panel4.TabIndex = 25;
+            panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel4.Controls.Add(timeTable1);
+            panel4.Location = new System.Drawing.Point(30, 87);
+            panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel4.Name = "panel4";
+            panel4.Size = new System.Drawing.Size(277, 344);
+            panel4.TabIndex = 25;
             // 
             // panel5
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(38, 42);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(355, 68);
-            this.panel5.TabIndex = 26;
+            panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel5.Controls.Add(label1);
+            panel5.Location = new System.Drawing.Point(30, 32);
+            panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new System.Drawing.Size(277, 52);
+            panel5.TabIndex = 26;
             // 
             // user_interface_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1029, 749);
-            this.ControlBox = false;
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.appCloseButton1);
-            this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "user_interface_main";
-            this.Text = "Form2";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            ClientSize = new System.Drawing.Size(800, 562);
+            ControlBox = false;
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(appCloseButton1);
+            DoubleBuffered = true;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "user_interface_main";
+            Text = "Form2";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

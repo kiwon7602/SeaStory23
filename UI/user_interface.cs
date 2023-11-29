@@ -21,13 +21,13 @@ namespace SeaStory
         }
 
         //닫기 버튼 클릭 시 이벤트
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonClose(object sender, EventArgs e)
         {
             this.Close();
         }
 
         //등록 버튼 클릭 시 이벤트
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonRegister(object sender, EventArgs e)
         {
             bool trigger = true; // trigger를 true로 초기화
 
@@ -95,7 +95,7 @@ namespace SeaStory
         }
 
         //중복 확인 버튼 클릭 시 이벤트
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonCheckDuplicate(object sender, EventArgs e)
         {
             //ID_Box.text 값을 통해 유저 검색후
             //유저가 null이 아니면 이미 등록된 아이디입니다! 메세지 박스 출력
