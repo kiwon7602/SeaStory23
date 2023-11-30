@@ -118,5 +118,6 @@ namespace SeaStory
             //중복 확인 체크 토글
             duplication_checker = false;
         }
+
     }
 }

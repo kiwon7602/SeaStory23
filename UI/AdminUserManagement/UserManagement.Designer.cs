@@ -49,7 +49,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(36, 36);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(99, 28);
@@ -59,6 +59,7 @@
             // button1
             // 
             button1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button1.ForeColor = System.Drawing.Color.Blue;
             button1.Location = new System.Drawing.Point(679, 153);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(91, 43);
@@ -83,6 +84,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(243, 243, 243);
             ClientSize = new System.Drawing.Size(800, 450);
             Controls.Add(button2);
             Controls.Add(button1);

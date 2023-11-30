@@ -42,7 +42,7 @@
             listView1.GridLines = true;
             listView1.Location = new System.Drawing.Point(30, 89);
             listView1.Name = "listView1";
-            listView1.Size = new System.Drawing.Size(606, 313);
+            listView1.Size = new System.Drawing.Size(572, 313);
             listView1.TabIndex = 5;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = System.Windows.Forms.View.Details;
@@ -72,7 +72,7 @@
             // 
             button1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button1.ForeColor = System.Drawing.Color.Red;
-            button1.Location = new System.Drawing.Point(666, 162);
+            button1.Location = new System.Drawing.Point(643, 167);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(101, 39);
             button1.TabIndex = 8;
@@ -83,8 +83,8 @@
             // button2
             // 
             button2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            button2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            button2.Location = new System.Drawing.Point(666, 89);
+            button2.ForeColor = System.Drawing.Color.Blue;
+            button2.Location = new System.Drawing.Point(643, 89);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(101, 39);
             button2.TabIndex = 6;

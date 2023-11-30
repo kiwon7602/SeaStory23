@@ -36,7 +36,7 @@
             // buttonAddFood
             // 
             buttonAddFood.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            buttonAddFood.ForeColor = System.Drawing.Color.CornflowerBlue;
+            buttonAddFood.ForeColor = System.Drawing.Color.Blue;
             buttonAddFood.Location = new System.Drawing.Point(669, 75);
             buttonAddFood.Name = "buttonAddFood";
             buttonAddFood.Size = new System.Drawing.Size(104, 48);

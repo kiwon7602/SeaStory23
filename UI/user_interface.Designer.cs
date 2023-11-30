@@ -35,6 +35,7 @@ namespace SeaStory
             panel6 = new System.Windows.Forms.Panel();
             label5 = new System.Windows.Forms.Label();
             PW_Box2 = new System.Windows.Forms.TextBox();
+            textBox1 = new System.Windows.Forms.TextBox();
             panel4 = new System.Windows.Forms.Panel();
             panel5 = new System.Windows.Forms.Panel();
             label2 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@ namespace SeaStory
             label1 = new System.Windows.Forms.Label();
             ID_Box = new System.Windows.Forms.TextBox();
             button1 = new System.Windows.Forms.Button();
-            textBox1 = new System.Windows.Forms.TextBox();
             panel1.SuspendLayout();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
@@ -62,7 +62,7 @@ namespace SeaStory
             button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             button3.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button3.ForeColor = System.Drawing.Color.Blue;
-            button3.Location = new System.Drawing.Point(213, 426);
+            button3.Location = new System.Drawing.Point(220, 413);
             button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(141, 80);
@@ -77,7 +77,7 @@ namespace SeaStory
             CloseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             CloseButton.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             CloseButton.ForeColor = System.Drawing.Color.Red;
-            CloseButton.Location = new System.Drawing.Point(410, 426);
+            CloseButton.Location = new System.Drawing.Point(415, 413);
             CloseButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             CloseButton.Name = "CloseButton";
             CloseButton.Size = new System.Drawing.Size(144, 80);
@@ -131,6 +131,15 @@ namespace SeaStory
             PW_Box2.Name = "PW_Box2";
             PW_Box2.Size = new System.Drawing.Size(100, 29);
             PW_Box2.TabIndex = 24;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            textBox1.Location = new System.Drawing.Point(-188, 39);
+            textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(100, 29);
+            textBox1.TabIndex = 22;
             // 
             // panel4
             // 
@@ -272,22 +281,13 @@ namespace SeaStory
             button1.UseVisualStyleBackColor = false;
             button1.Click += buttonCheckDuplicate;
             // 
-            // textBox1
-            // 
-            textBox1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            textBox1.Location = new System.Drawing.Point(-188, 39);
-            textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(100, 29);
-            textBox1.TabIndex = 22;
-            // 
             // user_interface
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(243, 243, 243);
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            ClientSize = new System.Drawing.Size(800, 562);
+            ClientSize = new System.Drawing.Size(800, 529);
             Controls.Add(panel1);
             Controls.Add(CloseButton);
             Controls.Add(button3);

@@ -73,6 +73,7 @@
             // seatPanelAdmin1
             // 
             seatPanelAdmin1.BackColor = System.Drawing.Color.FromArgb(251, 251, 251);
+            seatPanelAdmin1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             seatPanelAdmin1.Location = new System.Drawing.Point(254, 90);
             seatPanelAdmin1.Name = "seatPanelAdmin1";
             seatPanelAdmin1.Size = new System.Drawing.Size(471, 309);
