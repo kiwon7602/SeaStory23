@@ -57,5 +57,10 @@ namespace SeaStory.ui
             this.Close();
 
         }
+
+        private void UserInterFacePayment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,16 +30,16 @@
         {
             System.Windows.Forms.Button buttonAddFood;
             buttonDeleteFood = new System.Windows.Forms.Button();
-            panel1 = new System.Windows.Forms.Panel();
             buttonAddFood = new System.Windows.Forms.Button();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // buttonAddFood
             // 
-            buttonAddFood.Location = new System.Drawing.Point(26, 60);
+            buttonAddFood.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonAddFood.ForeColor = System.Drawing.Color.Blue;
+            buttonAddFood.Location = new System.Drawing.Point(669, 75);
             buttonAddFood.Name = "buttonAddFood";
-            buttonAddFood.Size = new System.Drawing.Size(85, 37);
+            buttonAddFood.Size = new System.Drawing.Size(104, 48);
             buttonAddFood.TabIndex = 4;
             buttonAddFood.Text = "음식 추가";
             buttonAddFood.UseVisualStyleBackColor = true;
@@ -47,37 +47,29 @@
             // 
             // buttonDeleteFood
             // 
-            buttonDeleteFood.Location = new System.Drawing.Point(26, 117);
+            buttonDeleteFood.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonDeleteFood.ForeColor = System.Drawing.Color.Red;
+            buttonDeleteFood.Location = new System.Drawing.Point(669, 168);
             buttonDeleteFood.Name = "buttonDeleteFood";
-            buttonDeleteFood.Size = new System.Drawing.Size(85, 37);
+            buttonDeleteFood.Size = new System.Drawing.Size(104, 48);
             buttonDeleteFood.TabIndex = 5;
             buttonDeleteFood.Text = "음식 삭제";
             buttonDeleteFood.UseVisualStyleBackColor = true;
             buttonDeleteFood.Click += buttonDeleteFood_Click;
-            // 
-            // panel1
-            // 
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel1.Controls.Add(buttonAddFood);
-            panel1.Controls.Add(buttonDeleteFood);
-            panel1.Location = new System.Drawing.Point(656, 75);
-            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(136, 334);
-            panel1.TabIndex = 6;
             // 
             // ManageFoodChildAdmin
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(panel1);
-            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Controls.Add(buttonAddFood);
+            Controls.Add(buttonDeleteFood);
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "ManageFoodChildAdmin";
-            Text = "ManageFoodChildAdmin";
+            Text = "음식 관리";
             Controls.SetChildIndex(flowLayoutPanelMenuItems, 0);
-            Controls.SetChildIndex(panel1, 0);
-            panel1.ResumeLayout(false);
+            Controls.SetChildIndex(buttonDeleteFood, 0);
+            Controls.SetChildIndex(buttonAddFood, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -86,6 +78,5 @@
 
         private System.Windows.Forms.Button buttonAddFood;
         private System.Windows.Forms.Button buttonDeleteFood;
-        private System.Windows.Forms.Panel panel1;
     }
 }

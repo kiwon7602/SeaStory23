@@ -28,44 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.title = new System.Windows.Forms.Label();
-            this.flowLayoutPanelMenuItems = new System.Windows.Forms.FlowLayoutPanel();
-            this.SuspendLayout();
+            title = new System.Windows.Forms.Label();
+            flowLayoutPanelMenuItems = new System.Windows.Forms.FlowLayoutPanel();
+            SuspendLayout();
             // 
             // title
             // 
-            this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(63, 44);
-            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(74, 20);
-            this.title.TabIndex = 0;
-            this.title.Text = "음식 목록";
+            title.AutoSize = true;
+            title.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            title.Location = new System.Drawing.Point(49, 33);
+            title.Name = "title";
+            title.Size = new System.Drawing.Size(104, 30);
+            title.TabIndex = 0;
+            title.Text = "음식 목록";
             // 
             // flowLayoutPanelMenuItems
             // 
-            this.flowLayoutPanelMenuItems.AutoScroll = true;
-            this.flowLayoutPanelMenuItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelMenuItems.Location = new System.Drawing.Point(63, 100);
-            this.flowLayoutPanelMenuItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanelMenuItems.Name = "flowLayoutPanelMenuItems";
-            this.flowLayoutPanelMenuItems.Size = new System.Drawing.Size(773, 445);
-            this.flowLayoutPanelMenuItems.TabIndex = 3;
+            flowLayoutPanelMenuItems.AutoScroll = true;
+            flowLayoutPanelMenuItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            flowLayoutPanelMenuItems.Location = new System.Drawing.Point(49, 75);
+            flowLayoutPanelMenuItems.Name = "flowLayoutPanelMenuItems";
+            flowLayoutPanelMenuItems.Size = new System.Drawing.Size(602, 334);
+            flowLayoutPanelMenuItems.TabIndex = 3;
             // 
             // ManageFoodParent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1029, 600);
-            this.Controls.Add(this.flowLayoutPanelMenuItems);
-            this.Controls.Add(this.title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "ManageFoodParent";
-            this.Text = "ManageFood";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(243, 243, 243);
+            BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(flowLayoutPanelMenuItems);
+            Controls.Add(title);
+            Name = "ManageFoodParent";
+            Text = "ManageFood";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

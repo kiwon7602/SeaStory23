@@ -52,35 +52,40 @@
             // 
             // txtBoxFoodName
             // 
+            txtBoxFoodName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtBoxFoodName.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtBoxFoodName.Location = new System.Drawing.Point(344, 104);
             txtBoxFoodName.Name = "txtBoxFoodName";
-            txtBoxFoodName.Size = new System.Drawing.Size(181, 23);
+            txtBoxFoodName.Size = new System.Drawing.Size(181, 29);
             txtBoxFoodName.TabIndex = 1;
             // 
             // labelFoodName
             // 
             labelFoodName.AutoSize = true;
-            labelFoodName.Location = new System.Drawing.Point(243, 107);
+            labelFoodName.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelFoodName.Location = new System.Drawing.Point(243, 102);
             labelFoodName.Name = "labelFoodName";
-            labelFoodName.Size = new System.Drawing.Size(59, 15);
+            labelFoodName.Size = new System.Drawing.Size(80, 21);
             labelFoodName.TabIndex = 3;
             labelFoodName.Text = "음식 이름";
             // 
             // labelFoodPrice
             // 
             labelFoodPrice.AutoSize = true;
+            labelFoodPrice.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             labelFoodPrice.Location = new System.Drawing.Point(243, 161);
             labelFoodPrice.Name = "labelFoodPrice";
-            labelFoodPrice.Size = new System.Drawing.Size(59, 15);
+            labelFoodPrice.Size = new System.Drawing.Size(80, 21);
             labelFoodPrice.TabIndex = 4;
             labelFoodPrice.Text = "음식 가격";
             // 
             // btnOK
             // 
-            //btnOK.Image = Properties.Resources.Button_PNG_Free_Download;
-            btnOK.Location = new System.Drawing.Point(360, 287);
+            btnOK.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnOK.ForeColor = System.Drawing.Color.Blue;
+            btnOK.Location = new System.Drawing.Point(331, 277);
             btnOK.Name = "btnOK";
-            btnOK.Size = new System.Drawing.Size(75, 23);
+            btnOK.Size = new System.Drawing.Size(98, 32);
             btnOK.TabIndex = 5;
             btnOK.Text = "등록";
             btnOK.UseVisualStyleBackColor = true;
@@ -88,9 +93,11 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new System.Drawing.Point(461, 287);
+            btnCancel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnCancel.ForeColor = System.Drawing.Color.Red;
+            btnCancel.Location = new System.Drawing.Point(452, 277);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new System.Drawing.Size(75, 23);
+            btnCancel.Size = new System.Drawing.Size(98, 32);
             btnCancel.TabIndex = 6;
             btnCancel.Text = "취소";
             btnCancel.UseVisualStyleBackColor = true;
@@ -98,9 +105,10 @@
             // 
             // btnBrowse
             // 
-            btnBrowse.Location = new System.Drawing.Point(94, 278);
+            btnBrowse.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnBrowse.Location = new System.Drawing.Point(85, 268);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.Size = new System.Drawing.Size(75, 23);
+            btnBrowse.Size = new System.Drawing.Size(98, 32);
             btnBrowse.TabIndex = 7;
             btnBrowse.Text = "사진 찾기";
             btnBrowse.UseVisualStyleBackColor = true;
@@ -108,18 +116,20 @@
             // 
             // numericUpDownFoodPrice
             // 
+            numericUpDownFoodPrice.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             numericUpDownFoodPrice.Location = new System.Drawing.Point(344, 159);
             numericUpDownFoodPrice.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
             numericUpDownFoodPrice.Name = "numericUpDownFoodPrice";
-            numericUpDownFoodPrice.Size = new System.Drawing.Size(181, 23);
+            numericUpDownFoodPrice.Size = new System.Drawing.Size(181, 29);
             numericUpDownFoodPrice.TabIndex = 8;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(59, 24);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(46, 29);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(59, 15);
+            label1.Size = new System.Drawing.Size(80, 21);
             label1.TabIndex = 9;
             label1.Text = "음식 추가";
             // 
@@ -127,6 +137,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(243, 243, 243);
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ClientSize = new System.Drawing.Size(575, 337);
             Controls.Add(label1);
@@ -139,7 +150,7 @@
             Controls.Add(txtBoxFoodName);
             Controls.Add(pictureBoxFoodImage);
             Name = "AddFoodForm";
-            Text = "AddFoodForm";
+            Text = "음식 추가";
             ((System.ComponentModel.ISupportInitialize)pictureBoxFoodImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownFoodPrice).EndInit();
             ResumeLayout(false);

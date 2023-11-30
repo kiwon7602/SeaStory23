@@ -86,5 +86,6 @@ namespace SeaStory.UI.AdminFoodManagement
                 MessageBox.Show("선택된 항목이 없습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
     }
 }
