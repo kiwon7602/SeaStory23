@@ -30,13 +30,13 @@
         {
             buttonPay = new System.Windows.Forms.Button();
             buttonCancel = new System.Windows.Forms.Button();
-            panel1 = new System.Windows.Forms.Panel();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // buttonPay
             // 
-            buttonPay.Location = new System.Drawing.Point(28, 64);
+            buttonPay.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            buttonPay.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonPay.Location = new System.Drawing.Point(684, 75);
             buttonPay.Name = "buttonPay";
             buttonPay.Size = new System.Drawing.Size(86, 40);
             buttonPay.TabIndex = 4;
@@ -46,7 +46,10 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new System.Drawing.Point(28, 145);
+            buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            buttonCancel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonCancel.ForeColor = System.Drawing.Color.Red;
+            buttonCancel.Location = new System.Drawing.Point(684, 156);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new System.Drawing.Size(86, 40);
             buttonCancel.TabIndex = 5;
@@ -54,29 +57,19 @@
             buttonCancel.UseVisualStyleBackColor = true;
             buttonCancel.Click += CloseButton_Click;
             // 
-            // panel1
-            // 
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel1.Controls.Add(buttonPay);
-            panel1.Controls.Add(buttonCancel);
-            panel1.Location = new System.Drawing.Point(656, 75);
-            panel1.Margin = new System.Windows.Forms.Padding(2);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(140, 334);
-            panel1.TabIndex = 6;
-            // 
             // ManageFoodChildUser
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(panel1);
+            Controls.Add(buttonPay);
+            Controls.Add(buttonCancel);
             Margin = new System.Windows.Forms.Padding(4);
             Name = "ManageFoodChildUser";
             Text = "음식 목록";
             Controls.SetChildIndex(flowLayoutPanelMenuItems, 0);
-            Controls.SetChildIndex(panel1, 0);
-            panel1.ResumeLayout(false);
+            Controls.SetChildIndex(buttonCancel, 0);
+            Controls.SetChildIndex(buttonPay, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -85,6 +78,5 @@
 
         private System.Windows.Forms.Button buttonPay;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -83,9 +83,5 @@ namespace SeaStory.UI
             this.Close();
         }
 
-        private void user_seat_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

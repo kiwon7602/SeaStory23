@@ -36,7 +36,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(37, 32);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(119, 28);
@@ -57,6 +57,8 @@
             // 
             // button2
             // 
+            button2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button2.ForeColor = System.Drawing.Color.CornflowerBlue;
             button2.Location = new System.Drawing.Point(671, 78);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(101, 39);
@@ -69,6 +71,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(243, 243, 243);
             ClientSize = new System.Drawing.Size(800, 450);
             Controls.Add(button2);
             Controls.Add(listView1);

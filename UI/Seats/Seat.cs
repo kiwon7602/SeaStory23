@@ -47,6 +47,11 @@ namespace SeaStory.UI.Seats
                 // Handle the case where usageTime is not a valid integer
                 labelRemainingTime.Text = "";
             }
+
+            if (buttonText != "선택")
+            {
+                buttonSelect.ForeColor = System.Drawing.Color.Red;
+            }
         }
 
         public void UpdateSeat(int seatNumber, string userID, string usageTime, bool disableEmtpySeatButton = true)

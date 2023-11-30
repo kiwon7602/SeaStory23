@@ -89,5 +89,6 @@ namespace SeaStory.UI.AdminFoodManagement
             userInterFacePayment.ShowDialog();
             this.Close();
         }
+
     }
 }

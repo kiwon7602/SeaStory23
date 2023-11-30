@@ -82,6 +82,7 @@
             // buttonSelect
             // 
             buttonSelect.BackColor = System.Drawing.Color.Silver;
+            buttonSelect.ForeColor = System.Drawing.Color.Black;
             buttonSelect.Location = new System.Drawing.Point(22, 95);
             buttonSelect.Name = "buttonSelect";
             buttonSelect.Size = new System.Drawing.Size(75, 23);

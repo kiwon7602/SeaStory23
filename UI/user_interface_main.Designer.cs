@@ -55,7 +55,7 @@ namespace SeaStory
             // 
             button7.BackColor = System.Drawing.SystemColors.ButtonFace;
             button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            button7.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button7.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button7.Location = new System.Drawing.Point(15, 10);
             button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button7.Name = "button7";
@@ -69,7 +69,7 @@ namespace SeaStory
             // 
             button10.BackColor = System.Drawing.SystemColors.ButtonFace;
             button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            button10.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button10.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button10.Location = new System.Drawing.Point(145, 10);
             button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button10.Name = "button10";
@@ -102,7 +102,7 @@ namespace SeaStory
             // 
             button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            button1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button1.Location = new System.Drawing.Point(270, 10);
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";
@@ -222,11 +222,12 @@ namespace SeaStory
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(156, 40);
             appCloseButton1.TabIndex = 27;
+            appCloseButton1.Load += appCloseButton1_Load;
             // 
             // button11
             // 
             button11.BackColor = System.Drawing.SystemColors.ButtonFace;
-            button11.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button11.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button11.ForeColor = System.Drawing.Color.Black;
             button11.Location = new System.Drawing.Point(611, 330);
             button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -256,6 +257,7 @@ namespace SeaStory
             Name = "user_interface_main";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "한기대 PC방";
+            FormClosed += user_interface_main_FormClosed;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

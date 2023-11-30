@@ -192,19 +192,6 @@ namespace SeaStory
             buttonLogOut(this, EventArgs.Empty);
         }
 
-
-        // 폼이 닫힐 때 타이머 정리
-        protected async override void OnFormClosing(FormClosingEventArgs e)
-        {
-            base.OnFormClosing(e);
-
-            if (timer != null)
-            {
-                timer.Stop();
-                timer.Dispose();
-            }
-        }
-
         //프로그램 종료 추가 기능
         private void appCloseButton1_Load(object sender, EventArgs e)
         {
@@ -226,9 +213,13 @@ namespace SeaStory
             user_Order_list_Form.ShowDialog();
         }
 
-        private void user_interface_main_Load(object sender, EventArgs e)
+        private void user_interface_main_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            if (timer != null)
+            {
+                timer.Stop();
+                timer.Dispose();
+            }
         }
     }
 }

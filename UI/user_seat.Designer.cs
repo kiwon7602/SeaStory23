@@ -188,7 +188,7 @@
             Name = "user_seat";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "좌석 선택";
-            Load += user_seat_Load;
+            
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);

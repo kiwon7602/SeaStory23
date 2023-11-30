@@ -65,6 +65,7 @@
             labelFoodName.Size = new System.Drawing.Size(59, 15);
             labelFoodName.TabIndex = 3;
             labelFoodName.Text = "음식 이름";
+            
             // 
             // labelFoodPrice
             // 
@@ -116,9 +117,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(59, 24);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(46, 29);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(59, 15);
+            label1.Size = new System.Drawing.Size(80, 21);
             label1.TabIndex = 9;
             label1.Text = "음식 추가";
             // 

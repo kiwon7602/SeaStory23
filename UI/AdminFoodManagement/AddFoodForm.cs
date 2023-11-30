@@ -78,5 +78,6 @@ namespace SeaStory.UI.AdminFoodManagement
         {
             this.Close();
         }
+
     }
 }
