@@ -21,22 +21,22 @@ namespace SeaStory.ui
 
         private void buttonCreditCard(object sender, EventArgs e)
         {
-            // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\신용카드.wav");
-            // simpleSound.Play();
+            SoundPlayer simpleSound = new SoundPlayer(@"..\..\..\UI\tts\card.wav");
+            simpleSound.Play();
             ProcessPayment();
         }
 
         private void buttonPayco(object sender, EventArgs e)
         {
-            // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\페이코.wav");
-            // simpleSound.Play();
+            SoundPlayer simpleSound2 = new SoundPlayer(@"..\..\..\UI\tts\payco.wav");
+            simpleSound2.Play();
             ProcessPayment();
         }
 
         private void buttonCash(object sender, EventArgs e)
         {
-            // SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Administrator\Desktop\깃허브\SeaStory23\UI\tts\현금.wav");
-            // simpleSound.Play();
+            SoundPlayer simpleSound3 = new SoundPlayer(@"..\..\..\UI\tts\cash.wav");
+            simpleSound3.Play();
             ProcessPayment();
         }
 

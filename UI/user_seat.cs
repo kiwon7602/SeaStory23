@@ -13,7 +13,7 @@ using static SeaStory.Model.DataCalss;
 using User = SeaStory.Model.DataCalss.User;
 using SeaStory.Model;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
-
+using System.Media;
 namespace SeaStory.UI
 {
     public partial class user_seat : Form
@@ -28,6 +28,8 @@ namespace SeaStory.UI
         public user_seat(string ID, int user_type)
         {
             InitializeComponent();
+            SoundPlayer simpleSound = new SoundPlayer(@"..\..\..\UI\tts\login.wav");
+            simpleSound.Play();
             userID = ID;
             userType = user_type;
 
