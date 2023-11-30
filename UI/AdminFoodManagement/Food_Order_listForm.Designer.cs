@@ -39,7 +39,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(37, 23);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(92, 28);
@@ -48,7 +48,7 @@
             // 
             // listView1
             // 
-            listView1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            listView1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             listView1.FullRowSelect = true;
             listView1.GridLines = true;
             listView1.Location = new System.Drawing.Point(37, 63);
@@ -83,7 +83,7 @@
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Location = new System.Drawing.Point(648, 63);
-            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel1.Margin = new System.Windows.Forms.Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(152, 312);
             panel1.TabIndex = 4;
@@ -98,7 +98,7 @@
             Controls.Add(listView1);
             Controls.Add(label1);
             Name = "Food_Order_listForm";
-            Text = "Food_Order_listForm";
+            Text = "주문 목록";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

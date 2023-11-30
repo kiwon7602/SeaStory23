@@ -61,7 +61,7 @@
             panel1.Controls.Add(buttonAddFood);
             panel1.Controls.Add(buttonDeleteFood);
             panel1.Location = new System.Drawing.Point(656, 75);
-            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel1.Margin = new System.Windows.Forms.Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(136, 334);
             panel1.TabIndex = 6;
@@ -72,9 +72,9 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
             Controls.Add(panel1);
-            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "ManageFoodChildAdmin";
-            Text = "ManageFoodChildAdmin";
+            Text = "음식 관리";
             Controls.SetChildIndex(flowLayoutPanelMenuItems, 0);
             Controls.SetChildIndex(panel1, 0);
             panel1.ResumeLayout(false);

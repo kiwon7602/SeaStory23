@@ -52,7 +52,7 @@
             labelTime.AutoSize = true;
             labelTime.Location = new System.Drawing.Point(86, 39);
             labelTime.Name = "labelTime";
-            labelTime.Size = new System.Drawing.Size(58, 15);
+            labelTime.Size = new System.Drawing.Size(59, 15);
             labelTime.TabIndex = 3;
             labelTime.Text = "추가 시간";
             // 
@@ -61,7 +61,7 @@
             labelMemberPrice.AutoSize = true;
             labelMemberPrice.Location = new System.Drawing.Point(86, 135);
             labelMemberPrice.Name = "labelMemberPrice";
-            labelMemberPrice.Size = new System.Drawing.Size(58, 15);
+            labelMemberPrice.Size = new System.Drawing.Size(59, 15);
             labelMemberPrice.TabIndex = 4;
             labelMemberPrice.Text = "회원 요금";
             labelMemberPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -71,7 +71,7 @@
             labelName.AutoSize = true;
             labelName.Location = new System.Drawing.Point(86, 86);
             labelName.Name = "labelName";
-            labelName.Size = new System.Drawing.Size(58, 15);
+            labelName.Size = new System.Drawing.Size(59, 15);
             labelName.TabIndex = 5;
             labelName.Text = "요금제 명";
             // 
@@ -125,7 +125,7 @@
             Controls.Add(labelTime);
             Controls.Add(textBoxName);
             Name = "AddTime";
-            Text = "AddTime";
+            Text = "요금제 추가";
             ((System.ComponentModel.ISupportInitialize)numericUpDownTime).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownPrice).EndInit();
             ResumeLayout(false);

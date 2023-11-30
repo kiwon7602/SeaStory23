@@ -91,7 +91,7 @@ namespace SeaStory
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Location = new System.Drawing.Point(58, 38);
-            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel1.Margin = new System.Windows.Forms.Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(676, 354);
             panel1.TabIndex = 14;
@@ -102,7 +102,7 @@ namespace SeaStory
             panel6.Controls.Add(label5);
             panel6.Controls.Add(PW_Box2);
             panel6.Location = new System.Drawing.Point(335, 106);
-            panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel6.Margin = new System.Windows.Forms.Padding(2);
             panel6.Name = "panel6";
             panel6.Size = new System.Drawing.Size(312, 94);
             panel6.TabIndex = 25;
@@ -110,12 +110,11 @@ namespace SeaStory
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = System.Drawing.Color.White;
-            label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            label5.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label5.BackColor = System.Drawing.SystemColors.Control;
+            label5.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label5.Location = new System.Drawing.Point(17, 32);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(141, 30);
+            label5.Size = new System.Drawing.Size(139, 28);
             label5.TabIndex = 25;
             label5.Text = "비밀번호 확인";
             // 
@@ -134,7 +133,7 @@ namespace SeaStory
             panel4.Controls.Add(label2);
             panel4.Controls.Add(PW_Box);
             panel4.Location = new System.Drawing.Point(20, 106);
-            panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel4.Margin = new System.Windows.Forms.Padding(2);
             panel4.Name = "panel4";
             panel4.Size = new System.Drawing.Size(308, 94);
             panel4.TabIndex = 24;
@@ -142,7 +141,7 @@ namespace SeaStory
             // panel5
             // 
             panel5.Location = new System.Drawing.Point(313, 0);
-            panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel5.Margin = new System.Windows.Forms.Padding(2);
             panel5.Name = "panel5";
             panel5.Size = new System.Drawing.Size(194, 94);
             panel5.TabIndex = 25;
@@ -150,12 +149,11 @@ namespace SeaStory
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = System.Drawing.Color.White;
-            label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            label2.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.BackColor = System.Drawing.SystemColors.Control;
+            label2.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label2.Location = new System.Drawing.Point(3, 32);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(94, 30);
+            label2.Size = new System.Drawing.Size(92, 28);
             label2.TabIndex = 23;
             label2.Text = "비밀번호";
             // 
@@ -175,7 +173,7 @@ namespace SeaStory
             panel3.Controls.Add(label3);
             panel3.Controls.Add(PHONE_Box);
             panel3.Location = new System.Drawing.Point(20, 212);
-            panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel3.Margin = new System.Windows.Forms.Padding(2);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(627, 127);
             panel3.TabIndex = 23;
@@ -183,12 +181,11 @@ namespace SeaStory
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = System.Drawing.Color.White;
-            label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            label4.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label4.BackColor = System.Drawing.SystemColors.Control;
+            label4.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label4.Location = new System.Drawing.Point(3, 14);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(54, 30);
+            label4.Size = new System.Drawing.Size(52, 28);
             label4.TabIndex = 22;
             label4.Text = "이름";
             // 
@@ -203,12 +200,11 @@ namespace SeaStory
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = System.Drawing.Color.White;
-            label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            label3.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.BackColor = System.Drawing.SystemColors.Control;
+            label3.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label3.Location = new System.Drawing.Point(3, 94);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(74, 30);
+            label3.Size = new System.Drawing.Size(72, 28);
             label3.TabIndex = 20;
             label3.Text = "연락처";
             // 
@@ -227,7 +223,7 @@ namespace SeaStory
             panel2.Controls.Add(ID_Box);
             panel2.Controls.Add(button1);
             panel2.Location = new System.Drawing.Point(20, 14);
-            panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel2.Margin = new System.Windows.Forms.Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(627, 77);
             panel2.TabIndex = 22;
@@ -235,12 +231,11 @@ namespace SeaStory
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.White;
-            label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            label1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(3, 20);
+            label1.BackColor = System.Drawing.SystemColors.Control;
+            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(16, 23);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(74, 30);
+            label1.Size = new System.Drawing.Size(72, 28);
             label1.TabIndex = 12;
             label1.Text = "아이디";
             // 
@@ -276,7 +271,7 @@ namespace SeaStory
             Controls.Add(button3);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "user_interface";
-            Text = "user_interface";
+            Text = "회원가입";
             panel1.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();

@@ -51,7 +51,7 @@
             // 
             // listView1
             // 
-            listView1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            listView1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             listView1.FullRowSelect = true;
             listView1.GridLines = true;
             listView1.Location = new System.Drawing.Point(30, 89);
@@ -64,7 +64,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label1.ForeColor = System.Drawing.Color.Red;
             label1.Location = new System.Drawing.Point(17, 16);
             label1.Name = "label1";
@@ -75,7 +75,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label2.Location = new System.Drawing.Point(75, 16);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(166, 28);
@@ -98,7 +98,7 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Location = new System.Drawing.Point(30, 26);
-            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel1.Margin = new System.Windows.Forms.Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(279, 59);
             panel1.TabIndex = 9;
@@ -109,7 +109,7 @@
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Location = new System.Drawing.Point(641, 89);
-            panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel2.Margin = new System.Windows.Forms.Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(124, 312);
             panel2.TabIndex = 10;
@@ -123,7 +123,7 @@
             Controls.Add(panel1);
             Controls.Add(listView1);
             Name = "User_Order_list_form";
-            Text = "User_Order_list_form";
+            Text = "주문 목록";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

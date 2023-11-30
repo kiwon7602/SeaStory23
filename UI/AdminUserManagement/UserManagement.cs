@@ -32,7 +32,7 @@ namespace SeaStory.UI.AdminFoodManagement
                 string NAME = selectedItem.SubItems[1].Text;
                 string PW = selectedItem.SubItems[2].Text;
                 string PHONE = selectedItem.SubItems[3].Text;
-                
+
 
                 // 업데이트 메소드 호출
                 UserManagement_update userManagement_update = new UserManagement_update(ID, NAME, PW, PHONE);
@@ -40,7 +40,7 @@ namespace SeaStory.UI.AdminFoodManagement
 
                 list_Update();
             }
-            
+
         }
         //회원 삭제 버튼 클릭 시
         private void button2_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace SeaStory.UI.AdminFoodManagement
             {
                 ListViewItem selectedItem = listView1.SelectedItems[0];
                 string ID = selectedItem.SubItems[0].Text;
-                
+
 
                 // DelOrders 메소드 호출
                 DatabaseAut.DeleteMember(ID);

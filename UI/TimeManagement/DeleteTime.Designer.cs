@@ -101,7 +101,7 @@
             Controls.Add(timeTableDelete);
             Controls.Add(timeTableKeep);
             Name = "DeleteTime";
-            Text = "DeleteTime";
+            Text = "요금제 삭제";
             ResumeLayout(false);
             PerformLayout();
         }

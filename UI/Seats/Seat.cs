@@ -24,7 +24,7 @@ namespace SeaStory.UI.Seats
             InitializeComponent();
         }
 
-        public Seat(int seatNumber, string userID, string usageTime, string buttonText="선택")
+        public Seat(int seatNumber, string userID, string usageTime, string buttonText = "선택")
             : this() // Calls the default constructor to initialize components
         {
             // Store the parameters
@@ -49,7 +49,7 @@ namespace SeaStory.UI.Seats
             }
         }
 
-        public void UpdateSeat(int seatNumber, string userID, string usageTime, bool disableEmtpySeatButton=true)
+        public void UpdateSeat(int seatNumber, string userID, string usageTime, bool disableEmtpySeatButton = true)
         {
             // Update properties
             SeatNumber = seatNumber;

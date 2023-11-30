@@ -39,7 +39,7 @@
             labelTitle.AutoSize = true;
             labelTitle.Location = new System.Drawing.Point(58, 37);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new System.Drawing.Size(58, 15);
+            labelTitle.Size = new System.Drawing.Size(59, 15);
             labelTitle.TabIndex = 0;
             labelTitle.Text = "음식 삭제";
             // 
@@ -81,7 +81,7 @@
             Controls.Add(flowLayoutPanelMenuItems);
             Controls.Add(labelTitle);
             Name = "DeleteFoodForm";
-            Text = "DeleteFoodForm";
+            Text = "음식 삭제";
             ResumeLayout(false);
             PerformLayout();
         }

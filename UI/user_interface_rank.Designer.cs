@@ -36,7 +36,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(37, 32);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(119, 28);
@@ -45,7 +45,7 @@
             // 
             // listView1
             // 
-            listView1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            listView1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             listView1.FullRowSelect = true;
             listView1.GridLines = true;
             listView1.Location = new System.Drawing.Point(37, 78);
@@ -74,7 +74,7 @@
             Controls.Add(listView1);
             Controls.Add(label1);
             Name = "user_interface_rank";
-            Text = "user_interface_rank";
+            Text = "사용량 랭킹";
             ResumeLayout(false);
             PerformLayout();
         }

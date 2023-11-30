@@ -89,7 +89,7 @@
             Controls.Add(label1);
             Controls.Add(listView1);
             Name = "UserManagement";
-            Text = "UserManagement";
+            Text = "회원 관리";
             ResumeLayout(false);
             PerformLayout();
         }

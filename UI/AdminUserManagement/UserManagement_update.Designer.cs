@@ -52,7 +52,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(41, 22);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(146, 28);
@@ -62,7 +62,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label5.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label5.Location = new System.Drawing.Point(29, 32);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(139, 28);
@@ -118,7 +118,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label4.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label4.Location = new System.Drawing.Point(32, 204);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(52, 28);
@@ -136,7 +136,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label3.Location = new System.Drawing.Point(32, 284);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(72, 28);
@@ -154,7 +154,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label2.Location = new System.Drawing.Point(32, 128);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(92, 28);
@@ -172,7 +172,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label6.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label6.Location = new System.Drawing.Point(32, 42);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(72, 28);
@@ -194,7 +194,7 @@
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button3);
             panel2.Location = new System.Drawing.Point(346, 292);
-            panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel2.Margin = new System.Windows.Forms.Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(362, 94);
             panel2.TabIndex = 26;
@@ -205,7 +205,7 @@
             panel3.Controls.Add(label5);
             panel3.Controls.Add(PW_Box2);
             panel3.Location = new System.Drawing.Point(346, 160);
-            panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel3.Margin = new System.Windows.Forms.Padding(2);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(354, 94);
             panel3.TabIndex = 27;
@@ -220,7 +220,7 @@
             Controls.Add(panel1);
             Controls.Add(label1);
             Name = "UserManagement_update";
-            Text = "UserManagement_update";
+            Text = "유저 정보 수정";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

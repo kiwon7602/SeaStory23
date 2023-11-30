@@ -69,7 +69,7 @@
             Controls.Add(buttonAddTime);
             Controls.Add(timeTable);
             Name = "ManageTimeAdmin";
-            Text = "ManageTimeAdmin";
+            Text = "요금제 관리";
             ResumeLayout(false);
         }
 

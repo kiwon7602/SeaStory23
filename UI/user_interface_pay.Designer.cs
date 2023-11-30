@@ -82,7 +82,7 @@
             // labelPrice
             // 
             labelPrice.AutoSize = true;
-            labelPrice.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelPrice.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             labelPrice.Location = new System.Drawing.Point(37, 8);
             labelPrice.Name = "labelPrice";
             labelPrice.Size = new System.Drawing.Size(55, 28);
@@ -91,7 +91,7 @@
             // 
             // button4
             // 
-            button4.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button4.Font = new System.Drawing.Font("맑은 고딕", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             button4.ForeColor = System.Drawing.Color.Red;
             button4.Location = new System.Drawing.Point(633, 334);
             button4.Name = "button4";
@@ -108,7 +108,7 @@
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Location = new System.Drawing.Point(49, 88);
-            panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel1.Margin = new System.Windows.Forms.Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(697, 232);
             panel1.TabIndex = 5;
@@ -118,7 +118,7 @@
             panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             panel4.Controls.Add(button3);
             panel4.Location = new System.Drawing.Point(459, 14);
-            panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel4.Margin = new System.Windows.Forms.Padding(2);
             panel4.Name = "panel4";
             panel4.Size = new System.Drawing.Size(226, 202);
             panel4.TabIndex = 6;
@@ -128,7 +128,7 @@
             panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             panel3.Controls.Add(button2);
             panel3.Location = new System.Drawing.Point(235, 14);
-            panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel3.Margin = new System.Windows.Forms.Padding(2);
             panel3.Name = "panel3";
             panel3.Size = new System.Drawing.Size(220, 202);
             panel3.TabIndex = 6;
@@ -138,7 +138,7 @@
             panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             panel2.Controls.Add(button1);
             panel2.Location = new System.Drawing.Point(11, 14);
-            panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel2.Margin = new System.Windows.Forms.Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(220, 202);
             panel2.TabIndex = 3;
@@ -147,7 +147,7 @@
             // 
             panel5.Controls.Add(labelPrice);
             panel5.Location = new System.Drawing.Point(49, 41);
-            panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            panel5.Margin = new System.Windows.Forms.Padding(2);
             panel5.Name = "panel5";
             panel5.Size = new System.Drawing.Size(131, 42);
             panel5.TabIndex = 6;
@@ -163,7 +163,7 @@
             Controls.Add(panel1);
             Controls.Add(button4);
             Name = "UserInterFacePayment";
-            Text = "user_interface_pay";
+            Text = "결제 방식";
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel3.ResumeLayout(false);

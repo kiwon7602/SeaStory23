@@ -73,7 +73,7 @@
             Controls.Add(panel1);
             Margin = new System.Windows.Forms.Padding(4);
             Name = "ManageFoodChildUser";
-            Text = "ManageFoodChildUser";
+            Text = "음식 목록";
             Controls.SetChildIndex(flowLayoutPanelMenuItems, 0);
             Controls.SetChildIndex(panel1, 0);
             panel1.ResumeLayout(false);

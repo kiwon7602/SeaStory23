@@ -77,7 +77,6 @@
             // 
             // btnOK
             // 
-            //btnOK.Image = Properties.Resources.Button_PNG_Free_Download;
             btnOK.Location = new System.Drawing.Point(360, 287);
             btnOK.Name = "btnOK";
             btnOK.Size = new System.Drawing.Size(75, 23);
@@ -139,7 +138,7 @@
             Controls.Add(txtBoxFoodName);
             Controls.Add(pictureBoxFoodImage);
             Name = "AddFoodForm";
-            Text = "AddFoodForm";
+            Text = "음식 추가";
             ((System.ComponentModel.ISupportInitialize)pictureBoxFoodImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownFoodPrice).EndInit();
             ResumeLayout(false);

@@ -225,5 +225,10 @@ namespace SeaStory
             User_Order_list_form user_Order_list_Form = new User_Order_list_form(seatNumber);
             user_Order_list_Form.ShowDialog();
         }
+
+        private void user_interface_main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

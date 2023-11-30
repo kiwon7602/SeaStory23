@@ -69,7 +69,9 @@
             // 
             // appCloseButton1
             // 
+            appCloseButton1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             appCloseButton1.Location = new System.Drawing.Point(34, 399);
+            appCloseButton1.Margin = new System.Windows.Forms.Padding(4);
             appCloseButton1.Name = "appCloseButton1";
             appCloseButton1.Size = new System.Drawing.Size(111, 29);
             appCloseButton1.TabIndex = 4;
@@ -105,7 +107,8 @@
             Controls.Add(button24);
             Controls.Add(button2);
             Name = "admin_inter_main";
-            Text = "admin_inter_main";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "관리자";
             ResumeLayout(false);
         }
 
