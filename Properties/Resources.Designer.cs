@@ -71,6 +71,15 @@ namespace SeaStory.Properties {
         }
         
         /// <summary>
+        ///   System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream addplayer {
+            get {
+                return ResourceManager.GetStream("addplayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         public static System.Drawing.Bitmap btn1 {
@@ -91,12 +100,48 @@ namespace SeaStory.Properties {
         }
         
         /// <summary>
+        ///   System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream card {
+            get {
+                return ResourceManager.GetStream("card", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream cash {
+            get {
+                return ResourceManager.GetStream("cash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         public static System.Drawing.Bitmap koreatechlogo {
             get {
                 object obj = ResourceManager.GetObject("koreatechlogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream login {
+            get {
+                return ResourceManager.GetStream("login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   System.IO.MemoryStream과(와) 유사한 System.IO.UnmanagedMemoryStream 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream payco {
+            get {
+                return ResourceManager.GetStream("payco", resourceCulture);
             }
         }
         
