@@ -89,7 +89,7 @@ namespace SeaStory
                 // 모든 조건이 성립한 경우에만 특별한 함수를 실행하고 폼을 종료
                 // 회원 가입 함수 실행
                 Model.DatabaseAut.RegisterUser(ID_Box.Text, NAME_Box.Text, PW_Box.Text, PHONE_Box.Text);
-                SoundPlayer addsound = new SoundPlayer(@"..\..\..\UI\tts\좌석tts\addplayer.wav");
+                SoundPlayer addsound = new SoundPlayer(Properties.Resources.addplayer);
                 addsound.Play();
                 // 폼 종료
                 this.Close();

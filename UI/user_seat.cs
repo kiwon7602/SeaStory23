@@ -28,7 +28,7 @@ namespace SeaStory.UI
         public user_seat(string ID, int user_type)
         {
             InitializeComponent();
-            SoundPlayer simpleSound = new SoundPlayer(@"..\..\..\UI\tts\login.wav");
+            SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.login);
             simpleSound.Play();
             userID = ID;
             userType = user_type;
