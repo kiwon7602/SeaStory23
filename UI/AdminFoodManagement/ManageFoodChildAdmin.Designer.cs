@@ -35,9 +35,11 @@
             // 
             // buttonAddFood
             // 
-            buttonAddFood.Location = new System.Drawing.Point(675, 92);
+            buttonAddFood.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonAddFood.ForeColor = System.Drawing.Color.Blue;
+            buttonAddFood.Location = new System.Drawing.Point(669, 75);
             buttonAddFood.Name = "buttonAddFood";
-            buttonAddFood.Size = new System.Drawing.Size(75, 23);
+            buttonAddFood.Size = new System.Drawing.Size(104, 48);
             buttonAddFood.TabIndex = 4;
             buttonAddFood.Text = "음식 추가";
             buttonAddFood.UseVisualStyleBackColor = true;
@@ -45,9 +47,11 @@
             // 
             // buttonDeleteFood
             // 
-            buttonDeleteFood.Location = new System.Drawing.Point(675, 149);
+            buttonDeleteFood.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonDeleteFood.ForeColor = System.Drawing.Color.Red;
+            buttonDeleteFood.Location = new System.Drawing.Point(669, 168);
             buttonDeleteFood.Name = "buttonDeleteFood";
-            buttonDeleteFood.Size = new System.Drawing.Size(75, 23);
+            buttonDeleteFood.Size = new System.Drawing.Size(104, 48);
             buttonDeleteFood.TabIndex = 5;
             buttonDeleteFood.Text = "음식 삭제";
             buttonDeleteFood.UseVisualStyleBackColor = true;
@@ -58,13 +62,14 @@
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(buttonDeleteFood);
             Controls.Add(buttonAddFood);
+            Controls.Add(buttonDeleteFood);
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "ManageFoodChildAdmin";
-            Text = "ManageFoodChildAdmin";
+            Text = "음식 관리";
             Controls.SetChildIndex(flowLayoutPanelMenuItems, 0);
-            Controls.SetChildIndex(buttonAddFood, 0);
             Controls.SetChildIndex(buttonDeleteFood, 0);
+            Controls.SetChildIndex(buttonAddFood, 0);
             ResumeLayout(false);
             PerformLayout();
         }

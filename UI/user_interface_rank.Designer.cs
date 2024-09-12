@@ -36,9 +36,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(37, 32);
+            label1.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(24, 23);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(71, 15);
+            label1.Size = new System.Drawing.Size(142, 32);
             label1.TabIndex = 0;
             label1.Text = "사용량 랭킹";
             // 
@@ -47,33 +48,36 @@
             listView1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             listView1.FullRowSelect = true;
             listView1.GridLines = true;
-            listView1.Location = new System.Drawing.Point(37, 78);
+            listView1.Location = new System.Drawing.Point(24, 78);
             listView1.Name = "listView1";
-            listView1.Size = new System.Drawing.Size(606, 313);
+            listView1.Size = new System.Drawing.Size(641, 313);
             listView1.TabIndex = 2;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = System.Windows.Forms.View.Details;
             // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(671, 78);
+            button2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button2.ForeColor = System.Drawing.Color.Blue;
+            button2.Location = new System.Drawing.Point(687, 78);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(101, 39);
             button2.TabIndex = 4;
             button2.Text = "새로고침";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += buttonRefresh;
             // 
             // user_interface_rank
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(243, 243, 243);
             ClientSize = new System.Drawing.Size(800, 450);
             Controls.Add(button2);
             Controls.Add(listView1);
             Controls.Add(label1);
             Name = "user_interface_rank";
-            Text = "user_interface_rank";
+            Text = "사용량 랭킹";
             ResumeLayout(false);
             PerformLayout();
         }

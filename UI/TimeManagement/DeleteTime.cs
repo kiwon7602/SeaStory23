@@ -63,5 +63,6 @@ namespace SeaStory.UI.TimeManagement
             timeTableDelete.Clear();
             this.Close();
         }
+
     }
 }

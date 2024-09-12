@@ -24,7 +24,7 @@ namespace SeaStory.UI.Seats
             InitializeComponent();
         }
 
-        public Seat(int seatNumber, string userID, string usageTime, string buttonText="선택")
+        public Seat(int seatNumber, string userID, string usageTime, string buttonText = "선택")
             : this() // Calls the default constructor to initialize components
         {
             // Store the parameters
@@ -47,9 +47,14 @@ namespace SeaStory.UI.Seats
                 // Handle the case where usageTime is not a valid integer
                 labelRemainingTime.Text = "";
             }
+
+            if (buttonText != "선택")
+            {
+                buttonSelect.ForeColor = System.Drawing.Color.Red;
+            }
         }
 
-        public void UpdateSeat(int seatNumber, string userID, string usageTime, bool disableEmtpySeatButton=true)
+        public void UpdateSeat(int seatNumber, string userID, string usageTime, bool disableEmtpySeatButton = true)
         {
             // Update properties
             SeatNumber = seatNumber;
@@ -107,5 +112,9 @@ namespace SeaStory.UI.Seats
             }
         }
 
+        private void labelSeatNum_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

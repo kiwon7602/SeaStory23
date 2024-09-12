@@ -19,12 +19,14 @@ namespace SeaStory
         public login()
         {
             InitializeComponent();
+
             //초기값
             label1.Visible = true;
             textBox1.Visible = true;
             label2.Visible = true;
             textBox2.Visible = true;
-
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
 
             // KeyDown 이벤트 등록
             this.AcceptButton = button1;
@@ -76,6 +78,7 @@ namespace SeaStory
                 }
             }
         }
+
 
     }
 }

@@ -34,19 +34,24 @@
             // 
             // buttonPay
             // 
-            buttonPay.Location = new System.Drawing.Point(695, 105);
+            buttonPay.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            buttonPay.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonPay.Location = new System.Drawing.Point(684, 75);
             buttonPay.Name = "buttonPay";
-            buttonPay.Size = new System.Drawing.Size(75, 23);
+            buttonPay.Size = new System.Drawing.Size(86, 40);
             buttonPay.TabIndex = 4;
             buttonPay.Text = "결제";
             buttonPay.UseVisualStyleBackColor = true;
-            buttonPay.Click += GetInfoButton_Click;
+            buttonPay.Click += MakePayment_Click;
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new System.Drawing.Point(695, 159);
+            buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            buttonCancel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            buttonCancel.ForeColor = System.Drawing.Color.Red;
+            buttonCancel.Location = new System.Drawing.Point(684, 156);
             buttonCancel.Name = "buttonCancel";
-            buttonCancel.Size = new System.Drawing.Size(75, 23);
+            buttonCancel.Size = new System.Drawing.Size(86, 40);
             buttonCancel.TabIndex = 5;
             buttonCancel.Text = "취소";
             buttonCancel.UseVisualStyleBackColor = true;
@@ -57,13 +62,14 @@
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(buttonCancel);
             Controls.Add(buttonPay);
+            Controls.Add(buttonCancel);
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "ManageFoodChildUser";
-            Text = "ManageFoodChildUser";
+            Text = "음식 목록";
             Controls.SetChildIndex(flowLayoutPanelMenuItems, 0);
-            Controls.SetChildIndex(buttonPay, 0);
             Controls.SetChildIndex(buttonCancel, 0);
+            Controls.SetChildIndex(buttonPay, 0);
             ResumeLayout(false);
             PerformLayout();
         }

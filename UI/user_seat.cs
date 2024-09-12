@@ -13,7 +13,7 @@ using static SeaStory.Model.DataCalss;
 using User = SeaStory.Model.DataCalss.User;
 using SeaStory.Model;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
-
+using System.Media;
 namespace SeaStory.UI
 {
     public partial class user_seat : Form
@@ -28,17 +28,14 @@ namespace SeaStory.UI
         public user_seat(string ID, int user_type)
         {
             InitializeComponent();
+            SoundPlayer simpleSound = new SoundPlayer(Properties.Resources.login);
+            simpleSound.Play();
             userID = ID;
             userType = user_type;
 
             InitializeUser();
             InitializeSeats();
 
-            //버튼에 대한 정보 초기화 부분
-            //DB에서 리스트 형태로 좌석 정보 받음
-            //1. 빈자리인 경우 - 버튼 텍스트에 좌석 이름만 받음
-            //2. 사용중 좌석이면서 사용 시간이 null인 경우 - 버튼 텍스트에 좌석 이름 \r\n 사용자명 , 버튼 상태 enable -false
-            //3. 사용중 좌석이면서 사용 시간이 있는 경우 - 버튼 텍스트에 좌석 이름  \r\n 사용자명  \r\n 잔여 시간 , 버튼 상태 enable -false
         }
         private void InitializeUser()
         {
@@ -49,8 +46,9 @@ namespace SeaStory.UI
                 User user = Model.DatabaseAut.UserData(userID);
 
                 //유저 정보 기반 유저명 호출 및 표시
-                label3.Text = user.Name;
+                labelUserName.Text = user.Name;
             }
+
         }
         private void InitializeSeats()
         {
@@ -62,11 +60,15 @@ namespace SeaStory.UI
             int usedSeatsCount = seats.Count(seat => !string.IsNullOrEmpty(seat.UserID));
             int availableSeatsCount = seats.Count - usedSeatsCount;
 
-            label1.Text = availableSeatsCount.ToString();
-            label2.Text = usedSeatsCount.ToString();
+            labelAvailableSeatCount.Text = availableSeatsCount.ToString();
+            labelUsedSeatCount.Text = usedSeatsCount.ToString();
 
             seatPanel1.SetSeatClickHandler(button1_Click);
+
+
         }
+
+
 
         private void Back_Button_Click(object sender, EventArgs e)
         {
@@ -82,5 +84,6 @@ namespace SeaStory.UI
             user_Interface_main.Show();
             this.Close();
         }
+
     }
 }
